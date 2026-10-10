@@ -1,1 +1,108 @@
-IyBSYWZ0YXIgVlBOCgpGcmVlICsgcHJpdmF0ZSBWUE4gY2xpZW50IGZvciBBbmRyb2lkLiAqKlJhZnRhcioqID0gc3BlZWQg4oCUIGlzIGFwcCBraSBwZWhjaGFuOgoqKlJhZnRhciBSYWNlKiogKHNlcnZlcnMga2kgbGl2ZSBzcGVlZCByYWNlLCB3aW5uZXIgYXV0by1jb25uZWN0KSBhdXIgKipHYW1pbmcgTW9kZSoqCihsb3dlc3QtcGluZyBzZXJ2ZXIsIGxpdmUgcGluZyBkaXNwbGF5KS4KCi0gKipGcmVlIFNlcnZlcnM6KiogVlBOIEdhdGUgKFVuaXZlcnNpdHkgb2YgVHN1a3ViYSkga2UgbGl2ZSBwdWJsaWMgc2VydmVycyDigJQgcG9vcmkgY291bnRyeQogIGxpc3QsIGtvaSBjYXAgbmFoaS4gMTAwJSBsaXZlIGRhdGEsIGtvaSBmYWtlL2RlbW8gc2VydmVyIG5haGkuCi0gKipNZXJlIFNlcnZlcnM6KiogYXBuYSBraHVkIGthIE9wZW5WUE4gc2VydmVyIChgLm92cG5gIHBhc3RlIC8gZmlsZSBpbXBvcnQgLyBRUiBzY2FuKSDigJQKICBjb25maWcgc2lyZiBwaG9uZSBwYXIgZW5jcnlwdGVkIHJlaHRpIGhhaS4KLSAqKlJvbWFuIFVyZHUgVUkqKiAoZGVmYXVsdCkgKyBFbmdsaXNoIHRvZ2dsZS4KLSAqKkF1dG8tZmFpbG92ZXI6KiogY29ubmVjdCBmYWlsIGhvIHRvIGFnbGF5IHNlcnZlciBwYXIga2h1ZCB0cnkga2FydGEgaGFpLgotICoqTm8gYWNjb3VudHMsIG5vIGFkcywgbm8gYW5hbHl0aWNzLioqIFByaXZhY3kgUG9saWN5OiBbUFJJVkFDWV9QT0xJQ1kubWRdKFBSSVZBQ1lfUE9MSUNZLm1kKQogIChhcHAga2UgYW5kYXIgYmhpIG1vam9vZCBoYWkpLgoKUGFja2FnZTogYGNvbS5yYWZ0YXIudnBuYCDCtyBtaW5TZGsgMjYgwrcgdGFyZ2V0U2RrIDM0IMK3IEtvdGxpbiAxLjkuMjQgwrcgQUdQIDguNS4yCgojIyBLYWlzZSBrYWFtIGthcnRhIGhhaQoKMS4gQXBwIGtob2xvIOKGkiAqKkZyZWUgU2VydmVycyoqIHRhYiBtZSBsaXZlIHNlcnZlciBsaXN0IChjb3VudHJ5LXdpc2UgZ3JvdXBlZCwgc2VhcmNoIGtlIHNhdGgpLgoyLiBIYXIgcm93IG1lIGFzYWwgZGF0YTogSVAvaG9zdG5hbWUsIHBpbmcgKG1zKSwgc3BlZWQsIGFjdGl2ZSBzZXNzaW9ucywgdXB0aW1lLgogICAtIPCfn6IgZ3JlZW4gZG90ID0gcmVhY2hhYmxlIChpcyBuZXR3b3JrIHBhciBjaGFsIHJhaGEgaGFpKQogICAtIPCflLQgcmVkL2RpbW1lZCA9IGRlYWQvYmxvY2tlZCAocmVjb21tZW5kZWQgc2UgYmFoYXIpCiAgIC0gTG9uZy1wcmVzcyBrYXJrZSBraGFyYWIgc2VydmVyICoqcmVwb3J0Kioga2FybyDigJQgd29oIHR1bWhhcmUgbGl5ZSBoYW1lc2hhIGtlIGxpeWUgY2hodXAgamF5ZWdhLgozLiAqKkJlc3QgU2VydmVyIOKAlCBBdXRvIENvbm5lY3QqKiBkYWJhbyDihpIgUmFmdGFyIFJhY2UgKHRvcCAxMiBraSBwYXJhbGxlbCBUQ1AgcmFjZSkg4oaSCiAgIHdpbm5lciBwYXIgYXV0by1jb25uZWN0Lgo0LiAqKkdhbWluZyBNb2RlKiog4oaSIHNhYiBzZSBrYW0gcGluZyB3YWxhIHJlYWNoYWJsZSBzZXJ2ZXIgKyBzdGF0dXMvbm90aWZpY2F0aW9uIG1lIGxpdmUgcGluZy4KNS4gWWEga29pIHNlcnZlciB0YXAga2Fya2Ugc2VsZWN0IGthcm8g4oaSICoqQ29ubmVjdCoqLgoKUGVobGkgY29ubmVjdCBwYXIgKipwcm9taW5lbnQgZGlzY2xvc3VyZSoqIChSb21hbiBVcmR1ICsgRW5nbGlzaCkgQWNjZXB0IGthcm5hIHphcm9vcmkgaGFpLgoKIyMgRGVidWcgQVBLIChHaXRIdWIgQWN0aW9ucykKCjEuIFllIHJlcG8gR2l0SHViIHBhciBgUmFmdGFyVnBuYCBuYWFtIHNlIGJhbmFvLCB5ZSBmaWxlcyBwdXNoIGthcm8gKGBtYWluYCBicmFuY2gpLgoyLiAqKkFjdGlvbnMg4oaSIEJ1aWxkIEFQSyoqIHdvcmtmbG93IGtodWQgY2hhbCBwYXJlZ2EgKHB1c2ggcGFyICsgbWFudWFsKS4KMy4gUnVuIGNvbXBsZXRlIGhvbmUgcGFyICoqQXJ0aWZhY3RzIOKGkiBSYWZ0YXJWcG4tZGVidWctYXBrKiogc2UgYC5hcGtgIGRvd25sb2FkIGthcm8sCiAgIHBob25lIHBhciBpbnN0YWxsIGthcm8uCgo+IE5vdGU6IGFnYXIgYXBwIGtpIHN0cnVjdHVyZSBiYWRsZSAobmF5aSBzZXJ2aWNlL3Byb2Nlc3MpIHRvIGluc3RhbGwgc2UgcGVobGUgcHVyYW5pCj4gYnVpbGQgKip1bmluc3RhbGwqKiBrYXIgZGVuYS4KCiMjIFNpZ25pbmcgJiBQbGF5IFN0b3JlIHVwbG9hZCAoUm9tYW4gVXJkdSArIEVuZ2xpc2gpCgoqKlN0ZXAgMSDigJQga2V5c3RvcmUgYmFuYW8gKHNpcmYgYWlrIGRhZmEpOioqCjEuIEdpdEh1YiByZXBvIG1lICoqQWN0aW9ucyDihpIgR2VuZXJhdGUgUmVsZWFzZSBLZXlzdG9yZSDihpIgUnVuIHdvcmtmbG93KiogZGFiYW8uCjIuIFJ1biBjb21wbGV0ZSBob25lIHBhciAqKkFydGlmYWN0cyDihpIgcmFmdGFyLXNpZ25pbmcqKiBkb3dubG9hZCBrYXJvIOKAlCBpcyBtZSAyIGZpbGVzIGhhaW46CiAgIGBrZXlzdG9yZS1iYXNlNjQudHh0YCBhdXIgYGtleXN0b3JlLXBhc3N3b3JkLnR4dGAuCjMuIFJlcG8gbWUgKipTZXR0aW5ncyDihpIgU2VjcmV0cyBhbmQgdmFyaWFibGVzIOKGkiBBY3Rpb25zIOKGkiBOZXcgcmVwb3NpdG9yeSBzZWNyZXQqKiBtZSB5ZSA0CiAgIHNlY3JldHMgYWRkIGthcm86CiAgIC0gYEtFWVNUT1JFX0JBU0U2NGAg4oaSIGBrZXlzdG9yZS1iYXNlNjQudHh0YCBrYSBwb29yYSBjb250ZW50CiAgIC0gYEtFWVNUT1JFX1BBU1NXT1JEYCDihpIgYGtleXN0b3JlLXBhc3N3b3JkLnR4dGAga2EgcG9vcmEgY29udGVudAogICAtIGBLRVlfQUxJQVNgIOKGkiBgcmFmdGFyYAogICAtIGBLRVlfUEFTU1dPUkRgIOKGkiBga2V5c3RvcmUtcGFzc3dvcmQudHh0YCBrYSBwb29yYSBjb250ZW50IChzYW1lIHBhc3N3b3JkKQo0LiAqKkFydGlmYWN0cyBkZWxldGUga2FyIGRvKiogYXVyIGBrZXlzdG9yZS1wYXNzd29yZC50eHRgIGthIGJhY2t1cCBtZWhmb296IGphZ2FoIHJha2hvCiAgICh5ZSBraG8gZ2F5YSB0byBmdXR1cmUgdXBkYXRlcyBzaWduIG5haGkgaG8gc2FrZW5naSkuCgoqKlN0ZXAgMiDigJQgc2lnbmVkIHJlbGVhc2UgYnVpbGQ6KioKMS4gKipBY3Rpb25zIOKGkiBCdWlsZCBSZWxlYXNlIOKGkiBSdW4gd29ya2Zsb3cqKiBkYWJhby4KMi4gKipBcnRpZmFjdHMg4oaSIFJhZnRhclZwbi1yZWxlYXNlKiogc2Ugc2lnbmVkIGAuYWFiYCAoUGxheSBTdG9yZSkgYXVyIGAuYXBrYCBkb3dubG9hZCBrYXJvLgoKKipTdGVwIDMg4oCUIFBsYXkgQ29uc29sZSB1cGxvYWQ6KioKMS4gUGxheSBDb25zb2xlIG1lIGFwcCBiYW5hbywgKipQbGF5IEFwcCBTaWduaW5nIE9OKiogcmFraG8gKHJlY29tbWVuZGVkIOKAlCBHb29nbGUgdHVtaGFyaQogICB1cGxvYWQga2V5IG1hbmFnZSBrYXJ0YSBoYWkpLgoyLiBTaWduZWQgYC5hYWJgIGtvIEludGVybmFsIHRlc3RpbmcgLyBQcm9kdWN0aW9uIHRyYWNrIHBhciB1cGxvYWQga2Fyby4KMy4gTGlzdGluZyBtZSAqKlByaXZhY3kgUG9saWN5Kioga2EgbGluayBkbyAoaXMgcmVwbyBraSBgUFJJVkFDWV9QT0xJQ1kubWRgKS4KNC4gVlBOIGFwcHMga2UgbGl5ZSBQbGF5IENvbnNvbGUgbWUgKipwcm9taW5lbnQgZGlzY2xvc3VyZSoqIHphcm9vcmkgaGFpIOKAlCB5ZSBhcHAgcGVobGkKICAgY29ubmVjdCBwYXIgZGlraGF0aSBoYWkgKFJvbWFuIFVyZHUgKyBFbmdsaXNoKSwgaXNrYSBzY3JlZW5zaG90IHJldmlldyBrZSBsaXllIHRheXlhciByYWtoby4KCioqdGFyZ2V0U2RrIG5vdGU6KiogYWJoaSBgdGFyZ2V0U2RrIDM0YCBoYWkgam8gdGhlZWsgaGFpLiBQbGF5IFN0b3JlIHdhcXQga2Ugc2F0aCBuYXlhCnRhcmdldFNkayByZXF1aXJlIGthcnRhIGhhaSDigJQgbGF1bmNoIGtlIHdhcXQgYWdhciBQbGF5IG5heWEgdmVyc2lvbiBtYW5nZSB0bwpgYXBwL2J1aWxkLmdyYWRsZS5rdHNgIG1lIGJ1bXAga2FybmEgcGFyZWdhIChwaGlyIEFHUCB2ZXJzaW9uIGJoaSBjaGVjayBrYXJuYSkuCgojIyBBcG5hIHNlcnZlciAoT3JhY2xlIENsb3VkIGZyZWUgdGllcikKCmBzZXJ2ZXItc2V0dXAvYCBmb2xkZXIgZGVraG86Ci0gW09SQUNMRV9TRVRVUF9VUkRVLm1kXShzZXJ2ZXItc2V0dXAvT1JBQ0xFX1NFVFVQX1VSRFUubWQpIOKAlCBSb21hbiBVcmR1IHN0ZXAtYnktc3RlcCBndWlkZQogIChhY2NvdW50IOKGkiBmcmVlIFZNIOKGkiBmaXJld2FsbCDihpIgc2NyaXB0IOKGkiBgLm92cG5gIGltcG9ydCkuCi0gW3NldHVwLW9wZW52cG4uc2hdKHNlcnZlci1zZXR1cC9zZXR1cC1vcGVudnBuLnNoKSDigJQgdW5hdHRlbmRlZCBPcGVuVlBOIHNlcnZlciBpbnN0YWxsIHNjcmlwdC4KCiMjIFByb2plY3Qgc3RydWN0dXJlCgpgYGAKUmFmdGFyVnBuLwrilJzilIDilIAgYXBwLyAgICAgICAgICAgICAgICAgICAgICAgICAgIyBBbmRyb2lkIGFwcCAoY29tLnJhZnRhci52cG4pCuKUgiAgIOKUlOKUgOKUgCBzcmMvbWFpbi9qYXZhL2NvbS9yYWZ0YXIvdnBuLwrilIIgICAgICAg4pSc4pSA4pSAIE1haW5BY3Rpdml0eS5rdCAgICAgICAgIyBwZXJtaXNzaW9uIGZsb3dzLCBsYXVuY2hlcnMgKGZpbGUvUVIvY2FtZXJhKQrilIIgICAgICAg4pSc4pSA4pSAIGRhdGEvICAgICAgICAgICAgICAgICAgIyBWcG5TZXJ2ZXIsIFZwbkdhdGVBcGksIFByaXZhdGVTZXJ2ZXJzLCBCbG9ja2xpc3RTdG9yZQrilIIgICAgICAg4pSc4pSA4pSAIHZwbi8gICAgICAgICAgICAgICAgICAgIyBWcG5Db25uZWN0b3IgKHRpbTA2IE9wZW5WUE4gZW5naW5lIHdyYXBwZXIpCuKUgiAgICAgICDilJTilIDilIAgdWkvICAgICAgICAgICAgICAgICAgICAjIEFwcCAoQ29tcG9zZSksIE1haW5WaWV3TW9kZWwsIFN0cmluZ3MgKGJpbGluZ3VhbCksCuKUgiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIEdhbWVOb3RpZmljYXRpb24sIFByaXZhY3lQb2xpY3kK4pSc4pSA4pSAIHNlcnZlci1zZXR1cC8gICAgICAgICAgICAgICAgICAjIE9yYWNsZSBndWlkZSArIHNldHVwLW9wZW52cG4uc2gK4pSc4pSA4pSAIC5naXRodWIvd29ya2Zsb3dzLyAgICAgICAgICAgICAjIGJ1aWxkLWFwaywgYnVpbGQtcmVsZWFzZSwgZ2VuZXJhdGUta2V5c3RvcmUK4pSc4pSA4pSAIFBSSVZBQ1lfUE9MSUNZLm1kCuKUlOKUgOKUgCBSRUFETUUubWQKYGBgCgojIyBUZWNobmljYWwgbm90ZXMKCi0gKipPcGVuVlBOIGVuZ2luZToqKiBgaW8uZ2l0aHViLnRpbTA2Om9wZW52cG46MS4xLjNgIChBcGFjaGUtMi4wLCBPcGVuVlBOIDMgQysrIGNvcmUsCiAgYGxpYm92cG4zLnNvYCBmb3IgNCBBQklzKSArIHBpbm5lZCBgaW8uZ2l0aHViLnRpbTA2OmJhc2V2cG5wcm90b2NvbHM6MS4xLjFgLgogIEFBUiBhcG5pIGBPcGVuVlBOU2VydmljZWAgZGVjbGFyZSBrYXJ0YSBoYWkg4oCUIGFwcCBtYW5pZmVzdCBtZSBkb2JhcmEgZGVjbGFyZSBuYWhpIGtpLgotICoqQ29uZmlnIGRlbGl2ZXJ5OioqIGBPcGVuVlBOU2VydmljZS5zdGFydFNlcnZpY2UoLi4uKWAgKENPTkZJR1VSQVRJT05fS0VZIGludGVudCBleHRyYSk7CiAgYFZwblNlcnZpY2VDb25uZWN0aW9uYCBzaXJmIGJpbmQgKyBzdGF0ZSBjYWxsYmFja3Mga2UgbGl5ZS4KLSAqKlZQTiBHYXRlIGNvbmZpZ3M6KiogY2lwaGVyIHNhbml0aXplIChDSEFDSEEyMC1QT0xZMTMwNSBmaXJzdCksIEROUyBpbmplY3QsIGJsb2NrLWlwdjYsCiAgVENQIHByb3RvIGFzLWlzIChhdXRvLXJld3JpdGUgbmFoaSkuCi0gKipEYXRhIGhvbmVzdHk6Kiogc2VydmVyIGxpc3QgMTAwJSBsaXZlIEFQSSBzZTsgZmV0Y2ggZmFpbCA9IGhvbmVzdCBlcnJvciArIHJldHJ5LAogIGthYmhpIGZha2UgbGlzdCBuYWhpLiBCbG9ja2VkL2RlYWQgPSBUQ1AgcmVhY2hhYmlsaXR5IGZhaWwgKGVtcGlyaWNhbCBmaWx0ZXIpICsKICB1c2VyIGJsb2NrbGlzdC4K
+# Raftar VPN
+
+Free + private VPN client for Android. **Raftar** = speed — is app ki pehchan:
+**Raftar Race** (servers ki live speed race, winner auto-connect) aur **Gaming Mode**
+(lowest-ping server, live ping display).
+
+- **Free Servers:** VPN Gate (University of Tsukuba) ke live public servers — poori country
+  list, koi cap nahi. 100% live data, koi fake/demo server nahi.
+- **Mere Servers:** apna khud ka OpenVPN server (`.ovpn` paste / file import / QR scan) —
+  config sirf phone par encrypted rehti hai.
+- **Roman Urdu UI** (default) + English toggle.
+- **Auto-failover:** connect fail ho to aglay server par khud try karta hai.
+- **No accounts, no ads, no analytics.** Privacy Policy: [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
+  (app ke andar bhi mojood hai).
+
+Package: `com.raftar.vpn` · minSdk 26 · targetSdk 34 · Kotlin 1.9.24 · AGP 8.5.2
+
+## Kaise kaam karta hai
+
+1. App kholo → **Free Servers** tab me live server list (country-wise grouped, search ke sath).
+2. Har row me asal data: IP/hostname, ping (ms), speed, active sessions, uptime.
+   - 🟢 green dot = reachable (is network par chal raha hai)
+   - 🔴 red/dimmed = dead/blocked (recommended se bahar)
+   - Long-press karke kharab server **report** karo — woh tumhare liye hamesha ke liye chhup jayega.
+3. **Best Server — Auto Connect** dabao → Raftar Race (top 12 ki parallel TCP race) →
+   winner par auto-connect.
+4. **Gaming Mode** → sab se kam ping wala reachable server + status/notification me live ping.
+5. Ya koi server tap karke select karo → **Connect**.
+
+Pehli connect par **prominent disclosure** (Roman Urdu + English) Accept karna zaroori hai.
+
+## Debug APK (GitHub Actions)
+
+1. Ye repo GitHub par `RaftarVpn` naam se banao, ye files push karo (`main` branch).
+2. **Actions → Build APK** workflow khud chal parega (push par + manual).
+3. Run complete hone par **Artifacts → RaftarVpn-debug-apk** se `.apk` download karo,
+   phone par install karo.
+
+> Note: agar app ki structure badle (nayi service/process) to install se pehle purani
+> build **uninstall** kar dena.
+
+## Signing & Play Store upload (Roman Urdu + English)
+
+**Step 1 — keystore banao (sirf aik dafa):**
+1. GitHub repo me **Actions → Generate Release Keystore → Run workflow** dabao.
+2. Run complete hone par **Artifacts → raftar-signing** download karo — is me 2 files hain:
+   `keystore-base64.txt` aur `keystore-password.txt`.
+3. Repo me **Settings → Secrets and variables → Actions → New repository secret** me ye 4
+   secrets add karo:
+   - `KEYSTORE_BASE64` → `keystore-base64.txt` ka poora content
+   - `KEYSTORE_PASSWORD` → `keystore-password.txt` ka poora content
+   - `KEY_ALIAS` → `raftar`
+   - `KEY_PASSWORD` → `keystore-password.txt` ka poora content (same password)
+4. **Artifacts delete kar do** aur `keystore-password.txt` ka backup mehfooz jagah rakho
+   (ye kho gaya to future updates sign nahi ho sakengi).
+
+**Step 2 — signed release build:**
+1. **Actions → Build Release → Run workflow** dabao.
+2. **Artifacts → RaftarVpn-release** se signed `.aab` (Play Store) aur `.apk` download karo.
+
+**Step 3 — Play Console upload:**
+1. Play Console me app banao, **Play App Signing ON** rakho (recommended — Google tumhari
+   upload key manage karta hai).
+2. Signed `.aab` ko Internal testing / Production track par upload karo.
+3. Listing me **Privacy Policy** ka link do (is repo ki `PRIVACY_POLICY.md`).
+4. VPN apps ke liye Play Console me **prominent disclosure** zaroori hai — ye app pehli
+   connect par dikhati hai (Roman Urdu + English), iska screenshot review ke liye tayyar rakho.
+
+**targetSdk note:** abhi `targetSdk 34` hai jo theek hai. Play Store waqt ke sath naya
+targetSdk require karta hai — launch ke waqt agar Play naya version mange to
+`app/build.gradle.kts` me bump karna parega (phir AGP version bhi check karna).
+
+## Apna server (Oracle Cloud free tier)
+
+`server-setup/` folder dekho:
+- [ORACLE_SETUP_URDU.md](server-setup/ORACLE_SETUP_URDU.md) — Roman Urdu step-by-step guide
+  (account → free VM → firewall → script → `.ovpn` import).
+- [setup-openvpn.sh](server-setup/setup-openvpn.sh) — unattended OpenVPN server install script.
+
+## Project structure
+
+```
+RaftarVpn/
+├── app/                          # Android app (com.raftar.vpn)
+│   └── src/main/java/com/raftar/vpn/
+│       ├── MainActivity.kt        # permission flows, launchers (file/QR/camera)
+│       ├── data/                  # VpnServer, VpnGateApi, PrivateServers, BlocklistStore
+│       ├── vpn/                   # VpnConnector (tim06 OpenVPN engine wrapper)
+│       └── ui/                    # App (Compose), MainViewModel, Strings (bilingual),
+│                                  # GameNotification, PrivacyPolicy
+├── server-setup/                  # Oracle guide + setup-openvpn.sh
+├── .github/workflows/             # build-apk, build-release, generate-keystore
+├── PRIVACY_POLICY.md
+└── README.md
+```
+
+## Technical notes
+
+- **OpenVPN engine:** `io.github.tim06:openvpn:1.1.3` (Apache-2.0, OpenVPN 3 C++ core,
+  `libovpn3.so` for 4 ABIs) + pinned `io.github.tim06:basevpnprotocols:1.1.1`.
+  AAR apni `OpenVPNService` declare karta hai — app manifest me dobara declare nahi ki.
+- **Config delivery:** `OpenVPNService.startService(...)` (CONFIGURATION_KEY intent extra);
+  `VpnServiceConnection` sirf bind + state callbacks ke liye.
+- **VPN Gate configs:** cipher sanitize (CHACHA20-POLY1305 first), DNS inject, block-ipv6,
+  TCP proto as-is (auto-rewrite nahi).
+- **Data honesty:** server list 100% live API se; fetch fail = honest error + retry,
+  kabhi fake list nahi. Blocked/dead = TCP reachability fail (empirical filter) +
+  user blocklist.

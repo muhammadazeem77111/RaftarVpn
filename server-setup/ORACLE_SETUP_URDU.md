@@ -1,1 +1,97 @@
-IyBPcmFjbGUgQ2xvdWQgcGFyIGFwbmEgRlJFRSBWUE4gU2VydmVyIOKAlCBTdGVwIGJ5IFN0ZXAgKFJvbWFuIFVyZHUpCgpZZSBndWlkZSAqKlJhZnRhciBWUE4qKiBrZSAiTWVyZSBTZXJ2ZXJzIiBzZWN0aW9uIGtlIGxpeWUgaGFpLiBPcmFjbGUgQ2xvdWQga2EgKipBbHdheXMgRnJlZSoqIHRpZXIKKHppbmRhZ2kgYmhhciBmcmVlKSBwYXIgYXBuYSBwcml2YXRlIE9wZW5WUE4gc2VydmVyIGJhbmFvIGdlIOKAlCBwaGlyIHVza2kgYC5vdnBuYCBmaWxlIGFwcCBtZQppbXBvcnQga2FyIGtlIGNvbm5lY3QgaG8gamFvIGdlLiBLb2kgbW9udGhseSBraGFyY2hhIG5haGkuCgo+IE5vdGU6IE9yYWNsZSBhY2NvdW50IGJhbmF0ZSB3YXF0ICoqY3JlZGl0L2RlYml0IGNhcmQqKiBtYW5nYSBqYXRhIGhhaSDigJQgc2lyZiBpZGVudGl0eQo+IHZlcmlmaWNhdGlvbiBrZSBsaXllLiBBbHdheXMgRnJlZSByZXNvdXJjZXMgcGFyICoqa29pIGNoYXJnZSBuYWhpKioga2F0LXRhIChzaXJmIGVrIGNoaG90aQo+IHRlbXBvcmFyeSBhdXRob3JpemF0aW9uIGhvbGQgbGFndGkgaGFpIGpvIGt1Y2ggZGluIG1lIHdhcGFzIGhvIGphdGkgaGFpKS4KCiMjIFN0ZXAgMSDigJQgT3JhY2xlIENsb3VkIGFjY291bnQgYmFuYW8KCjEuIFtvcmFjbGUuY29tL2Nsb3VkL2ZyZWVdKGh0dHBzOi8vd3d3Lm9yYWNsZS5jb20vY2xvdWQvZnJlZS8pIGtob2xvIOKGkiAqKiJTdGFydCBmb3IgZnJlZSIqKiBkYWJhby4KMi4gRW1haWwsIHBhc3N3b3JkLCBuYWFtLCBhZGRyZXNzIChQYWtpc3RhbikgbGlraG8uICoqSG9tZSBSZWdpb24qKiB3b2ggY2h1bm8gam8gdHVtaGFyZSBzYWIgc2UKICAgcWFyZWViIGhvIChqYWlzZSBgYXAtbXVtYmFpLTFgIHlhIGBhcC1zaW5nYXBvcmUtMWApIOKAlCBpc2kgcmVnaW9uIG1lIFZNIGJhbmVnaS4KMy4gQ3JlZGl0L2RlYml0IGNhcmQgYWRkIGthcm8gKHZlcmlmaWNhdGlvbiBrZSBsaXllOyBmcmVlIHRpZXIgcGFyIGNoYXJnZSBuYWhpKS4KNC4gTW9iaWxlIG51bWJlciB2ZXJpZnkga2FybyAoT1RQIGFheWVnYSkuIEFjY291bnQgYmFuIGdheWEhCgojIyBTdGVwIDIg4oCUIEZyZWUgVk0gKHNlcnZlcikgbGF1bmNoIGthcm8KCjEuIE9yYWNsZSBDbG91ZCBDb25zb2xlIG1lIGxvZ2luIGthcm8g4oaSIHRvcC1sZWZ0IG1lbnUg4oaSICoqQ29tcHV0ZSDihpIgSW5zdGFuY2VzKiog4oaSICoqQ3JlYXRlIGluc3RhbmNlKiouCjIuIE5hYW06IGByYWZ0YXItdnBuYCAoa3VjaCBiaGkpLgozLiAqKkltYWdlOioqIGBVYnVudHUgMjIuMDRgIChDYW5vbmljYWwgVWJ1bnR1IDIyLjA0IE1pbmltYWwgYmhpIGNoYWxlZ2kpLgo0LiAqKlNoYXBlOioqIGBWTS5TdGFuZGFyZC5FMi4xLk1pY3JvYCAoQWx3YXlzIEZyZWUgZWxpZ2libGUg4oCUIDEgQ1BVLCAxIEdCIFJBTTsgVlBOIGtlIGxpeWUga2FhZmkgaGFpKS4KICAgLSBBZ2FyIEFtcGVyZSBBUk0gc2hhcGUgZnJlZSBtZSBtaWwgcmFoYSBobyB0byB3b2ggYmhpIGxlIHNha3RlIGhvLCBsZWtpbiBNaWNybyBzYWIgc2Ugc2FmZSBoYWkuCjUuICoqTmV0d29ya2luZzoqKiAiQXNzaWduIGEgcHVibGljIElQdjQgYWRkcmVzcyIgKipPTioqIHJha2hvICh0YWFrZSBwaG9uZSBzZSBjb25uZWN0IGhvIHNha28pLgo2LiAqKlNTSCBrZXlzOioqICJHZW5lcmF0ZSBhIGtleSBwYWlyIGZvciBtZSIgY2h1bm8gYXVyICoqcHJpdmF0ZSBrZXkgZG93bmxvYWQqKiBrYXIgbGVuYQogICAoYC5rZXlgIGZpbGUpIOKAlCBpc2kgc2Ugc2VydmVyIG1lIGxvZ2luIGhvIGdhLgo3LiAqKkNyZWF0ZSoqIGRhYmFvLiAx4oCTMiBtaW51dGUgbWUgVk0gKipSdW5uaW5nKiogaG8gamF5ZWdpLiBJc2thICoqUHVibGljIElQKiogbm90ZSBrYXIgbG8KICAgKEluc3RhbmNlIGRldGFpbHMgcGFnZSBwYXIgbmF6YXIgYWF5ZWdhKS4KCiMjIFN0ZXAgMyDigJQgRmlyZXdhbGwgbWUgVURQIDExOTQga2hvbG8KCjEuIEluc3RhbmNlIHBhZ2UgcGFyIOKGkiAqKkF0dGFjaGVkIFZOSUMqKiDihpIgdXNraSAqKlN1Ym5ldCoqIHBhciBjbGljayBrYXJvLgoyLiAqKkRlZmF1bHQgU2VjdXJpdHkgTGlzdCoqIGtob2xvIOKGkiAqKkFkZCBJbmdyZXNzIFJ1bGVzKio6CiAgIC0gU291cmNlIENJRFI6IGAwLjAuMC4wLzBgCiAgIC0gRGVzdGluYXRpb24gUG9ydCBSYW5nZTogYDExOTRgCiAgIC0gUHJvdG9jb2w6ICoqVURQKioKICAgLSBBZGQga2Fyby4KMy4gKFNTSCBrZSBsaXllIHBvcnQgMjIgcGVobGUgc2Uga2h1bGEgaG90YSBoYWkuKQoKIyMgU3RlcCA0IOKAlCBTZXJ2ZXIgcGFyIE9wZW5WUE4gaW5zdGFsbCBrYXJvCgpBcG5lIGNvbXB1dGVyIHNlIFNTSCBrYXJvIChwcml2YXRlIGtleSB3YWxpIGZpbGUga2EgcGF0aCBkbyk6CgpgYGBiYXNoCnNzaCAtaSAvcGF0aC90by9zc2gta2V5LXh4eHgua2V5IHVidW50dUA8Vk0tS0EtUFVCTElDLUlQPgpgYGAKClBoaXIgaXMgcmVwbyBrYSBzY3JpcHQgY2hhbGFvOgoKYGBgYmFzaApjdXJsIC1PIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS88dHVtaGFyYS11c2VybmFtZT4vUmFmdGFyVnBuL21haW4vc2VydmVyLXNldHVwL3NldHVwLW9wZW52cG4uc2gKY2htb2QgK3ggc2V0dXAtb3BlbnZwbi5zaApzdWRvIC4vc2V0dXAtb3BlbnZwbi5zaApgYGAKClNjcmlwdCBraHVkIHNhYiBrYXJlIGdhOiBPcGVuVlBOICsgZWFzeS1yc2EgaW5zdGFsbCwgY2VydGlmaWNhdGVzIGJhbmFuYSwgc2VydmVyIGNvbmZpZywKSVAgZm9yd2FyZGluZywgZmlyZXdhbGwgKE5BVCkgcnVsZXMuIDLigJM0IG1pbnV0ZSBsYWd0ZSBoYWluLgoKIyMgU3RlcCA1IOKAlCBBcG5lIGxpeWUgY2xpZW50IGAub3ZwbmAgZmlsZSBiYW5hbwoKYGBgYmFzaApzdWRvIC4vc2V0dXAtb3BlbnZwbi5zaCBuZXctY2xpZW50IG1lcmEtcGhvbmUKYGBgCgpZZSBgL3Jvb3QvbWVyYS1waG9uZS5vdnBuYCBiYW5hIGRlIGdhLiBBcG5lIGNvbXB1dGVyIHBhciBsYW86CgpgYGBiYXNoCnN1ZG8gY2F0IC9yb290L21lcmEtcGhvbmUub3ZwbgpgYGAKCk91dHB1dCBrbyBjb3B5IGthcmtlIGFwbmUgY29tcHV0ZXIgcGFyIGBtZXJhLXBob25lLm92cG5gIGZpbGUgbWUgc2F2ZSBrYXIgbG8KKHlhIGBzY3BgIHNlIGRvd25sb2FkIGthciBsbykuCgojIyBTdGVwIDYg4oCUIFJhZnRhciBWUE4gYXBwIG1lIGltcG9ydCBrYXJvCgoxLiBBcHAga2hvbG8g4oaSICoqIk1lcmUgU2VydmVycyIqKiB0YWIuCjIuICoqIkZpbGUgaW1wb3J0IGthcm8iKiogZGFiYW8g4oaSIGBtZXJhLXBob25lLm92cG5gIHNlbGVjdCBrYXJvLgogICAtIFlhIGZpbGUga28ga2hvbG8sIHRleHQgY29weSBrYXJvIOKGkiAqKiJUZXh0IHBhc3RlIGthcm8iKiouCjMuIFNlcnZlciBraSByb3cgcGFyICoqQ29ubmVjdCoqIGRhYmFvLiBQZWhsaSBkYWZhIGRpc2Nsb3N1cmUgQWNjZXB0IGthcm5hIHBhcmVnYS4KNC4gSG8gZ2F5YSEgQWIgdHVtaGFyYSBhcG5hIHByaXZhdGUgVlBOIHNlcnZlciBjaGFsIHJhaGEgaGFpLgoKIyMgQWlrIHNlIHp5YWRhIGRldmljZXM/CgpIYXIgZGV2aWNlIGtlIGxpeWUgYWxhZyBjbGllbnQgYmFuYW8gKHNhbWUgc2VydmVyIHBhcik6CgpgYGBiYXNoCnN1ZG8gLi9zZXR1cC1vcGVudnBuLnNoIG5ldy1jbGllbnQgZHVzcmEtcGhvbmUKYGBgCgojIyBNYXNsYSBobyB0bwoKLSAqKkNvbm5lY3QgbmFoaSBobyByYWhhOioqIE9yYWNsZSBTZWN1cml0eSBMaXN0IG1lIFVEUCAxMTk0IGluZ3Jlc3MgcnVsZSBkb2JhcmEgY2hlY2sga2FybywKICBhdXIgc2VydmVyIHBhciBgc3VkbyBzeXN0ZW1jdGwgc3RhdHVzIG9wZW52cG4tc2VydmVyQHNlcnZlcmAgZGVraG8gKGFjdGl2ZSBob25hIGNoYWhpeWUpLgotICoqU2NyaXB0IGRvYmFyYSBjaGFsYW5hOioqIGBzdWRvIC4vc2V0dXAtb3BlbnZwbi5zaGAgZG9iYXJhIGNoYWxhbmEgc2FmZSBoYWkgKHB1cmFuaQogIHNldHRpbmdzIG92ZXJ3cml0ZSBobyBqYXRpIGhhaW4sIGNsaWVudHMgZG9iYXJhIGJhbmFuZSBwYXJlbmdlKS4K
+# Oracle Cloud par apna FREE VPN Server — Step by Step (Roman Urdu)
+
+Ye guide **Raftar VPN** ke "Mere Servers" section ke liye hai. Oracle Cloud ka **Always Free** tier
+(zindagi bhar free) par apna private OpenVPN server banao ge — phir uski `.ovpn` file app me
+import kar ke connect ho jao ge. Koi monthly kharcha nahi.
+
+> Note: Oracle account banate waqt **credit/debit card** manga jata hai — sirf identity
+> verification ke liye. Always Free resources par **koi charge nahi** kat-ta (sirf ek chhoti
+> temporary authorization hold lagti hai jo kuch din me wapas ho jati hai).
+
+## Step 1 — Oracle Cloud account banao
+
+1. [oracle.com/cloud/free](https://www.oracle.com/cloud/free/) kholo → **"Start for free"** dabao.
+2. Email, password, naam, address (Pakistan) likho. **Home Region** woh chuno jo tumhare sab se
+   qareeb ho (jaise `ap-mumbai-1` ya `ap-singapore-1`) — isi region me VM banegi.
+3. Credit/debit card add karo (verification ke liye; free tier par charge nahi).
+4. Mobile number verify karo (OTP aayega). Account ban gaya!
+
+## Step 2 — Free VM (server) launch karo
+
+1. Oracle Cloud Console me login karo → top-left menu → **Compute → Instances** → **Create instance**.
+2. Naam: `raftar-vpn` (kuch bhi).
+3. **Image:** `Ubuntu 22.04` (Canonical Ubuntu 22.04 Minimal bhi chalegi).
+4. **Shape:** `VM.Standard.E2.1.Micro` (Always Free eligible — 1 CPU, 1 GB RAM; VPN ke liye kaafi hai).
+   - Agar Ampere ARM shape free me mil raha ho to woh bhi le sakte ho, lekin Micro sab se safe hai.
+5. **Networking:** "Assign a public IPv4 address" **ON** rakho (taake phone se connect ho sako).
+6. **SSH keys:** "Generate a key pair for me" chuno aur **private key download** kar lena
+   (`.key` file) — isi se server me login ho ga.
+7. **Create** dabao. 1–2 minute me VM **Running** ho jayegi. Iska **Public IP** note kar lo
+   (Instance details page par nazar aayega).
+
+## Step 3 — Firewall me UDP 1194 kholo
+
+1. Instance page par → **Attached VNIC** → uski **Subnet** par click karo.
+2. **Default Security List** kholo → **Add Ingress Rules**:
+   - Source CIDR: `0.0.0.0/0`
+   - Destination Port Range: `1194`
+   - Protocol: **UDP**
+   - Add karo.
+3. (SSH ke liye port 22 pehle se khula hota hai.)
+
+## Step 4 — Server par OpenVPN install karo
+
+Apne computer se SSH karo (private key wali file ka path do):
+
+```bash
+ssh -i /path/to/ssh-key-xxxx.key ubuntu@<VM-KA-PUBLIC-IP>
+```
+
+Phir is repo ka script chalao:
+
+```bash
+curl -O https://raw.githubusercontent.com/<tumhara-username>/RaftarVpn/main/server-setup/setup-openvpn.sh
+chmod +x setup-openvpn.sh
+sudo ./setup-openvpn.sh
+```
+
+Script khud sab kare ga: OpenVPN + easy-rsa install, certificates banana, server config,
+IP forwarding, firewall (NAT) rules. 2–4 minute lagte hain.
+
+## Step 5 — Apne liye client `.ovpn` file banao
+
+```bash
+sudo ./setup-openvpn.sh new-client mera-phone
+```
+
+Ye `/root/mera-phone.ovpn` bana de ga. Apne computer par lao:
+
+```bash
+sudo cat /root/mera-phone.ovpn
+```
+
+Output ko copy karke apne computer par `mera-phone.ovpn` file me save kar lo
+(ya `scp` se download kar lo).
+
+## Step 6 — Raftar VPN app me import karo
+
+1. App kholo → **"Mere Servers"** tab.
+2. **"File import karo"** dabao → `mera-phone.ovpn` select karo.
+   - Ya file ko kholo, text copy karo → **"Text paste karo"**.
+3. Server ki row par **Connect** dabao. Pehli dafa disclosure Accept karna parega.
+4. Ho gaya! Ab tumhara apna private VPN server chal raha hai.
+
+## Aik se zyada devices?
+
+Har device ke liye alag client banao (same server par):
+
+```bash
+sudo ./setup-openvpn.sh new-client dusra-phone
+```
+
+## Masla ho to
+
+- **Connect nahi ho raha:** Oracle Security List me UDP 1194 ingress rule dobara check karo,
+  aur server par `sudo systemctl status openvpn-server@server` dekho (active hona chahiye).
+- **Script dobara chalana:** `sudo ./setup-openvpn.sh` dobara chalana safe hai (purani
+  settings overwrite ho jati hain, clients dobara banane parenge).

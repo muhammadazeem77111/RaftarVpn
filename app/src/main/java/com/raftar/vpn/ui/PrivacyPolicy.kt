@@ -1,1 +1,36 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi51aQoKLyoqCiAqIFByaXZhY3kgUG9saWN5IOKAlCBQUklWQUNZX1BPTElDWS5tZCAocmVwbyByb290KSBrZSBtdXRhYmlxLgogKiBEb25vIG1lIHRhYmRlZWxpIGFpayBzYXRoIGthcm5hIChQbGF5IFN0b3JlIGxpc3RpbmcgaXNpIHRleHQga28gZGVraGUgZ2kpLgogKi8KdmFsIFBSSVZBQ1lfUE9MSUNZX1RFWFQgPSAiIiIKUmFmdGFyIFZQTiDigJQgUHJpdmFjeSBQb2xpY3kKTGFzdCB1cGRhdGVkOiBPY3RvYmVyIDIwMjYKCjEuIE5vIGFjY291bnRzLCBubyBwZXJzb25hbCBkYXRhClJhZnRhciBWUE4gcmVxdWlyZXMgbm8gc2lnbi11cCBhbmQgY29sbGVjdHMgbm8gbmFtZSwgZW1haWwsIHBob25lIG51bWJlciwgb3IgYW55IHBlcnNvbmFsbHkgaWRlbnRpZmlhYmxlIGluZm9ybWF0aW9uLgoKMi4gTm8gYnJvd3NpbmcgbG9ncwpUaGUgYXBwIG5ldmVyIHJlY29yZHMsIHN0b3Jlcywgb3IgdHJhbnNtaXRzIHlvdXIgYnJvd3NpbmcgaGlzdG9yeSwgdmlzaXRlZCBkb21haW5zLCBETlMgbG9va3Vwcywgb3IgdHJhZmZpYyBjb250ZW50cy4gVGhlcmUgaXMgbm8gYW5hbHl0aWNzIFNESyBhbmQgbm8gYWR2ZXJ0aXNpbmcgU0RLIGluIHRoZSBhcHAg4oCUIG5vdGhpbmcgdG8gcmVwb3J0IGJhY2sgdG8uCgozLiBIb3cgdGhlIFZQTiB3b3JrcwpXaGVuIHlvdSBjb25uZWN0LCBBbmRyb2lkIHJvdXRlcyB5b3VyIGludGVybmV0IHRyYWZmaWMgdGhyb3VnaCB0aGUgc2VsZWN0ZWQgVlBOIHNlcnZlciB1c2luZyBhbiBlbmNyeXB0ZWQgT3BlblZQTiB0dW5uZWwuIFRoaXMgaXMgdGhlIGVudGlyZSBmdW5jdGlvbiBvZiB0aGUgYXBwLgoKNC4gRnJlZSBzZXJ2ZXJzIChWUE4gR2F0ZSkKVGhlIGZyZWUgc2VydmVyIGxpc3QgY29tZXMgZnJvbSB0aGUgVlBOIEdhdGUgQWNhZGVtaWMgRXhwZXJpbWVudCBQcm9qZWN0IChVbml2ZXJzaXR5IG9mIFRzdWt1YmEsIEphcGFuKS4gVGhlc2Ugc2VydmVycyBhcmUgcnVuIGJ5IGluZGVwZW5kZW50IHZvbHVudGVlcnMgYXJvdW5kIHRoZSB3b3JsZC4gVm9sdW50ZWVyIG9wZXJhdG9ycyBtYXkga2VlcCB0aGVpciBvd24gb3BlcmF0aW9uYWwgY29ubmVjdGlvbiBsb2dzIGFjY29yZGluZyB0byB0aGVpciBjb25maWd1cmF0aW9ucyDigJQgc2VlIHRoZSBvZmZpY2lhbCBwb2xpY3kgYXQgaHR0cHM6Ly93d3cudnBuZ2F0ZS5uZXQvZW4vYWJvdXRfYWJ1c2UuYXNweC4gUmFmdGFyIFZQTiBpcyBhbiBpbmRlcGVuZGVudCBjbGllbnQgYW5kIGlzIG5vdCBhZmZpbGlhdGVkIHdpdGggdGhlIFVuaXZlcnNpdHkgb2YgVHN1a3ViYS4KCjUuIFlvdXIgb3duIHNlcnZlcnMgKCJNZXJlIFNlcnZlcnMiKQpQcml2YXRlIC5vdnBuIGNvbmZpZ3VyYXRpb25zIHlvdSBpbXBvcnQgKHBhc3RlLCBmaWxlLCBvciBRUikgYXJlIHN0b3JlZCBPTkxZIG9uIHlvdXIgZGV2aWNlLCBlbmNyeXB0ZWQgd2l0aCBFbmNyeXB0ZWRTaGFyZWRQcmVmZXJlbmNlcyAoQUVTLTI1NikuIFRoZXkgYXJlIG5ldmVyIHVwbG9hZGVkIGFueXdoZXJlLgoKNi4gUGVybWlzc2lvbnMgdXNlZAotIFZQTiAoVnBuU2VydmljZSk6IHRvIGVzdGFibGlzaCB0aGUgZW5jcnlwdGVkIHR1bm5lbCDigJQgY29yZSBmdW5jdGlvbmFsaXR5LgotIEludGVybmV0IC8gbmV0d29yayBzdGF0ZTogdG8gZmV0Y2ggdGhlIHNlcnZlciBsaXN0IGFuZCBjb25uZWN0LgotIE5vdGlmaWNhdGlvbnM6IHRvIHNob3cgVlBOIHN0YXR1cyBhbmQgR2FtaW5nIE1vZGUgcGluZy4KLSBDYW1lcmEgKG9wdGlvbmFsKTogb25seSB3aGVuIHlvdSBjaG9vc2UgIlNjYW4gUVIiIHRvIGltcG9ydCB5b3VyIG93biBzZXJ2ZXIgY29uZmlnLgoKNy4gQ2hhbmdlcwpJZiB0aGlzIHBvbGljeSBjaGFuZ2VzLCB0aGUgdXBkYXRlZCB0ZXh0IHdpbGwgc2hpcCBpbnNpZGUgdGhlIGFwcCBhbmQgaW4gdGhlIHJlcG9zaXRvcnkuCgpDb250YWN0OiBvcGVuIGFuIGlzc3VlIG9uIHRoZSBHaXRIdWIgcmVwb3NpdG9yeS4KIiIiLnRyaW1JbmRlbnQoKQo=
+package com.raftar.vpn.ui
+
+/**
+ * Privacy Policy — PRIVACY_POLICY.md (repo root) ke mutabiq.
+ * Dono me tabdeeli aik sath karna (Play Store listing isi text ko dekhe gi).
+ */
+val PRIVACY_POLICY_TEXT = """
+Raftar VPN — Privacy Policy
+Last updated: October 2026
+
+1. No accounts, no personal data
+Raftar VPN requires no sign-up and collects no name, email, phone number, or any personally identifiable information.
+
+2. No browsing logs
+The app never records, stores, or transmits your browsing history, visited domains, DNS lookups, or traffic contents. There is no analytics SDK and no advertising SDK in the app — nothing to report back to.
+
+3. How the VPN works
+When you connect, Android routes your internet traffic through the selected VPN server using an encrypted OpenVPN tunnel. This is the entire function of the app.
+
+4. Free servers (VPN Gate)
+The free server list comes from the VPN Gate Academic Experiment Project (University of Tsukuba, Japan). These servers are run by independent volunteers around the world. Volunteer operators may keep their own operational connection logs according to their configurations — see the official policy at https://www.vpngate.net/en/about_abuse.aspx. Raftar VPN is an independent client and is not affiliated with the University of Tsukuba.
+
+5. Your own servers ("Mere Servers")
+Private .ovpn configurations you import (paste, file, or QR) are stored ONLY on your device, encrypted with EncryptedSharedPreferences (AES-256). They are never uploaded anywhere.
+
+6. Permissions used
+- VPN (VpnService): to establish the encrypted tunnel — core functionality.
+- Internet / network state: to fetch the server list and connect.
+- Notifications: to show VPN status and Gaming Mode ping.
+- Camera (optional): only when you choose "Scan QR" to import your own server config.
+
+7. Changes
+If this policy changes, the updated text will ship inside the app and in the repository.
+
+Contact: open an issue on the GitHub repository.
+""".trimIndent()

@@ -1,1 +1,390 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi51aQoKaW1wb3J0IGFuZHJvaWQuYXBwLkFwcGxpY2F0aW9uCmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuQ29udGV4dAppbXBvcnQgYW5kcm9pZC5uZXQuVXJpCmltcG9ydCBhbmRyb2lkeC5saWZlY3ljbGUuQW5kcm9pZFZpZXdNb2RlbAppbXBvcnQgYW5kcm9pZHgubGlmZWN5Y2xlLnZpZXdNb2RlbFNjb3BlCmltcG9ydCBjb20ucmFmdGFyLnZwbi5kYXRhLkJsb2NrbGlzdFN0b3JlCmltcG9ydCBjb20ucmFmdGFyLnZwbi5kYXRhLlByaXZhdGVTZXJ2ZXIKaW1wb3J0IGNvbS5yYWZ0YXIudnBuLmRhdGEuUHJpdmF0ZVNlcnZlclN0b3JlCmltcG9ydCBjb20ucmFmdGFyLnZwbi5kYXRhLlZwbkdhdGVBcGkKaW1wb3J0IGNvbS5yYWZ0YXIudnBuLmRhdGEuVnBuU2VydmVyCmltcG9ydCBjb20ucmFmdGFyLnZwbi5kYXRhLmlzVmFsaWRPdnBuCmltcG9ydCBjb20ucmFmdGFyLnZwbi52cG4uVnBuQ29ubmVjdG9yCmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuRGlzcGF0Y2hlcnMKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5Kb2IKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5hc3luYwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmF3YWl0QWxsCmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuY29yb3V0aW5lU2NvcGUKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5kZWxheQppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cuTXV0YWJsZVN0YXRlRmxvdwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cuU3RhdGVGbG93CmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuZmxvdy5hc1N0YXRlRmxvdwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmlzQWN0aXZlCmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMubGF1bmNoCmltcG9ydCBqYXZhLnV0aWwuQ29sbGVjdGlvbnMKCmRhdGEgY2xhc3MgUmFjZVJlc3VsdCh2YWwgc2VydmVyOiBWcG5TZXJ2ZXIsIHZhbCBtczogTG9uZz8pCgpzZWFsZWQgaW50ZXJmYWNlIFJhY2VTdGF0ZSB7CiAgICBkYXRhIG9iamVjdCBJZGxlIDogUmFjZVN0YXRlCiAgICBkYXRhIGNsYXNzIFJ1bm5pbmcodmFsIHJlc3VsdHM6IExpc3Q8UmFjZVJlc3VsdD4pIDogUmFjZVN0YXRlCiAgICBkYXRhIGNsYXNzIERvbmUodmFsIHdpbm5lcjogVnBuU2VydmVyPykgOiBSYWNlU3RhdGUKfQoKY2xhc3MgTWFpblZpZXdNb2RlbChhcHA6IEFwcGxpY2F0aW9uKSA6IEFuZHJvaWRWaWV3TW9kZWwoYXBwKSB7CgogICAgcHJpdmF0ZSB2YWwgY3R4ID0gYXBwLmFwcGxpY2F0aW9uQ29udGV4dAogICAgcHJpdmF0ZSB2YWwgYXBpID0gVnBuR2F0ZUFwaShjdHgpCiAgICBwcml2YXRlIHZhbCBwcml2YXRlU3RvcmUgPSBQcml2YXRlU2VydmVyU3RvcmUoY3R4KQogICAgcHJpdmF0ZSB2YWwgYmxvY2tsaXN0ID0gQmxvY2tsaXN0U3RvcmUoY3R4KQogICAgcHJpdmF0ZSB2YWwgZ2FtZU5vdGlmID0gR2FtZU5vdGlmaWNhdGlvbihjdHgpCiAgICBwcml2YXRlIHZhbCBzZXR0aW5ncyA9IGN0eC5nZXRTaGFyZWRQcmVmZXJlbmNlcygicmFmdGFyX3NldHRpbmdzIiwgQ29udGV4dC5NT0RFX1BSSVZBVEUpCiAgICB2YWwgY29ubmVjdG9yID0gVnBuQ29ubmVjdG9yKGN0eCkKCiAgICAvLyAtLS0tIGZyZWUgc2VydmVycyAtLS0tCiAgICBwcml2YXRlIHZhbCBfc2VydmVycyA9IE11dGFibGVTdGF0ZUZsb3c8TGlzdDxWcG5TZXJ2ZXI+PihlbXB0eUxpc3QoKSkKICAgIHZhbCBzZXJ2ZXJzOiBTdGF0ZUZsb3c8TGlzdDxWcG5TZXJ2ZXI+PiA9IF9zZXJ2ZXJzLmFzU3RhdGVGbG93KCkKCiAgICAvKiogU2NvcmUgZGVzYywgcGhpciBwaW5nIGFzYy4gQmxvY2tlZCAodXNlci1yZXBvcnRlZCkgc2VydmVycyBwZWhsZSBzZSBuaWtsZSBodWUuIEtvaSBjYXAgbmFoaS4gKi8KICAgIHByaXZhdGUgdmFsIF9yYW5rZWQgPSBNdXRhYmxlU3RhdGVGbG93PExpc3Q8VnBuU2VydmVyPj4oZW1wdHlMaXN0KCkpCiAgICB2YWwgcmFua2VkOiBTdGF0ZUZsb3c8TGlzdDxWcG5TZXJ2ZXI+PiA9IF9yYW5rZWQuYXNTdGF0ZUZsb3coKQoKICAgIC8qKiBzZXJ2ZXIuaWQgLT4gVENQIHJlYWNoYWJsZSAoc2Vzc2lvbiBjYWNoZTsgbnVsbCA9IGFiaGkgY2hlY2sgbmFoaSBodWEpLiAqLwogICAgcHJpdmF0ZSB2YWwgX3JlYWNoYWJpbGl0eSA9IE11dGFibGVTdGF0ZUZsb3c8TWFwPFN0cmluZywgQm9vbGVhbj4+KGVtcHR5TWFwKCkpCiAgICB2YWwgcmVhY2hhYmlsaXR5OiBTdGF0ZUZsb3c8TWFwPFN0cmluZywgQm9vbGVhbj4+ID0gX3JlYWNoYWJpbGl0eS5hc1N0YXRlRmxvdygpCgogICAgcHJpdmF0ZSB2YWwgX3Byb2JpbmcgPSBNdXRhYmxlU3RhdGVGbG93KGZhbHNlKQogICAgdmFsIHByb2Jpbmc6IFN0YXRlRmxvdzxCb29sZWFuPiA9IF9wcm9iaW5nLmFzU3RhdGVGbG93KCkKCiAgICBwcml2YXRlIHZhbCBfbG9hZGluZyA9IE11dGFibGVTdGF0ZUZsb3coZmFsc2UpCiAgICB2YWwgbG9hZGluZzogU3RhdGVGbG93PEJvb2xlYW4+ID0gX2xvYWRpbmcuYXNTdGF0ZUZsb3coKQoKICAgIHByaXZhdGUgdmFsIF9maW5kaW5nQmVzdCA9IE11dGFibGVTdGF0ZUZsb3coZmFsc2UpCiAgICB2YWwgZmluZGluZ0Jlc3Q6IFN0YXRlRmxvdzxCb29sZWFuPiA9IF9maW5kaW5nQmVzdC5hc1N0YXRlRmxvdygpCgogICAgcHJpdmF0ZSB2YWwgX3NlbGVjdGVkID0gTXV0YWJsZVN0YXRlRmxvdzxWcG5TZXJ2ZXI/PihudWxsKQogICAgdmFsIHNlbGVjdGVkOiBTdGF0ZUZsb3c8VnBuU2VydmVyPz4gPSBfc2VsZWN0ZWQuYXNTdGF0ZUZsb3coKQoKICAgIHByaXZhdGUgdmFsIF9ub3RpY2UgPSBNdXRhYmxlU3RhdGVGbG93PFN0cmluZz8+KG51bGwpCiAgICB2YWwgbm90aWNlOiBTdGF0ZUZsb3c8U3RyaW5nPz4gPSBfbm90aWNlLmFzU3RhdGVGbG93KCkKCiAgICBwcml2YXRlIHZhbCBfcXVlcnkgPSBNdXRhYmxlU3RhdGVGbG93KCIiKQogICAgdmFsIHF1ZXJ5OiBTdGF0ZUZsb3c8U3RyaW5nPiA9IF9xdWVyeS5hc1N0YXRlRmxvdygpCgogICAgLy8gLS0tLSByYWZ0YXIgcmFjZSAtLS0tCiAgICBwcml2YXRlIHZhbCBfcmFjZSA9IE11dGFibGVTdGF0ZUZsb3c8UmFjZVN0YXRlPihSYWNlU3RhdGUuSWRsZSkKICAgIHZhbCByYWNlOiBTdGF0ZUZsb3c8UmFjZVN0YXRlPiA9IF9yYWNlLmFzU3RhdGVGbG93KCkKCiAgICAvLyAtLS0tIGdhbWluZyBtb2RlIC0tLS0KICAgIHByaXZhdGUgdmFsIF9nYW1pbmcgPSBNdXRhYmxlU3RhdGVGbG93KGZhbHNlKQogICAgdmFsIGdhbWluZzogU3RhdGVGbG93PEJvb2xlYW4+ID0gX2dhbWluZy5hc1N0YXRlRmxvdygpCgogICAgcHJpdmF0ZSB2YWwgX2dhbWVQaW5nID0gTXV0YWJsZVN0YXRlRmxvdzxMb25nPz4obnVsbCkKICAgIHZhbCBnYW1lUGluZzogU3RhdGVGbG93PExvbmc/PiA9IF9nYW1lUGluZy5hc1N0YXRlRmxvdygpCgogICAgcHJpdmF0ZSB2YXIgcGluZ0pvYjogSm9iPyA9IG51bGwKCiAgICAvLyAtLS0tIHByaXZhdGUgc2VydmVycyAtLS0tCiAgICBwcml2YXRlIHZhbCBfcHJpdmF0ZVNlcnZlcnMgPSBNdXRhYmxlU3RhdGVGbG93KHByaXZhdGVTdG9yZS5saXN0KCkpCiAgICB2YWwgcHJpdmF0ZVNlcnZlcnM6IFN0YXRlRmxvdzxMaXN0PFByaXZhdGVTZXJ2ZXI+PiA9IF9wcml2YXRlU2VydmVycy5hc1N0YXRlRmxvdygpCgogICAgLy8gLS0tLSBkaXNjbG9zdXJlIC0tLS0KICAgIHByaXZhdGUgdmFsIF9zaG93RGlzY2xvc3VyZSA9IE11dGFibGVTdGF0ZUZsb3coZmFsc2UpCiAgICB2YWwgc2hvd0Rpc2Nsb3N1cmU6IFN0YXRlRmxvdzxCb29sZWFuPiA9IF9zaG93RGlzY2xvc3VyZS5hc1N0YXRlRmxvdygpCiAgICBwcml2YXRlIHZhciBwZW5kaW5nQ29ubmVjdEFjdGlvbjogKCgpIC0+IFVuaXQpPyA9IG51bGwKCiAgICB2YWwgdnBuU3RhdGU6IFN0YXRlRmxvdzxWcG5Db25uZWN0b3IuVnBuU3RhdGU+ID0gY29ubmVjdG9yLnN0YXRlCgogICAgaW5pdCB7CiAgICAgICAgU3RyaW5ncy5jdXJyZW50ID0KICAgICAgICAgICAgaWYgKHNldHRpbmdzLmdldFN0cmluZygibGFuZyIsICJ1ciIpID09ICJlbiIpIFN0cmluZ3MuTGFuZy5FTiBlbHNlIFN0cmluZ3MuTGFuZy5VUgogICAgICAgIHJlZnJlc2goYXV0byA9IHRydWUpCiAgICAgICAgLy8gR2FtaW5nIHBpbmcgbW9uaXRvciBsaWZlY3ljbGU6IGNvbm5lY3QgcGFyIHN0YXJ0LCBkaXNjb25uZWN0IHBhciBzdG9wLgogICAgICAgIHZpZXdNb2RlbFNjb3BlLmxhdW5jaCB7CiAgICAgICAgICAgIGNvbm5lY3Rvci5zdGF0ZS5jb2xsZWN0IHsgc3QgLT4KICAgICAgICAgICAgICAgIHdoZW4gKHN0KSB7CiAgICAgICAgICAgICAgICAgICAgaXMgVnBuQ29ubmVjdG9yLlZwblN0YXRlLkNvbm5lY3RlZCAtPiBpZiAoX2dhbWluZy52YWx1ZSkgc3RhcnRQaW5nTW9uaXRvcihzdC5zZXJ2ZXIpCiAgICAgICAgICAgICAgICAgICAgaXMgVnBuQ29ubmVjdG9yLlZwblN0YXRlLkRpc2Nvbm5lY3RlZCwKICAgICAgICAgICAgICAgICAgICBpcyBWcG5Db25uZWN0b3IuVnBuU3RhdGUuRmFpbGVkLAogICAgICAgICAgICAgICAgICAgIGlzIFZwbkNvbm5lY3Rvci5WcG5TdGF0ZS5JZGxlIC0+IHsKICAgICAgICAgICAgICAgICAgICAgICAgX2dhbWluZy52YWx1ZSA9IGZhbHNlCiAgICAgICAgICAgICAgICAgICAgICAgIHN0b3BQaW5nTW9uaXRvcigpCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIGVsc2UgLT4gVW5pdAogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PSBsYW5ndWFnZSA9PT09PT09PT09PT0KCiAgICBmdW4gdG9nZ2xlTGFuZygpIHsKICAgICAgICB2YWwgbmV4dCA9IGlmIChTdHJpbmdzLmN1cnJlbnQgPT0gU3RyaW5ncy5MYW5nLlVSKSBTdHJpbmdzLkxhbmcuRU4gZWxzZSBTdHJpbmdzLkxhbmcuVVIKICAgICAgICBTdHJpbmdzLmN1cnJlbnQgPSBuZXh0CiAgICAgICAgc2V0dGluZ3MuZWRpdCgpLnB1dFN0cmluZygibGFuZyIsIGlmIChuZXh0ID09IFN0cmluZ3MuTGFuZy5FTikgImVuIiBlbHNlICJ1ciIpLmFwcGx5KCkKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT0gZGlzY2xvc3VyZSA9PT09PT09PT09PT0KCiAgICAvKiogUGVobGkgY29ubmVjdCBhdHRlbXB0IHBhciBwcm9taW5lbnQgZGlzY2xvc3VyZSDigJQgQWNjZXB0IGtlIGJhZ2hhaXIgYWFnYXkgbmFoaS4gKi8KICAgIGZ1biByZXF1ZXN0Q29ubmVjdChhY3Rpb246ICgpIC0+IFVuaXQpIHsKICAgICAgICBpZiAoc2V0dGluZ3MuZ2V0Qm9vbGVhbigiZGlzY2xvc3VyZV9vayIsIGZhbHNlKSkgewogICAgICAgICAgICBhY3Rpb24oKQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHBlbmRpbmdDb25uZWN0QWN0aW9uID0gYWN0aW9uCiAgICAgICAgICAgIF9zaG93RGlzY2xvc3VyZS52YWx1ZSA9IHRydWUKICAgICAgICB9CiAgICB9CgogICAgZnVuIGFjY2VwdERpc2Nsb3N1cmUoKSB7CiAgICAgICAgc2V0dGluZ3MuZWRpdCgpLnB1dEJvb2xlYW4oImRpc2Nsb3N1cmVfb2siLCB0cnVlKS5hcHBseSgpCiAgICAgICAgX3Nob3dEaXNjbG9zdXJlLnZhbHVlID0gZmFsc2UKICAgICAgICBwZW5kaW5nQ29ubmVjdEFjdGlvbj8uaW52b2tlKCkKICAgICAgICBwZW5kaW5nQ29ubmVjdEFjdGlvbiA9IG51bGwKICAgIH0KCiAgICBmdW4gZGVjbGluZURpc2Nsb3N1cmUoKSB7CiAgICAgICAgX3Nob3dEaXNjbG9zdXJlLnZhbHVlID0gZmFsc2UKICAgICAgICBwZW5kaW5nQ29ubmVjdEFjdGlvbiA9IG51bGwKICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJkZWNsaW5lZCIpCiAgICB9CgogICAgLy8gPT09PT09PT09PT09IHNlcnZlciBsaXN0ID09PT09PT09PT09PQoKICAgIC8qKiBQZWhsZSBjYWNoZSBkaWtoYW8gKGZvcmFuKSwgcGhpciBiYWNrZ3JvdW5kIG1lIHRhemEgbGlzdC4gS2FiaGkgZmFrZSBsaXN0IG5haGkuICovCiAgICBmdW4gcmVmcmVzaChhdXRvOiBCb29sZWFuID0gZmFsc2UpIHsKICAgICAgICB2aWV3TW9kZWxTY29wZS5sYXVuY2ggewogICAgICAgICAgICBpZiAoIWF1dG8pIF9sb2FkaW5nLnZhbHVlID0gdHJ1ZQogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgdmFsIGNhY2hlZCA9IGFwaS5sb2FkQ2FjaGVkKCkKICAgICAgICAgICAgICAgIGlmIChjYWNoZWQuaXNOb3RFbXB0eSgpICYmIF9zZXJ2ZXJzLnZhbHVlLmlzRW1wdHkoKSkgYXBwbHlMaXN0KGNhY2hlZCkKICAgICAgICAgICAgICAgIHZhbCBmcmVzaCA9IGFwaS5mZXRjaEZyZXNoKCkKICAgICAgICAgICAgICAgIGFwcGx5TGlzdChmcmVzaCkKICAgICAgICAgICAgfSBjYXRjaCAoZTogRXhjZXB0aW9uKSB7CiAgICAgICAgICAgICAgICBpZiAoX3NlcnZlcnMudmFsdWUuaXNFbXB0eSgpKSB7CiAgICAgICAgICAgICAgICAgICAgLy8gS2hhYWxpIGhhYXRoOiBob25lc3QgZXJyb3IsIHJldHJ5IGthIG9wdGlvbiDigJQgZmFrZSBsaXN0IGthYmhpIG5haGkuCiAgICAgICAgICAgICAgICAgICAgX25vdGljZS52YWx1ZSA9IGUubWVzc2FnZSA/OiBTdHJpbmdzLnQoIm5vdGljZU5lZWRMaXN0IikKICAgICAgICAgICAgICAgIH0gZWxzZSBpZiAoIWF1dG8pIHsKICAgICAgICAgICAgICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJub3RpY2VSZWZyZXNoRmFpbCIpCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0gZmluYWxseSB7CiAgICAgICAgICAgICAgICBfbG9hZGluZy52YWx1ZSA9IGZhbHNlCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBmdW4gYXBwbHlMaXN0KGxpc3Q6IExpc3Q8VnBuU2VydmVyPikgewogICAgICAgIHZhbCB2aXNpYmxlID0gbGlzdC5maWx0ZXIgeyAhYmxvY2tsaXN0LmlzQmxvY2tlZChpdC5pZCkgfQogICAgICAgIF9zZXJ2ZXJzLnZhbHVlID0gdmlzaWJsZQogICAgICAgIF9yYW5rZWQudmFsdWUgPSBhcGkucmFuayh2aXNpYmxlKQogICAgICAgIGlmIChfc2VsZWN0ZWQudmFsdWUgPT0gbnVsbCkgX3NlbGVjdGVkLnZhbHVlID0gX3JhbmtlZC52YWx1ZS5maXJzdE9yTnVsbCgpCiAgICAgICAgcHJvYmVUb3BTZXJ2ZXJzKCkKICAgIH0KCiAgICAvKioKICAgICAqIFRvcCAyMCByYW5rZWQgc2VydmVycyBraSBUQ1AgcmVhY2hhYmlsaXR5IGJhY2tncm91bmQgbWUgY2hlY2sga2Fyby4KICAgICAqIEZhaWwgaG9uZSB3YWxhID0gaXMgbmV0d29yayBwYXIgYmxvY2tlZC9kZWFkID0gcmVjb21tZW5kZWQgc2UgYmFoYXIgKyBkaW1tZWQuCiAgICAgKi8KICAgIHByaXZhdGUgZnVuIHByb2JlVG9wU2VydmVycygpIHsKICAgICAgICB2YWwgdGFyZ2V0cyA9IF9yYW5rZWQudmFsdWUuZmlsdGVyIHsgaXQuaWQgIWluIF9yZWFjaGFiaWxpdHkudmFsdWUgfS50YWtlKDIwKQogICAgICAgIGlmICh0YXJnZXRzLmlzRW1wdHkoKSkgcmV0dXJuCiAgICAgICAgdmlld01vZGVsU2NvcGUubGF1bmNoIHsKICAgICAgICAgICAgX3Byb2JpbmcudmFsdWUgPSB0cnVlCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICB2YWwgcmVzdWx0cyA9IHRhcmdldHMubWFwIHsgcyAtPiBhc3luYyB7IHMuaWQgdG8gYXBpLmNoZWNrVGNwUmVhY2hhYmxlKHMpIH0gfS5hd2FpdEFsbCgpCiAgICAgICAgICAgICAgICBfcmVhY2hhYmlsaXR5LnZhbHVlID0gX3JlYWNoYWJpbGl0eS52YWx1ZSArIHJlc3VsdHMudG9NYXAoKQogICAgICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICAgICAgX3Byb2JpbmcudmFsdWUgPSBmYWxzZQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIGZ1biBzZXRRdWVyeShxOiBTdHJpbmcpIHsKICAgICAgICBfcXVlcnkudmFsdWUgPSBxCiAgICB9CgogICAgZnVuIHNlbGVjdChzZXJ2ZXI6IFZwblNlcnZlcikgewogICAgICAgIF9zZWxlY3RlZC52YWx1ZSA9IHNlcnZlcgogICAgfQoKICAgIC8qKiBMb25nLXByZXNzOiB1c2VyIG5lIGtoYXJhYiBzZXJ2ZXIgcmVwb3J0IGtpeWEg4oCUIGlzIHVzZXIga2UgbGl5ZSBoYW1lc2hhIGtlIGxpeWUgYmFoYXIuICovCiAgICBmdW4gcmVwb3J0QmFkKHNlcnZlcjogVnBuU2VydmVyKSB7CiAgICAgICAgYmxvY2tsaXN0LmJsb2NrKHNlcnZlci5pZCkKICAgICAgICBfc2VydmVycy52YWx1ZSA9IF9zZXJ2ZXJzLnZhbHVlLmZpbHRlciB7IGl0LmlkICE9IHNlcnZlci5pZCB9CiAgICAgICAgX3JhbmtlZC52YWx1ZSA9IF9yYW5rZWQudmFsdWUuZmlsdGVyIHsgaXQuaWQgIT0gc2VydmVyLmlkIH0KICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJyZXBvcnRlZEJhZCIpCiAgICB9CgogICAgZnVuIHBvc3ROb3RpY2UobXNnOiBTdHJpbmcpIHsKICAgICAgICBfbm90aWNlLnZhbHVlID0gbXNnCiAgICB9CgogICAgLy8gPT09PT09PT09PT09IHJhZnRhciByYWNlID09PT09PT09PT09PQoKICAgIC8qKgogICAgICogUGFyYWxsZWwgVENQLWNvbm5lY3QgcmFjZSAodG9wIH4xMiBjYW5kaWRhdGVzKS4gTGl2ZSByYW5rZWQgcmVzdWx0cyBfcmFjZSBtZSwKICAgICAqIHdpbm5lciByZXR1cm4gaG90YSBoYWkuIEhhciByZXN1bHQgcmVhY2hhYmlsaXR5IGNhY2hlIG1lIGJoaSBqYXRhIGhhaS4KICAgICAqLwogICAgcHJpdmF0ZSBzdXNwZW5kIGZ1biByYWNlU2VydmVycyhjYW5kaWRhdGVzOiBMaXN0PFZwblNlcnZlcj4pOiBWcG5TZXJ2ZXI/ID0gY29yb3V0aW5lU2NvcGUgewogICAgICAgIF9yYWNlLnZhbHVlID0gUmFjZVN0YXRlLlJ1bm5pbmcoZW1wdHlMaXN0KCkpCiAgICAgICAgdmFsIGFjYyA9IENvbGxlY3Rpb25zLnN5bmNocm9uaXplZExpc3QobXV0YWJsZUxpc3RPZjxSYWNlUmVzdWx0PigpKQogICAgICAgIGNhbmRpZGF0ZXMubWFwIHsgcyAtPgogICAgICAgICAgICBhc3luYyhEaXNwYXRjaGVycy5JTykgewogICAgICAgICAgICAgICAgdmFsIG1zID0gYXBpLm1lYXN1cmVUY3AocykKICAgICAgICAgICAgICAgIHZhbCByID0gUmFjZVJlc3VsdChzLCBtcykKICAgICAgICAgICAgICAgIHN5bmNocm9uaXplZChhY2MpIHsKICAgICAgICAgICAgICAgICAgICBhY2MuYWRkKHIpCiAgICAgICAgICAgICAgICAgICAgYWNjLnNvcnRXaXRoKGNvbXBhcmVCeTxSYWNlUmVzdWx0PiB7IGl0Lm1zID86IExvbmcuTUFYX1ZBTFVFIH0pCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBfcmFjZS52YWx1ZSA9IFJhY2VTdGF0ZS5SdW5uaW5nKGFjYy50b0xpc3QoKSkKICAgICAgICAgICAgICAgIF9yZWFjaGFiaWxpdHkudmFsdWUgPSBfcmVhY2hhYmlsaXR5LnZhbHVlICsgKHMuaWQgdG8gKG1zICE9IG51bGwpKQogICAgICAgICAgICAgICAgcgogICAgICAgICAgICB9CiAgICAgICAgfS5hd2FpdEFsbCgpCiAgICAgICAgdmFsIHdpbm5lciA9IGFjYy5maXJzdE9yTnVsbCB7IGl0Lm1zICE9IG51bGwgfT8uc2VydmVyCiAgICAgICAgX3JhY2UudmFsdWUgPSBSYWNlU3RhdGUuRG9uZSh3aW5uZXIpCiAgICAgICAgLy8gUmVzdWx0IGNhcmQga3VjaCBzZWNvbmQgZGlraGEga2FyIGF1dG8taGlkZSAoY29ubmVjdCBtZSB0YWtoZWVyIG5hIGhvIOKAlAogICAgICAgIC8vIGlzIGxpeWUgdmlld01vZGVsU2NvcGUgbWUsIGlzIHJhY2Uga2Ugc2NvcGUgbWUgbmFoaSkuCiAgICAgICAgdmlld01vZGVsU2NvcGUubGF1bmNoIHsKICAgICAgICAgICAgZGVsYXkoODAwMCkKICAgICAgICAgICAgaWYgKF9yYWNlLnZhbHVlIGlzIFJhY2VTdGF0ZS5Eb25lKSBfcmFjZS52YWx1ZSA9IFJhY2VTdGF0ZS5JZGxlCiAgICAgICAgfQogICAgICAgIHdpbm5lcgogICAgfQoKICAgIC8qKiAiQmVzdCBTZXJ2ZXIg4oCUIEF1dG8gQ29ubmVjdCI6IHJhY2Uga2FyYW8sIHdpbm5lciBrbyBjb25uZWN0IGthcm8uICovCiAgICBmdW4gYXV0b0Nvbm5lY3RCZXN0KCkgewogICAgICAgIGlmIChfcmFua2VkLnZhbHVlLmlzRW1wdHkoKSkgewogICAgICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJub3RpY2VOZWVkTGlzdCIpCiAgICAgICAgICAgIHJldHVybgogICAgICAgIH0KICAgICAgICB2aWV3TW9kZWxTY29wZS5sYXVuY2ggewogICAgICAgICAgICBfZmluZGluZ0Jlc3QudmFsdWUgPSB0cnVlCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICB2YWwgY2FuZGlkYXRlcyA9IF9yYW5rZWQudmFsdWUuZmlsdGVyIHsgYXBpLmlzUmVjb21tZW5kZWQoaXQpIH0udGFrZSgxMikKICAgICAgICAgICAgICAgICAgICAuaWZFbXB0eSB7IF9yYW5rZWQudmFsdWUudGFrZSgxMikgfQogICAgICAgICAgICAgICAgdmFsIHdpbm5lciA9IHJhY2VTZXJ2ZXJzKGNhbmRpZGF0ZXMpCiAgICAgICAgICAgICAgICBpZiAod2lubmVyID09IG51bGwpIHsKICAgICAgICAgICAgICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJub3RpY2VOb1NlcnZlciIpCiAgICAgICAgICAgICAgICAgICAgcmV0dXJuQGxhdW5jaAogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgX3NlbGVjdGVkLnZhbHVlID0gd2lubmVyCiAgICAgICAgICAgICAgICBzdGFydENvbm5lY3Qod2lubmVyKQogICAgICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICAgICAgX2ZpbmRpbmdCZXN0LnZhbHVlID0gZmFsc2UKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT0gZ2FtaW5nIG1vZGUgPT09PT09PT09PT09CgogICAgLyoqIExvd2VzdC1waW5nIHJlYWNoYWJsZSBzZXJ2ZXIgY2h1bm8sIGNvbm5lY3Qga2FybywgbGl2ZSBwaW5nIGRpa2hhby4gKi8KICAgIGZ1biBzdGFydEdhbWluZ01vZGUoKSB7CiAgICAgICAgaWYgKF9yYW5rZWQudmFsdWUuaXNFbXB0eSgpKSB7CiAgICAgICAgICAgIF9ub3RpY2UudmFsdWUgPSBTdHJpbmdzLnQoIm5vdGljZU5lZWRMaXN0IikKICAgICAgICAgICAgcmV0dXJuCiAgICAgICAgfQogICAgICAgIHZpZXdNb2RlbFNjb3BlLmxhdW5jaCB7CiAgICAgICAgICAgIF9maW5kaW5nQmVzdC52YWx1ZSA9IHRydWUKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIHZhbCBjYW5kaWRhdGVzID0gX3JhbmtlZC52YWx1ZS5maWx0ZXIgeyBhcGkuaXNSZWNvbW1lbmRlZChpdCkgfQogICAgICAgICAgICAgICAgICAgIC5zb3J0ZWRCeSB7IGl0LnBpbmdNcyB9LnRha2UoMTIpCiAgICAgICAgICAgICAgICAgICAgLmlmRW1wdHkgeyBfcmFua2VkLnZhbHVlLnNvcnRlZEJ5IHsgaXQucGluZ01zIH0udGFrZSgxMikgfQogICAgICAgICAgICAgICAgdmFsIHdpbm5lciA9IHJhY2VTZXJ2ZXJzKGNhbmRpZGF0ZXMpCiAgICAgICAgICAgICAgICBpZiAod2lubmVyID09IG51bGwpIHsKICAgICAgICAgICAgICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJub3RpY2VOb1NlcnZlciIpCiAgICAgICAgICAgICAgICAgICAgcmV0dXJuQGxhdW5jaAogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgX2dhbWluZy52YWx1ZSA9IHRydWUKICAgICAgICAgICAgICAgIF9zZWxlY3RlZC52YWx1ZSA9IHdpbm5lcgogICAgICAgICAgICAgICAgc3RhcnRDb25uZWN0KHdpbm5lcikKICAgICAgICAgICAgICAgIHN0YXJ0UGluZ01vbml0b3Iod2lubmVyKQogICAgICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICAgICAgX2ZpbmRpbmdCZXN0LnZhbHVlID0gZmFsc2UKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIGZ1biBzdGFydFBpbmdNb25pdG9yKHNlcnZlcjogVnBuU2VydmVyKSB7CiAgICAgICAgaWYgKHBpbmdKb2I/LmlzQWN0aXZlID09IHRydWUpIHJldHVybgogICAgICAgIHBpbmdKb2IgPSB2aWV3TW9kZWxTY29wZS5sYXVuY2ggewogICAgICAgICAgICB3aGlsZSAoaXNBY3RpdmUpIHsKICAgICAgICAgICAgICAgIHZhbCBtcyA9IGFwaS5tZWFzdXJlVGNwKHNlcnZlcikKICAgICAgICAgICAgICAgIF9nYW1lUGluZy52YWx1ZSA9IG1zCiAgICAgICAgICAgICAgICBnYW1lTm90aWYuc2hvdyhtcykKICAgICAgICAgICAgICAgIGRlbGF5KDEwXzAwMCkKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIGZ1biBzdG9wUGluZ01vbml0b3IoKSB7CiAgICAgICAgcGluZ0pvYj8uY2FuY2VsKCkKICAgICAgICBwaW5nSm9iID0gbnVsbAogICAgICAgIF9nYW1lUGluZy52YWx1ZSA9IG51bGwKICAgICAgICBnYW1lTm90aWYuY2FuY2VsKCkKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT0gY29ubmVjdCA9PT09PT09PT09PT0KCiAgICAvKiogUGVybWlzc2lvbiArIGRpc2Nsb3N1cmUga2UgYmFhZCBzZWxlY3RlZCBzZXJ2ZXIgcGFyIGNvbm5lY3QuICovCiAgICBmdW4gdXNlclN0YXJ0Q29ubmVjdCgpIHsKICAgICAgICB2YWwgc2VydmVyID0gX3NlbGVjdGVkLnZhbHVlID86IF9yYW5rZWQudmFsdWUuZmlyc3RPck51bGwoKQogICAgICAgIGlmIChzZXJ2ZXIgPT0gbnVsbCkgewogICAgICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJub3RpY2VOZWVkTGlzdCIpCiAgICAgICAgICAgIHJldHVybgogICAgICAgIH0KICAgICAgICBfc2VsZWN0ZWQudmFsdWUgPSBzZXJ2ZXIKICAgICAgICBzdGFydENvbm5lY3Qoc2VydmVyKQogICAgfQoKICAgIHByaXZhdGUgZnVuIHN0YXJ0Q29ubmVjdChzZXJ2ZXI6IFZwblNlcnZlcikgewogICAgICAgIGNvbm5lY3Rvci5jbGVhckRlYWRTZXJ2ZXJzKCkKICAgICAgICAvLyBTZWxlY3RlZC9iZXN0IHNlcnZlciBwZWhsZSwgYmFxaSByYW5rLW9yZGVyIG1lIGZhaWxvdmVyIGNhbmRpZGF0ZXMuCiAgICAgICAgdmFsIG9yZGVyZWQgPSBsaXN0T2Yoc2VydmVyKSArIF9yYW5rZWQudmFsdWUuZmlsdGVyIHsgaXQuaWQgIT0gc2VydmVyLmlkIH0KICAgICAgICBjb25uZWN0b3IuY29ubmVjdChvcmRlcmVkLCBhcGk6OmRlY29kZUNvbmZpZykKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT0gcHJpdmF0ZSBzZXJ2ZXJzID09PT09PT09PT09PQoKICAgIGZ1biBpbXBvcnRQcml2YXRlVGV4dCh0ZXh0OiBTdHJpbmcsIG5hbWU6IFN0cmluZykgewogICAgICAgIHZhbCBjbGVhbiA9IHRleHQudHJpbSgpCiAgICAgICAgaWYgKCFpc1ZhbGlkT3ZwbihjbGVhbikpIHsKICAgICAgICAgICAgX25vdGljZS52YWx1ZSA9IFN0cmluZ3MudCgiaW52YWxpZENvbmZpZyIpCiAgICAgICAgICAgIHJldHVybgogICAgICAgIH0KICAgICAgICBwcml2YXRlU3RvcmUuYWRkKG5hbWUuaWZCbGFuayB7ICJTZXJ2ZXIiIH0sIGNsZWFuKQogICAgICAgIF9wcml2YXRlU2VydmVycy52YWx1ZSA9IHByaXZhdGVTdG9yZS5saXN0KCkKICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJwcml2YXRlQWRkZWQiKQogICAgfQoKICAgIGZ1biBpbXBvcnRQcml2YXRlRmlsZSh1cmk6IFVyaSkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHZhbCB0ZXh0ID0gY3R4LmNvbnRlbnRSZXNvbHZlci5vcGVuSW5wdXRTdHJlYW0odXJpKT8uYnVmZmVyZWRSZWFkZXIoKT8ucmVhZFRleHQoKS5vckVtcHR5KCkKICAgICAgICAgICAgdmFsIG5hbWUgPSB1cmkubGFzdFBhdGhTZWdtZW50Py5zdWJzdHJpbmdBZnRlckxhc3QoJy8nKT8udGFrZUlmIHsgaXQuaXNOb3RCbGFuaygpIH0gPzogIkltcG9ydGVkIgogICAgICAgICAgICBpbXBvcnRQcml2YXRlVGV4dCh0ZXh0LCBuYW1lKQogICAgICAgIH0gY2F0Y2ggKF86IEV4Y2VwdGlvbikgewogICAgICAgICAgICBfbm90aWNlLnZhbHVlID0gU3RyaW5ncy50KCJmaWxlUmVhZEVycm9yIikKICAgICAgICB9CiAgICB9CgogICAgZnVuIGRlbGV0ZVByaXZhdGUoaWQ6IFN0cmluZykgewogICAgICAgIHByaXZhdGVTdG9yZS5yZW1vdmUoaWQpCiAgICAgICAgX3ByaXZhdGVTZXJ2ZXJzLnZhbHVlID0gcHJpdmF0ZVN0b3JlLmxpc3QoKQogICAgICAgIF9ub3RpY2UudmFsdWUgPSBTdHJpbmdzLnQoInByaXZhdGVEZWxldGVkIikKICAgIH0KCiAgICBmdW4gY29ubmVjdFByaXZhdGUoc2VydmVyOiBQcml2YXRlU2VydmVyKSB7CiAgICAgICAgY29ubmVjdG9yLmNvbm5lY3RQcml2YXRlKHNlcnZlci5uYW1lLCBzZXJ2ZXIuY29uZmlnKQogICAgfQoKICAgIGZ1biBjb25zdW1lTm90aWNlKCkgewogICAgICAgIF9ub3RpY2UudmFsdWUgPSBudWxsCiAgICB9CgogICAgLyoqIFZwblNlcnZpY2UucHJlcGFyZSgpIHN5c3RlbSBkaWFsb2cgZGVueSBob25lIHBhci4gKi8KICAgIGZ1biBvblBlcm1pc3Npb25EZW5pZWQoKSB7CiAgICAgICAgX25vdGljZS52YWx1ZSA9IFN0cmluZ3MudCgibm90aWNlUGVybURlbmllZCIpCiAgICB9Cn0K
+package com.raftar.vpn.ui
+
+import android.app.Application
+import android.content.Context
+import android.net.Uri
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
+import com.raftar.vpn.data.BlocklistStore
+import com.raftar.vpn.data.PrivateServer
+import com.raftar.vpn.data.PrivateServerStore
+import com.raftar.vpn.data.VpnGateApi
+import com.raftar.vpn.data.VpnServer
+import com.raftar.vpn.data.isValidOvpn
+import com.raftar.vpn.vpn.VpnConnector
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
+import java.util.Collections
+
+data class RaceResult(val server: VpnServer, val ms: Long?)
+
+sealed interface RaceState {
+    data object Idle : RaceState
+    data class Running(val results: List<RaceResult>) : RaceState
+    data class Done(val winner: VpnServer?) : RaceState
+}
+
+class MainViewModel(app: Application) : AndroidViewModel(app) {
+
+    private val ctx = app.applicationContext
+    private val api = VpnGateApi(ctx)
+    private val privateStore = PrivateServerStore(ctx)
+    private val blocklist = BlocklistStore(ctx)
+    private val gameNotif = GameNotification(ctx)
+    private val settings = ctx.getSharedPreferences("raftar_settings", Context.MODE_PRIVATE)
+    val connector = VpnConnector(ctx)
+
+    // ---- free servers ----
+    private val _servers = MutableStateFlow<List<VpnServer>>(emptyList())
+    val servers: StateFlow<List<VpnServer>> = _servers.asStateFlow()
+
+    /** Score desc, phir ping asc. Blocked (user-reported) servers pehle se nikle hue. Koi cap nahi. */
+    private val _ranked = MutableStateFlow<List<VpnServer>>(emptyList())
+    val ranked: StateFlow<List<VpnServer>> = _ranked.asStateFlow()
+
+    /** server.id -> TCP reachable (session cache; null = abhi check nahi hua). */
+    private val _reachability = MutableStateFlow<Map<String, Boolean>>(emptyMap())
+    val reachability: StateFlow<Map<String, Boolean>> = _reachability.asStateFlow()
+
+    private val _probing = MutableStateFlow(false)
+    val probing: StateFlow<Boolean> = _probing.asStateFlow()
+
+    private val _loading = MutableStateFlow(false)
+    val loading: StateFlow<Boolean> = _loading.asStateFlow()
+
+    private val _findingBest = MutableStateFlow(false)
+    val findingBest: StateFlow<Boolean> = _findingBest.asStateFlow()
+
+    private val _selected = MutableStateFlow<VpnServer?>(null)
+    val selected: StateFlow<VpnServer?> = _selected.asStateFlow()
+
+    private val _notice = MutableStateFlow<String?>(null)
+    val notice: StateFlow<String?> = _notice.asStateFlow()
+
+    private val _query = MutableStateFlow("")
+    val query: StateFlow<String> = _query.asStateFlow()
+
+    // ---- raftar race ----
+    private val _race = MutableStateFlow<RaceState>(RaceState.Idle)
+    val race: StateFlow<RaceState> = _race.asStateFlow()
+
+    // ---- gaming mode ----
+    private val _gaming = MutableStateFlow(false)
+    val gaming: StateFlow<Boolean> = _gaming.asStateFlow()
+
+    private val _gamePing = MutableStateFlow<Long?>(null)
+    val gamePing: StateFlow<Long?> = _gamePing.asStateFlow()
+
+    private var pingJob: Job? = null
+
+    // ---- private servers ----
+    private val _privateServers = MutableStateFlow(privateStore.list())
+    val privateServers: StateFlow<List<PrivateServer>> = _privateServers.asStateFlow()
+
+    // ---- disclosure ----
+    private val _showDisclosure = MutableStateFlow(false)
+    val showDisclosure: StateFlow<Boolean> = _showDisclosure.asStateFlow()
+    private var pendingConnectAction: (() -> Unit)? = null
+
+    val vpnState: StateFlow<VpnConnector.VpnState> = connector.state
+
+    init {
+        Strings.current =
+            if (settings.getString("lang", "ur") == "en") Strings.Lang.EN else Strings.Lang.UR
+        refresh(auto = true)
+        // Gaming ping monitor lifecycle: connect par start, disconnect par stop.
+        viewModelScope.launch {
+            connector.state.collect { st ->
+                when (st) {
+                    is VpnConnector.VpnState.Connected -> if (_gaming.value) startPingMonitor(st.server)
+                    is VpnConnector.VpnState.Disconnected,
+                    is VpnConnector.VpnState.Failed,
+                    is VpnConnector.VpnState.Idle -> {
+                        _gaming.value = false
+                        stopPingMonitor()
+                    }
+                    else -> Unit
+                }
+            }
+        }
+    }
+
+    // ============ language ============
+
+    fun toggleLang() {
+        val next = if (Strings.current == Strings.Lang.UR) Strings.Lang.EN else Strings.Lang.UR
+        Strings.current = next
+        settings.edit().putString("lang", if (next == Strings.Lang.EN) "en" else "ur").apply()
+    }
+
+    // ============ disclosure ============
+
+    /** Pehli connect attempt par prominent disclosure — Accept ke baghair aagay nahi. */
+    fun requestConnect(action: () -> Unit) {
+        if (settings.getBoolean("disclosure_ok", false)) {
+            action()
+        } else {
+            pendingConnectAction = action
+            _showDisclosure.value = true
+        }
+    }
+
+    fun acceptDisclosure() {
+        settings.edit().putBoolean("disclosure_ok", true).apply()
+        _showDisclosure.value = false
+        pendingConnectAction?.invoke()
+        pendingConnectAction = null
+    }
+
+    fun declineDisclosure() {
+        _showDisclosure.value = false
+        pendingConnectAction = null
+        _notice.value = Strings.t("declined")
+    }
+
+    // ============ server list ============
+
+    /** Pehle cache dikhao (foran), phir background me taza list. Kabhi fake list nahi. */
+    fun refresh(auto: Boolean = false) {
+        viewModelScope.launch {
+            if (!auto) _loading.value = true
+            try {
+                val cached = api.loadCached()
+                if (cached.isNotEmpty() && _servers.value.isEmpty()) applyList(cached)
+                val fresh = api.fetchFresh()
+                applyList(fresh)
+            } catch (e: Exception) {
+                if (_servers.value.isEmpty()) {
+                    // Khaali haath: honest error, retry ka option — fake list kabhi nahi.
+                    _notice.value = e.message ?: Strings.t("noticeNeedList")
+                } else if (!auto) {
+                    _notice.value = Strings.t("noticeRefreshFail")
+                }
+            } finally {
+                _loading.value = false
+            }
+        }
+    }
+
+    private fun applyList(list: List<VpnServer>) {
+        val visible = list.filter { !blocklist.isBlocked(it.id) }
+        _servers.value = visible
+        _ranked.value = api.rank(visible)
+        if (_selected.value == null) _selected.value = _ranked.value.firstOrNull()
+        probeTopServers()
+    }
+
+    /**
+     * Top 20 ranked servers ki TCP reachability background me check karo.
+     * Fail hone wala = is network par blocked/dead = recommended se bahar + dimmed.
+     */
+    private fun probeTopServers() {
+        val targets = _ranked.value.filter { it.id !in _reachability.value }.take(20)
+        if (targets.isEmpty()) return
+        viewModelScope.launch {
+            _probing.value = true
+            try {
+                val results = targets.map { s -> async { s.id to api.checkTcpReachable(s) } }.awaitAll()
+                _reachability.value = _reachability.value + results.toMap()
+            } finally {
+                _probing.value = false
+            }
+        }
+    }
+
+    fun setQuery(q: String) {
+        _query.value = q
+    }
+
+    fun select(server: VpnServer) {
+        _selected.value = server
+    }
+
+    /** Long-press: user ne kharab server report kiya — is user ke liye hamesha ke liye bahar. */
+    fun reportBad(server: VpnServer) {
+        blocklist.block(server.id)
+        _servers.value = _servers.value.filter { it.id != server.id }
+        _ranked.value = _ranked.value.filter { it.id != server.id }
+        _notice.value = Strings.t("reportedBad")
+    }
+
+    fun postNotice(msg: String) {
+        _notice.value = msg
+    }
+
+    // ============ raftar race ============
+
+    /**
+     * Parallel TCP-connect race (top ~12 candidates). Live ranked results _race me,
+     * winner return hota hai. Har result reachability cache me bhi jata hai.
+     */
+    private suspend fun raceServers(candidates: List<VpnServer>): VpnServer? = coroutineScope {
+        _race.value = RaceState.Running(emptyList())
+        val acc = Collections.synchronizedList(mutableListOf<RaceResult>())
+        candidates.map { s ->
+            async(Dispatchers.IO) {
+                val ms = api.measureTcp(s)
+                val r = RaceResult(s, ms)
+                synchronized(acc) {
+                    acc.add(r)
+                    acc.sortWith(compareBy<RaceResult> { it.ms ?: Long.MAX_VALUE })
+                }
+                _race.value = RaceState.Running(acc.toList())
+                _reachability.value = _reachability.value + (s.id to (ms != null))
+                r
+            }
+        }.awaitAll()
+        val winner = acc.firstOrNull { it.ms != null }?.server
+        _race.value = RaceState.Done(winner)
+        // Result card kuch second dikha kar auto-hide (connect me takheer na ho —
+        // is liye viewModelScope me, is race ke scope me nahi).
+        viewModelScope.launch {
+            delay(8000)
+            if (_race.value is RaceState.Done) _race.value = RaceState.Idle
+        }
+        winner
+    }
+
+    /** "Best Server — Auto Connect": race karao, winner ko connect karo. */
+    fun autoConnectBest() {
+        if (_ranked.value.isEmpty()) {
+            _notice.value = Strings.t("noticeNeedList")
+            return
+        }
+        viewModelScope.launch {
+            _findingBest.value = true
+            try {
+                val candidates = _ranked.value.filter { api.isRecommended(it) }.take(12)
+                    .ifEmpty { _ranked.value.take(12) }
+                val winner = raceServers(candidates)
+                if (winner == null) {
+                    _notice.value = Strings.t("noticeNoServer")
+                    return@launch
+                }
+                _selected.value = winner
+                startConnect(winner)
+            } finally {
+                _findingBest.value = false
+            }
+        }
+    }
+
+    // ============ gaming mode ============
+
+    /** Lowest-ping reachable server chuno, connect karo, live ping dikhao. */
+    fun startGamingMode() {
+        if (_ranked.value.isEmpty()) {
+            _notice.value = Strings.t("noticeNeedList")
+            return
+        }
+        viewModelScope.launch {
+            _findingBest.value = true
+            try {
+                val candidates = _ranked.value.filter { api.isRecommended(it) }
+                    .sortedBy { it.pingMs }.take(12)
+                    .ifEmpty { _ranked.value.sortedBy { it.pingMs }.take(12) }
+                val winner = raceServers(candidates)
+                if (winner == null) {
+                    _notice.value = Strings.t("noticeNoServer")
+                    return@launch
+                }
+                _gaming.value = true
+                _selected.value = winner
+                startConnect(winner)
+                startPingMonitor(winner)
+            } finally {
+                _findingBest.value = false
+            }
+        }
+    }
+
+    private fun startPingMonitor(server: VpnServer) {
+        if (pingJob?.isActive == true) return
+        pingJob = viewModelScope.launch {
+            while (isActive) {
+                val ms = api.measureTcp(server)
+                _gamePing.value = ms
+                gameNotif.show(ms)
+                delay(10_000)
+            }
+        }
+    }
+
+    private fun stopPingMonitor() {
+        pingJob?.cancel()
+        pingJob = null
+        _gamePing.value = null
+        gameNotif.cancel()
+    }
+
+    // ============ connect ============
+
+    /** Permission + disclosure ke baad selected server par connect. */
+    fun userStartConnect() {
+        val server = _selected.value ?: _ranked.value.firstOrNull()
+        if (server == null) {
+            _notice.value = Strings.t("noticeNeedList")
+            return
+        }
+        _selected.value = server
+        startConnect(server)
+    }
+
+    private fun startConnect(server: VpnServer) {
+        connector.clearDeadServers()
+        // Selected/best server pehle, baqi rank-order me failover candidates.
+        val ordered = listOf(server) + _ranked.value.filter { it.id != server.id }
+        connector.connect(ordered, api::decodeConfig)
+    }
+
+    // ============ private servers ============
+
+    fun importPrivateText(text: String, name: String) {
+        val clean = text.trim()
+        if (!isValidOvpn(clean)) {
+            _notice.value = Strings.t("invalidConfig")
+            return
+        }
+        privateStore.add(name.ifBlank { "Server" }, clean)
+        _privateServers.value = privateStore.list()
+        _notice.value = Strings.t("privateAdded")
+    }
+
+    fun importPrivateFile(uri: Uri) {
+        try {
+            val text = ctx.contentResolver.openInputStream(uri)?.bufferedReader()?.readText().orEmpty()
+            val name = uri.lastPathSegment?.substringAfterLast('/')?.takeIf { it.isNotBlank() } ?: "Imported"
+            importPrivateText(text, name)
+        } catch (_: Exception) {
+            _notice.value = Strings.t("fileReadError")
+        }
+    }
+
+    fun deletePrivate(id: String) {
+        privateStore.remove(id)
+        _privateServers.value = privateStore.list()
+        _notice.value = Strings.t("privateDeleted")
+    }
+
+    fun connectPrivate(server: PrivateServer) {
+        connector.connectPrivate(server.name, server.config)
+    }
+
+    fun consumeNotice() {
+        _notice.value = null
+    }
+
+    /** VpnService.prepare() system dialog deny hone par. */
+    fun onPermissionDenied() {
+        _notice.value = Strings.t("noticePermDenied")
+    }
+}

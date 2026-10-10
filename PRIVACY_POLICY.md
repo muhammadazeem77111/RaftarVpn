@@ -1,1 +1,46 @@
-IyBSYWZ0YXIgVlBOIOKAlCBQcml2YWN5IFBvbGljeQoKKipMYXN0IHVwZGF0ZWQ6IE9jdG9iZXIgMjAyNioqCgojIyAxLiBObyBhY2NvdW50cywgbm8gcGVyc29uYWwgZGF0YQoKUmFmdGFyIFZQTiByZXF1aXJlcyBubyBzaWduLXVwIGFuZCBjb2xsZWN0cyBubyBuYW1lLCBlbWFpbCwgcGhvbmUgbnVtYmVyLCBvciBhbnkKcGVyc29uYWxseSBpZGVudGlmaWFibGUgaW5mb3JtYXRpb24uCgojIyAyLiBObyBicm93c2luZyBsb2dzCgpUaGUgYXBwIG5ldmVyIHJlY29yZHMsIHN0b3Jlcywgb3IgdHJhbnNtaXRzIHlvdXIgYnJvd3NpbmcgaGlzdG9yeSwgdmlzaXRlZCBkb21haW5zLApETlMgbG9va3Vwcywgb3IgdHJhZmZpYyBjb250ZW50cy4gVGhlcmUgaXMgbm8gYW5hbHl0aWNzIFNESyBhbmQgbm8gYWR2ZXJ0aXNpbmcgU0RLCmluIHRoZSBhcHAg4oCUIG5vdGhpbmcgdG8gcmVwb3J0IGJhY2sgdG8uCgojIyAzLiBIb3cgdGhlIFZQTiB3b3JrcwoKV2hlbiB5b3UgY29ubmVjdCwgQW5kcm9pZCByb3V0ZXMgeW91ciBpbnRlcm5ldCB0cmFmZmljIHRocm91Z2ggdGhlIHNlbGVjdGVkIFZQTiBzZXJ2ZXIKdXNpbmcgYW4gZW5jcnlwdGVkIE9wZW5WUE4gdHVubmVsLiBUaGlzIGlzIHRoZSBlbnRpcmUgZnVuY3Rpb24gb2YgdGhlIGFwcC4KCiMjIDQuIEZyZWUgc2VydmVycyAoVlBOIEdhdGUpCgpUaGUgZnJlZSBzZXJ2ZXIgbGlzdCBjb21lcyBmcm9tIHRoZSBWUE4gR2F0ZSBBY2FkZW1pYyBFeHBlcmltZW50IFByb2plY3QgKFVuaXZlcnNpdHkKb2YgVHN1a3ViYSwgSmFwYW4pLiBUaGVzZSBzZXJ2ZXJzIGFyZSBydW4gYnkgaW5kZXBlbmRlbnQgdm9sdW50ZWVycyBhcm91bmQgdGhlIHdvcmxkLgpWb2x1bnRlZXIgb3BlcmF0b3JzIG1heSBrZWVwIHRoZWlyIG93biBvcGVyYXRpb25hbCBjb25uZWN0aW9uIGxvZ3MgYWNjb3JkaW5nIHRvIHRoZWlyCmNvbmZpZ3VyYXRpb25zIOKAlCBzZWUgdGhlIG9mZmljaWFsIHBvbGljeSBhdCBodHRwczovL3d3dy52cG5nYXRlLm5ldC9lbi9hYm91dF9hYnVzZS5hc3B4LgpSYWZ0YXIgVlBOIGlzIGFuIGluZGVwZW5kZW50IGNsaWVudCBhbmQgaXMgbm90IGFmZmlsaWF0ZWQgd2l0aCB0aGUgVW5pdmVyc2l0eSBvZiBUc3VrdWJhLgoKIyMgNS4gWW91ciBvd24gc2VydmVycyAoIk1lcmUgU2VydmVycyIpCgpQcml2YXRlIC5vdnBuIGNvbmZpZ3VyYXRpb25zIHlvdSBpbXBvcnQgKHBhc3RlLCBmaWxlLCBvciBRUikgYXJlIHN0b3JlZCBPTkxZIG9uIHlvdXIKZGV2aWNlLCBlbmNyeXB0ZWQgd2l0aCBFbmNyeXB0ZWRTaGFyZWRQcmVmZXJlbmNlcyAoQUVTLTI1NikuIFRoZXkgYXJlIG5ldmVyIHVwbG9hZGVkCmFueXdoZXJlLgoKIyMgNi4gUGVybWlzc2lvbnMgdXNlZAoKLSAqKlZQTiAoVnBuU2VydmljZSk6KiogdG8gZXN0YWJsaXNoIHRoZSBlbmNyeXB0ZWQgdHVubmVsIOKAlCBjb3JlIGZ1bmN0aW9uYWxpdHkuCi0gKipJbnRlcm5ldCAvIG5ldHdvcmsgc3RhdGU6KiogdG8gZmV0Y2ggdGhlIHNlcnZlciBsaXN0IGFuZCBjb25uZWN0LgotICoqTm90aWZpY2F0aW9uczoqKiB0byBzaG93IFZQTiBzdGF0dXMgYW5kIEdhbWluZyBNb2RlIHBpbmcuCi0gKipDYW1lcmEgKG9wdGlvbmFsKToqKiBvbmx5IHdoZW4geW91IGNob29zZSAiU2NhbiBRUiIgdG8gaW1wb3J0IHlvdXIgb3duIHNlcnZlciBjb25maWcuCgojIyA3LiBDaGFuZ2VzCgpJZiB0aGlzIHBvbGljeSBjaGFuZ2VzLCB0aGUgdXBkYXRlZCB0ZXh0IHdpbGwgc2hpcCBpbnNpZGUgdGhlIGFwcCBhbmQgaW4gdGhpcyByZXBvc2l0b3J5LgoKKipDb250YWN0OioqIG9wZW4gYW4gaXNzdWUgb24gdGhlIEdpdEh1YiByZXBvc2l0b3J5Lgo=
+# Raftar VPN — Privacy Policy
+
+**Last updated: October 2026**
+
+## 1. No accounts, no personal data
+
+Raftar VPN requires no sign-up and collects no name, email, phone number, or any
+personally identifiable information.
+
+## 2. No browsing logs
+
+The app never records, stores, or transmits your browsing history, visited domains,
+DNS lookups, or traffic contents. There is no analytics SDK and no advertising SDK
+in the app — nothing to report back to.
+
+## 3. How the VPN works
+
+When you connect, Android routes your internet traffic through the selected VPN server
+using an encrypted OpenVPN tunnel. This is the entire function of the app.
+
+## 4. Free servers (VPN Gate)
+
+The free server list comes from the VPN Gate Academic Experiment Project (University
+of Tsukuba, Japan). These servers are run by independent volunteers around the world.
+Volunteer operators may keep their own operational connection logs according to their
+configurations — see the official policy at https://www.vpngate.net/en/about_abuse.aspx.
+Raftar VPN is an independent client and is not affiliated with the University of Tsukuba.
+
+## 5. Your own servers ("Mere Servers")
+
+Private .ovpn configurations you import (paste, file, or QR) are stored ONLY on your
+device, encrypted with EncryptedSharedPreferences (AES-256). They are never uploaded
+anywhere.
+
+## 6. Permissions used
+
+- **VPN (VpnService):** to establish the encrypted tunnel — core functionality.
+- **Internet / network state:** to fetch the server list and connect.
+- **Notifications:** to show VPN status and Gaming Mode ping.
+- **Camera (optional):** only when you choose "Scan QR" to import your own server config.
+
+## 7. Changes
+
+If this policy changes, the updated text will ship inside the app and in this repository.
+
+**Contact:** open an issue on the GitHub repository.

@@ -1,1 +1,163 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi51aQoKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5Db21wb3NhYmxlCmltcG9ydCBhbmRyb2lkeC5jb21wb3NlLnJ1bnRpbWUuZ2V0VmFsdWUKaW1wb3J0IGFuZHJvaWR4LmNvbXBvc2UucnVudGltZS5tdXRhYmxlU3RhdGVPZgppbXBvcnQgYW5kcm9pZHguY29tcG9zZS5ydW50aW1lLnNldFZhbHVlCgovKioKICogQXBwIGtpIHRhbWFtIHVzZXItdmlzaWJsZSBzdHJpbmdzIHlhaGluIHNlIGFhdGkgaGFpbiDigJQgVUkgbWUga29pIGhhcmRjb2RlZCB0ZXh0IG5haGkuCiAqIFJvbWFuIFVyZHUgREVGQVVMVCBoYWk7IEVuZ2xpc2ggdG9nZ2xlIHNldHRpbmdzL3RvcC1iYXIgc2UuCiAqLwpvYmplY3QgU3RyaW5ncyB7CgogICAgZW51bSBjbGFzcyBMYW5nIHsgVVIsIEVOIH0KCiAgICB2YXIgY3VycmVudCBieSBtdXRhYmxlU3RhdGVPZihMYW5nLlVSKQoKICAgIGZ1biB0KGtleTogU3RyaW5nKTogU3RyaW5nID0gKGlmIChjdXJyZW50ID09IExhbmcuVVIpIHVyIGVsc2UgZW4pW2tleV0gPzogZW5ba2V5XSA/OiBrZXkKCiAgICAvLyBUb2dnbGUgYnV0dG9uIHBhciBEVVNSSSBsYW5ndWFnZSBrYSBuYWFtIGRpa2h0YSBoYWkuCiAgICBmdW4gdG9nZ2xlTGFiZWwoKTogU3RyaW5nID0gaWYgKGN1cnJlbnQgPT0gTGFuZy5VUikgIkVuZ2xpc2giIGVsc2UgIlJvbWFuIFVyZHUiCgogICAgcHJpdmF0ZSB2YWwgdXIgPSBtYXBPZigKICAgICAgICAiYXBwTmFtZSIgdG8gIlJhZnRhciBWUE4iLAogICAgICAgICJyZWZyZXNoIiB0byAiUmVmcmVzaCIsCiAgICAgICAgInRhYkZyZWUiIHRvICJGcmVlIFNlcnZlcnMiLAogICAgICAgICJ0YWJQcml2YXRlIiB0byAiTWVyZSBTZXJ2ZXJzIiwKICAgICAgICAiY29ubmVjdCIgdG8gIkNvbm5lY3QiLAogICAgICAgICJkaXNjb25uZWN0IiB0byAiRGlzY29ubmVjdCIsCiAgICAgICAgImNhbmNlbCIgdG8gIkNhbmNlbCIsCiAgICAgICAgInJldHJ5IiB0byAiRG9iYXJhIHRyeSBrYXJvIiwKICAgICAgICAic3RhdHVzQ29ubmVjdGluZyIgdG8gIlNlcnZlciBzZSBqb3IgcmFoYSBoYWnigKYiLAogICAgICAgICJjb25uZWN0ZWRUbyIgdG8gIkNvbm5lY3RlZCIsCiAgICAgICAgInN0YXR1c0ZhaWxlZCIgdG8gIkZhaWwgaG8gZ2F5YSIsCiAgICAgICAgInN0YXR1c0Rpc2Nvbm5lY3RlZCIgdG8gIkRpc2Nvbm5lY3RlZCIsCiAgICAgICAgImJlc3RTZXJ2ZXIiIHRvICJCZXN0IFNlcnZlciDigJQgQXV0byBDb25uZWN0IiwKICAgICAgICAiZmluZGluZ0Jlc3QiIHRvICJCZWh0cmVlbiBzZXJ2ZXIgZGhvb25kIHJhaGEgaGFp4oCmIiwKICAgICAgICAicmFjZVRpdGxlIiB0byAiUmFmdGFyIFJhY2UiLAogICAgICAgICJyYWNlTGl2ZSIgdG8gIkxpdmUgcmFjZSDigJQgc2FiIHNlIHRleiBzZXJ2ZXIgamVldGF5IGdhIiwKICAgICAgICAicmFjZVdpbm5lciIgdG8gIldpbm5lciIsCiAgICAgICAgInJhY2VVbnJlYWNoYWJsZSIgdG8gIm5haGkgcGFodW5jaGEiLAogICAgICAgICJnYW1pbmdNb2RlIiB0byAiR2FtaW5nIE1vZGUiLAogICAgICAgICJnYW1pbmdQaW5nIiB0byAiUGluZyIsCiAgICAgICAgInNlYXJjaEhpbnQiIHRvICJDb3VudHJ5IHlhIHNlcnZlciBzZWFyY2gga2FybyIsCiAgICAgICAgInByb2JpbmciIHRvICJTZXJ2ZXJzIGNoZWNrIGhvIHJhaGUgaGFpbuKApiIsCiAgICAgICAgImZvb3RlciIgdG8gIkZyZWUgcHVibGljIHNlcnZlcnMgKFZQTiBHYXRlKSDigJQgc2FiIGNvdW50cmllcyBmZWVkIHNlIGFhdGkgaGFpbiwgc3BlZWQvcXVhbGl0eSB2YXJ5IGthcnRpIGhhaS4iLAogICAgICAgICJ1bmtub3duQ291bnRyeSIgdG8gIlVua25vd24iLAogICAgICAgICJwcml2YWN5UG9saWN5IiB0byAiUHJpdmFjeSBQb2xpY3kiLAogICAgICAgICJwcml2YXRlRW1wdHkiIHRvICJBYmhpIGtvaSBwcml2YXRlIHNlcnZlciBuYWhpIOKAlCBuZWVjaGUgc2UgYWRkIGthcm8iLAogICAgICAgICJhZGRQYXN0ZSIgdG8gIlRleHQgcGFzdGUga2FybyIsCiAgICAgICAgImFkZEZpbGUiIHRvICJGaWxlIGltcG9ydCBrYXJvIiwKICAgICAgICAiYWRkUXIiIHRvICJRUiBzY2FuIGthcm8iLAogICAgICAgICJwYXN0ZVRpdGxlIiB0byAiQ29uZmlnIHBhc3RlIGthcm8iLAogICAgICAgICJuYW1lSGludCIgdG8gIk5hYW0gKGphaXNlOiBNZXJhIE9yYWNsZSBTZXJ2ZXIpIiwKICAgICAgICAiY29uZmlnSGludCIgdG8gIi5vdnBuIHRleHQgeWFoYW4gcGFzdGUga2FybyIsCiAgICAgICAgInNhdmUiIHRvICJTYXZlIGthcm8iLAogICAgICAgICJkZWxldGUiIHRvICJEZWxldGUiLAogICAgICAgICJyZXBvcnRCYWQiIHRvICJSZXBvcnQgYmFkIHNlcnZlciIsCiAgICAgICAgInJlcG9ydGVkQmFkIiB0byAiU2VydmVyIHJlcG9ydCBobyBnYXlhIOKAlCBhYiBuYWhpIGRpa2hlIGdhIiwKICAgICAgICAiaW52YWxpZENvbmZpZyIgdG8gIlllIHZhbGlkIC5vdnBuIGNvbmZpZyBuYWhpIChyZW1vdGUgbGluZSBuYWhpIG1pbGkpIiwKICAgICAgICAicHJpdmF0ZUFkZGVkIiB0byAiU2VydmVyIGFkZCBobyBnYXlhIiwKICAgICAgICAicHJpdmF0ZURlbGV0ZWQiIHRvICJTZXJ2ZXIgZGVsZXRlIGhvIGdheWEiLAogICAgICAgICJjb25maXJtRGVsZXRlIiB0byAiWWUgc2VydmVyIGRlbGV0ZSBrYXJuYSBoYWk/IiwKICAgICAgICAieWVzIiB0byAiSGFhbiIsCiAgICAgICAgIm5vIiB0byAiTmFoaSIsCiAgICAgICAgInFyUHJvbXB0IiB0byAiUVIgY29kZSBzY2FuIGthcm8iLAogICAgICAgICJjYW1lcmFEZW5pZWQiIHRvICJRUiBzY2FuIGtlIGxpeWUgY2FtZXJhIHBlcm1pc3Npb24gY2hhaGl5ZSIsCiAgICAgICAgImZpbGVSZWFkRXJyb3IiIHRvICJGaWxlIHBhcmggbmFoaSBzYWtpIiwKICAgICAgICAibm90aWNlUmVmcmVzaEZhaWwiIHRvICJSZWZyZXNoIGZhaWwg4oCUIHB1cmFuaSBsaXN0IGRpa2hhaSBqYSByYWhpIGhhaSIsCiAgICAgICAgIm5vdGljZU5lZWRMaXN0IiB0byAiUGVobGUgc2VydmVyIGxpc3QgbG9hZCBob25heSBkbyIsCiAgICAgICAgIm5vdGljZU5vU2VydmVyIiB0byAiS29pIHNlcnZlciBuYWhpIG1pbGEiLAogICAgICAgICJub3RpY2VQZXJtRGVuaWVkIiB0byAiVlBOIHBlcm1pc3Npb24ga2UgYmFnaGFpciBjb25uZWN0IG5haGkgaG8gc2FrdGEiLAogICAgICAgICJub1NlcnZlcnNBdmFpbCIgdG8gIktvaSBzZXJ2ZXIgYXZhaWxhYmxlIG5haGkg4oCUIGxpc3QgcmVmcmVzaCBrYXJvIiwKICAgICAgICAiZmFpbG92ZXJGYWlsZWQiIHRvICJLb2kgc2VydmVyIGNvbm5lY3QgbmEgaG8gc2FrYSDigJQgZG9iYXJhIHRyeSBrYXJvIiwKICAgICAgICAiY29ubkxvc3QiIHRvICJDb25uZWN0aW9uIHRvb3QgZ2F5YSDigJQgZG9iYXJhIGNvbm5lY3Qga2FybyIsCiAgICAgICAgInBlcm1Ob3RHcmFudGVkIiB0byAiVlBOIHBlcm1pc3Npb24gbmFoaSBtaWxpIiwKICAgICAgICAiZ2FtaW5nTm90aWZUaXRsZSIgdG8gIlJhZnRhciBWUE4g4oCUIEdhbWluZyBNb2RlIiwKICAgICAgICAiZGVjbGluZWQiIHRvICJEaXNjbG9zdXJlIHF1Ym9vbCBraXllIGJhZ2hhaXIgVlBOIGNvbm5lY3QgbmFoaSBobyBzYWt0YSIsCiAgICAgICAgImRpc2Nsb3N1cmVUaXRsZSIgdG8gIlphcm9vcmkgYmFhdCIsCiAgICAgICAgImFjY2VwdCIgdG8gIlF1Ym9vbCBoYWkiLAogICAgICAgICJkaXNjbG9zdXJlVGV4dCIgdG8gIlJhZnRhciBWUE4gYWFwa2EgaW50ZXJuZXQgdHJhZmZpYyBWUE4gc2VydmVyIGtlIHphcml5ZSBiaGVqdGEgaGFpLiAiICsKICAgICAgICAgICAgIkZyZWUgc2VydmVycyB2b2x1bnRlZXJzIChWUE4gR2F0ZSwgVW5pdmVyc2l0eSBvZiBUc3VrdWJhKSBjaGFsYXRlIGhhaW4g4oCUICIgKwogICAgICAgICAgICAid29oIGFwbmUgb3BlcmF0aW9uYWwgbG9ncyByYWtoIHNha3RlIGhhaW4uIEh1bSBhYXBraSBicm93c2luZyByZWNvcmQgbmFoaSBrYXJ0ZSwgIiArCiAgICAgICAgICAgICJrb2kgYWNjb3VudCBuYWhpIG1hbmd0ZSwgYXVyIGtvaSBhZHMvYW5hbHl0aWNzIG5haGkgbGFnYXRlLlxuXG4iICsKICAgICAgICAgICAgIlJhZnRhciBWUE4gcm91dGVzIHlvdXIgaW50ZXJuZXQgdHJhZmZpYyB0aHJvdWdoIGEgVlBOIHNlcnZlci4gRnJlZSBzZXJ2ZXJzIGFyZSBydW4gIiArCiAgICAgICAgICAgICJieSB2b2x1bnRlZXJzIChWUE4gR2F0ZSwgVW5pdmVyc2l0eSBvZiBUc3VrdWJhKSDigJQgdGhleSBtYXkga2VlcCB0aGVpciBvd24gb3BlcmF0aW9uYWwgIiArCiAgICAgICAgICAgICJsb2dzLiBXZSBkb24ndCByZWNvcmQgeW91ciBicm93c2luZywgcmVxdWlyZSBubyBhY2NvdW50LCBhbmQgaW5jbHVkZSBubyBhZHMgb3IgYW5hbHl0aWNzLiIKICAgICkKCiAgICBwcml2YXRlIHZhbCBlbiA9IG1hcE9mKAogICAgICAgICJhcHBOYW1lIiB0byAiUmFmdGFyIFZQTiIsCiAgICAgICAgInJlZnJlc2giIHRvICJSZWZyZXNoIiwKICAgICAgICAidGFiRnJlZSIgdG8gIkZyZWUgU2VydmVycyIsCiAgICAgICAgInRhYlByaXZhdGUiIHRvICJNeSBTZXJ2ZXJzIiwKICAgICAgICAiY29ubmVjdCIgdG8gIkNvbm5lY3QiLAogICAgICAgICJkaXNjb25uZWN0IiB0byAiRGlzY29ubmVjdCIsCiAgICAgICAgImNhbmNlbCIgdG8gIkNhbmNlbCIsCiAgICAgICAgInJldHJ5IiB0byAiUmV0cnkiLAogICAgICAgICJzdGF0dXNDb25uZWN0aW5nIiB0byAiQ29ubmVjdGluZ+KApiIsCiAgICAgICAgImNvbm5lY3RlZFRvIiB0byAiQ29ubmVjdGVkIiwKICAgICAgICAic3RhdHVzRmFpbGVkIiB0byAiRmFpbGVkIiwKICAgICAgICAic3RhdHVzRGlzY29ubmVjdGVkIiB0byAiRGlzY29ubmVjdGVkIiwKICAgICAgICAiYmVzdFNlcnZlciIgdG8gIkJlc3QgU2VydmVyIOKAlCBBdXRvIENvbm5lY3QiLAogICAgICAgICJmaW5kaW5nQmVzdCIgdG8gIkZpbmRpbmcgYmVzdCBzZXJ2ZXLigKYiLAogICAgICAgICJyYWNlVGl0bGUiIHRvICJSYWZ0YXIgUmFjZSIsCiAgICAgICAgInJhY2VMaXZlIiB0byAiTGl2ZSByYWNlIOKAlCBmYXN0ZXN0IHNlcnZlciB3aW5zIiwKICAgICAgICAicmFjZVdpbm5lciIgdG8gIldpbm5lciIsCiAgICAgICAgInJhY2VVbnJlYWNoYWJsZSIgdG8gInVucmVhY2hhYmxlIiwKICAgICAgICAiZ2FtaW5nTW9kZSIgdG8gIkdhbWluZyBNb2RlIiwKICAgICAgICAiZ2FtaW5nUGluZyIgdG8gIlBpbmciLAogICAgICAgICJzZWFyY2hIaW50IiB0byAiU2VhcmNoIGNvdW50cnkgb3Igc2VydmVyIiwKICAgICAgICAicHJvYmluZyIgdG8gIkNoZWNraW5nIHNlcnZlcnPigKYiLAogICAgICAgICJmb290ZXIiIHRvICJGcmVlIHB1YmxpYyBzZXJ2ZXJzIChWUE4gR2F0ZSkg4oCUIGFsbCBjb3VudHJpZXMgY29tZSBmcm9tIHRoZSBsaXZlIGZlZWQ7IHNwZWVkL3F1YWxpdHkgdmFyaWVzLiIsCiAgICAgICAgInVua25vd25Db3VudHJ5IiB0byAiVW5rbm93biIsCiAgICAgICAgInByaXZhY3lQb2xpY3kiIHRvICJQcml2YWN5IFBvbGljeSIsCiAgICAgICAgInByaXZhdGVFbXB0eSIgdG8gIk5vIHByaXZhdGUgc2VydmVycyB5ZXQg4oCUIGFkZCBvbmUgYmVsb3ciLAogICAgICAgICJhZGRQYXN0ZSIgdG8gIlBhc3RlIHRleHQiLAogICAgICAgICJhZGRGaWxlIiB0byAiSW1wb3J0IGZpbGUiLAogICAgICAgICJhZGRRciIgdG8gIlNjYW4gUVIiLAogICAgICAgICJwYXN0ZVRpdGxlIiB0byAiUGFzdGUgY29uZmlnIiwKICAgICAgICAibmFtZUhpbnQiIHRvICJOYW1lIChlLmcuIE15IE9yYWNsZSBTZXJ2ZXIpIiwKICAgICAgICAiY29uZmlnSGludCIgdG8gIlBhc3RlIC5vdnBuIHRleHQgaGVyZSIsCiAgICAgICAgInNhdmUiIHRvICJTYXZlIiwKICAgICAgICAiZGVsZXRlIiB0byAiRGVsZXRlIiwKICAgICAgICAicmVwb3J0QmFkIiB0byAiUmVwb3J0IGJhZCBzZXJ2ZXIiLAogICAgICAgICJyZXBvcnRlZEJhZCIgdG8gIlNlcnZlciByZXBvcnRlZCDigJQgd29uJ3Qgc2hvdyBhZ2FpbiIsCiAgICAgICAgImludmFsaWRDb25maWciIHRvICJOb3QgYSB2YWxpZCAub3ZwbiBjb25maWcgKG5vIHJlbW90ZSBsaW5lIGZvdW5kKSIsCiAgICAgICAgInByaXZhdGVBZGRlZCIgdG8gIlNlcnZlciBhZGRlZCIsCiAgICAgICAgInByaXZhdGVEZWxldGVkIiB0byAiU2VydmVyIGRlbGV0ZWQiLAogICAgICAgICJjb25maXJtRGVsZXRlIiB0byAiRGVsZXRlIHRoaXMgc2VydmVyPyIsCiAgICAgICAgInllcyIgdG8gIlllcyIsCiAgICAgICAgIm5vIiB0byAiTm8iLAogICAgICAgICJxclByb21wdCIgdG8gIlNjYW4gdGhlIFFSIGNvZGUiLAogICAgICAgICJjYW1lcmFEZW5pZWQiIHRvICJDYW1lcmEgcGVybWlzc2lvbiBuZWVkZWQgZm9yIFFSIHNjYW4iLAogICAgICAgICJmaWxlUmVhZEVycm9yIiB0byAiQ291bGRuJ3QgcmVhZCBmaWxlIiwKICAgICAgICAibm90aWNlUmVmcmVzaEZhaWwiIHRvICJSZWZyZXNoIGZhaWxlZCDigJQgc2hvd2luZyBjYWNoZWQgbGlzdCIsCiAgICAgICAgIm5vdGljZU5lZWRMaXN0IiB0byAiV2FpdCBmb3IgdGhlIHNlcnZlciBsaXN0IHRvIGxvYWQiLAogICAgICAgICJub3RpY2VOb1NlcnZlciIgdG8gIk5vIHNlcnZlciBmb3VuZCIsCiAgICAgICAgIm5vdGljZVBlcm1EZW5pZWQiIHRvICJDYW4ndCBjb25uZWN0IHdpdGhvdXQgVlBOIHBlcm1pc3Npb24iLAogICAgICAgICJub1NlcnZlcnNBdmFpbCIgdG8gIk5vIHNlcnZlcnMgYXZhaWxhYmxlIOKAlCByZWZyZXNoIHRoZSBsaXN0IiwKICAgICAgICAiZmFpbG92ZXJGYWlsZWQiIHRvICJObyBzZXJ2ZXIgY29ubmVjdGVkIOKAlCB0cnkgYWdhaW4iLAogICAgICAgICJjb25uTG9zdCIgdG8gIkNvbm5lY3Rpb24gbG9zdCDigJQgcmVjb25uZWN0IiwKICAgICAgICAicGVybU5vdEdyYW50ZWQiIHRvICJWUE4gcGVybWlzc2lvbiBub3QgZ3JhbnRlZCIsCiAgICAgICAgImdhbWluZ05vdGlmVGl0bGUiIHRvICJSYWZ0YXIgVlBOIOKAlCBHYW1pbmcgTW9kZSIsCiAgICAgICAgImRlY2xpbmVkIiB0byAiVlBOIGNhbid0IGNvbm5lY3QgdW5sZXNzIHlvdSBhY2NlcHQgdGhlIGRpc2Nsb3N1cmUiLAogICAgICAgICJkaXNjbG9zdXJlVGl0bGUiIHRvICJJbXBvcnRhbnQgbm90aWNlIiwKICAgICAgICAiYWNjZXB0IiB0byAiQWNjZXB0IiwKICAgICAgICAiZGlzY2xvc3VyZVRleHQiIHRvICJSYWZ0YXIgVlBOIGFhcGthIGludGVybmV0IHRyYWZmaWMgVlBOIHNlcnZlciBrZSB6YXJpeWUgYmhlanRhIGhhaS4gIiArCiAgICAgICAgICAgICJGcmVlIHNlcnZlcnMgdm9sdW50ZWVycyAoVlBOIEdhdGUsIFVuaXZlcnNpdHkgb2YgVHN1a3ViYSkgY2hhbGF0ZSBoYWluIOKAlCAiICsKICAgICAgICAgICAgIndvaCBhcG5lIG9wZXJhdGlvbmFsIGxvZ3MgcmFraCBzYWt0ZSBoYWluLiBIdW0gYWFwa2kgYnJvd3NpbmcgcmVjb3JkIG5haGkga2FydGUsICIgKwogICAgICAgICAgICAia29pIGFjY291bnQgbmFoaSBtYW5ndGUsIGF1ciBrb2kgYWRzL2FuYWx5dGljcyBuYWhpIGxhZ2F0ZS5cblxuIiArCiAgICAgICAgICAgICJSYWZ0YXIgVlBOIHJvdXRlcyB5b3VyIGludGVybmV0IHRyYWZmaWMgdGhyb3VnaCBhIFZQTiBzZXJ2ZXIuIEZyZWUgc2VydmVycyBhcmUgcnVuICIgKwogICAgICAgICAgICAiYnkgdm9sdW50ZWVycyAoVlBOIEdhdGUsIFVuaXZlcnNpdHkgb2YgVHN1a3ViYSkg4oCUIHRoZXkgbWF5IGtlZXAgdGhlaXIgb3duIG9wZXJhdGlvbmFsICIgKwogICAgICAgICAgICAibG9ncy4gV2UgZG9uJ3QgcmVjb3JkIHlvdXIgYnJvd3NpbmcsIHJlcXVpcmUgbm8gYWNjb3VudCwgYW5kIGluY2x1ZGUgbm8gYWRzIG9yIGFuYWx5dGljcy4iCiAgICApCn0KCi8qKiBDb21wb3NhYmxlIHZlcnNpb24g4oCUIGxhbmd1YWdlIHRvZ2dsZSBwYXIgcmVjb21wb3NlIGhvdGEgaGFpLiAqLwpAQ29tcG9zYWJsZQpmdW4gdHIoa2V5OiBTdHJpbmcpOiBTdHJpbmcgewogICAgU3RyaW5ncy5jdXJyZW50IC8vIHN1YnNjcmliZSBmb3IgcmVjb21wb3NpdGlvbgogICAgcmV0dXJuIFN0cmluZ3MudChrZXkpCn0K
+package com.raftar.vpn.ui
+
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+
+/**
+ * App ki tamam user-visible strings yahin se aati hain — UI me koi hardcoded text nahi.
+ * Roman Urdu DEFAULT hai; English toggle settings/top-bar se.
+ */
+object Strings {
+
+    enum class Lang { UR, EN }
+
+    var current by mutableStateOf(Lang.UR)
+
+    fun t(key: String): String = (if (current == Lang.UR) ur else en)[key] ?: en[key] ?: key
+
+    // Toggle button par DUSRI language ka naam dikhta hai.
+    fun toggleLabel(): String = if (current == Lang.UR) "English" else "Roman Urdu"
+
+    private val ur = mapOf(
+        "appName" to "Raftar VPN",
+        "refresh" to "Refresh",
+        "tabFree" to "Free Servers",
+        "tabPrivate" to "Mere Servers",
+        "connect" to "Connect",
+        "disconnect" to "Disconnect",
+        "cancel" to "Cancel",
+        "retry" to "Dobara try karo",
+        "statusConnecting" to "Server se jor raha hai…",
+        "connectedTo" to "Connected",
+        "statusFailed" to "Fail ho gaya",
+        "statusDisconnected" to "Disconnected",
+        "bestServer" to "Best Server — Auto Connect",
+        "findingBest" to "Behtreen server dhoond raha hai…",
+        "raceTitle" to "Raftar Race",
+        "raceLive" to "Live race — sab se tez server jeetay ga",
+        "raceWinner" to "Winner",
+        "raceUnreachable" to "nahi pahuncha",
+        "gamingMode" to "Gaming Mode",
+        "gamingPing" to "Ping",
+        "searchHint" to "Country ya server search karo",
+        "probing" to "Servers check ho rahe hain…",
+        "footer" to "Free public servers (VPN Gate) — sab countries feed se aati hain, speed/quality vary karti hai.",
+        "unknownCountry" to "Unknown",
+        "privacyPolicy" to "Privacy Policy",
+        "privateEmpty" to "Abhi koi private server nahi — neeche se add karo",
+        "addPaste" to "Text paste karo",
+        "addFile" to "File import karo",
+        "addQr" to "QR scan karo",
+        "pasteTitle" to "Config paste karo",
+        "nameHint" to "Naam (jaise: Mera Oracle Server)",
+        "configHint" to ".ovpn text yahan paste karo",
+        "save" to "Save karo",
+        "delete" to "Delete",
+        "reportBad" to "Report bad server",
+        "reportedBad" to "Server report ho gaya — ab nahi dikhe ga",
+        "invalidConfig" to "Ye valid .ovpn config nahi (remote line nahi mili)",
+        "privateAdded" to "Server add ho gaya",
+        "privateDeleted" to "Server delete ho gaya",
+        "confirmDelete" to "Ye server delete karna hai?",
+        "yes" to "Haan",
+        "no" to "Nahi",
+        "qrPrompt" to "QR code scan karo",
+        "cameraDenied" to "QR scan ke liye camera permission chahiye",
+        "fileReadError" to "File parh nahi saki",
+        "noticeRefreshFail" to "Refresh fail — purani list dikhai ja rahi hai",
+        "noticeNeedList" to "Pehle server list load honay do",
+        "noticeNoServer" to "Koi server nahi mila",
+        "noticePermDenied" to "VPN permission ke baghair connect nahi ho sakta",
+        "noServersAvail" to "Koi server available nahi — list refresh karo",
+        "failoverFailed" to "Koi server connect na ho saka — dobara try karo",
+        "connLost" to "Connection toot gaya — dobara connect karo",
+        "permNotGranted" to "VPN permission nahi mili",
+        "gamingNotifTitle" to "Raftar VPN — Gaming Mode",
+        "declined" to "Disclosure qubool kiye baghair VPN connect nahi ho sakta",
+        "disclosureTitle" to "Zaroori baat",
+        "accept" to "Qubool hai",
+        "disclosureText" to "Raftar VPN aapka internet traffic VPN server ke zariye bhejta hai. " +
+            "Free servers volunteers (VPN Gate, University of Tsukuba) chalate hain — " +
+            "woh apne operational logs rakh sakte hain. Hum aapki browsing record nahi karte, " +
+            "koi account nahi mangte, aur koi ads/analytics nahi lagate.\n\n" +
+            "Raftar VPN routes your internet traffic through a VPN server. Free servers are run " +
+            "by volunteers (VPN Gate, University of Tsukuba) — they may keep their own operational " +
+            "logs. We don't record your browsing, require no account, and include no ads or analytics."
+    )
+
+    private val en = mapOf(
+        "appName" to "Raftar VPN",
+        "refresh" to "Refresh",
+        "tabFree" to "Free Servers",
+        "tabPrivate" to "My Servers",
+        "connect" to "Connect",
+        "disconnect" to "Disconnect",
+        "cancel" to "Cancel",
+        "retry" to "Retry",
+        "statusConnecting" to "Connecting…",
+        "connectedTo" to "Connected",
+        "statusFailed" to "Failed",
+        "statusDisconnected" to "Disconnected",
+        "bestServer" to "Best Server — Auto Connect",
+        "findingBest" to "Finding best server…",
+        "raceTitle" to "Raftar Race",
+        "raceLive" to "Live race — fastest server wins",
+        "raceWinner" to "Winner",
+        "raceUnreachable" to "unreachable",
+        "gamingMode" to "Gaming Mode",
+        "gamingPing" to "Ping",
+        "searchHint" to "Search country or server",
+        "probing" to "Checking servers…",
+        "footer" to "Free public servers (VPN Gate) — all countries come from the live feed; speed/quality varies.",
+        "unknownCountry" to "Unknown",
+        "privacyPolicy" to "Privacy Policy",
+        "privateEmpty" to "No private servers yet — add one below",
+        "addPaste" to "Paste text",
+        "addFile" to "Import file",
+        "addQr" to "Scan QR",
+        "pasteTitle" to "Paste config",
+        "nameHint" to "Name (e.g. My Oracle Server)",
+        "configHint" to "Paste .ovpn text here",
+        "save" to "Save",
+        "delete" to "Delete",
+        "reportBad" to "Report bad server",
+        "reportedBad" to "Server reported — won't show again",
+        "invalidConfig" to "Not a valid .ovpn config (no remote line found)",
+        "privateAdded" to "Server added",
+        "privateDeleted" to "Server deleted",
+        "confirmDelete" to "Delete this server?",
+        "yes" to "Yes",
+        "no" to "No",
+        "qrPrompt" to "Scan the QR code",
+        "cameraDenied" to "Camera permission needed for QR scan",
+        "fileReadError" to "Couldn't read file",
+        "noticeRefreshFail" to "Refresh failed — showing cached list",
+        "noticeNeedList" to "Wait for the server list to load",
+        "noticeNoServer" to "No server found",
+        "noticePermDenied" to "Can't connect without VPN permission",
+        "noServersAvail" to "No servers available — refresh the list",
+        "failoverFailed" to "No server connected — try again",
+        "connLost" to "Connection lost — reconnect",
+        "permNotGranted" to "VPN permission not granted",
+        "gamingNotifTitle" to "Raftar VPN — Gaming Mode",
+        "declined" to "VPN can't connect unless you accept the disclosure",
+        "disclosureTitle" to "Important notice",
+        "accept" to "Accept",
+        "disclosureText" to "Raftar VPN aapka internet traffic VPN server ke zariye bhejta hai. " +
+            "Free servers volunteers (VPN Gate, University of Tsukuba) chalate hain — " +
+            "woh apne operational logs rakh sakte hain. Hum aapki browsing record nahi karte, " +
+            "koi account nahi mangte, aur koi ads/analytics nahi lagate.\n\n" +
+            "Raftar VPN routes your internet traffic through a VPN server. Free servers are run " +
+            "by volunteers (VPN Gate, University of Tsukuba) — they may keep their own operational " +
+            "logs. We don't record your browsing, require no account, and include no ads or analytics."
+    )
+}
+
+/** Composable version — language toggle par recompose hota hai. */
+@Composable
+fun tr(key: String): String {
+    Strings.current // subscribe for recomposition
+    return Strings.t(key)
+}

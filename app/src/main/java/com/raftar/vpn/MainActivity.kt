@@ -1,1 +1,133 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbgoKaW1wb3J0IGFuZHJvaWQuTWFuaWZlc3QKaW1wb3J0IGFuZHJvaWQuY29udGVudC5wbS5QYWNrYWdlTWFuYWdlcgppbXBvcnQgYW5kcm9pZC5uZXQuVnBuU2VydmljZQppbXBvcnQgYW5kcm9pZC5vcy5CdWlsZAppbXBvcnQgYW5kcm9pZC5vcy5CdW5kbGUKaW1wb3J0IGFuZHJvaWR4LmFjdGl2aXR5LkNvbXBvbmVudEFjdGl2aXR5CmltcG9ydCBhbmRyb2lkeC5hY3Rpdml0eS5jb21wb3NlLnNldENvbnRlbnQKaW1wb3J0IGFuZHJvaWR4LmFjdGl2aXR5LnJlc3VsdC5jb250cmFjdC5BY3Rpdml0eVJlc3VsdENvbnRyYWN0cwppbXBvcnQgYW5kcm9pZHguYWN0aXZpdHkudmlld01vZGVscwppbXBvcnQgYW5kcm9pZHguY29yZS5jb250ZW50LkNvbnRleHRDb21wYXQKaW1wb3J0IGNvbS5qb3VybmV5YXBwcy5iYXJjb2Rlc2Nhbm5lci5TY2FuQ29udHJhY3QKaW1wb3J0IGNvbS5qb3VybmV5YXBwcy5iYXJjb2Rlc2Nhbm5lci5TY2FuT3B0aW9ucwppbXBvcnQgY29tLnJhZnRhci52cG4uZGF0YS5Qcml2YXRlU2VydmVyCmltcG9ydCBjb20ucmFmdGFyLnZwbi51aS5BcHAKaW1wb3J0IGNvbS5yYWZ0YXIudnBuLnVpLk1haW5WaWV3TW9kZWwKaW1wb3J0IGNvbS5yYWZ0YXIudnBuLnVpLlN0cmluZ3MKaW1wb3J0IGNvbS5yYWZ0YXIudnBuLnZwbi5WcG5Db25uZWN0b3IKCmNsYXNzIE1haW5BY3Rpdml0eSA6IENvbXBvbmVudEFjdGl2aXR5KCkgewoKICAgIHByaXZhdGUgdmFsIHZpZXdNb2RlbDogTWFpblZpZXdNb2RlbCBieSB2aWV3TW9kZWxzKCkKCiAgICAvKiogVlBOIHBlcm1pc3Npb24gbWlsbmUga2UgYmFhZCBqbyBhY3Rpb24gY2hhbGFuYSBobyAoY29ubmVjdCAvIGJlc3QgLyBnYW1pbmcgLyBwcml2YXRlKS4gKi8KICAgIHByaXZhdGUgdmFyIHBlbmRpbmdBZnRlclBlcm1pc3Npb246ICgoKSAtPiBVbml0KT8gPSBudWxsCgogICAgcHJpdmF0ZSB2YWwgdnBuUGVybWlzc2lvbkxhdW5jaGVyID0gcmVnaXN0ZXJGb3JBY3Rpdml0eVJlc3VsdCgKICAgICAgICBBY3Rpdml0eVJlc3VsdENvbnRyYWN0cy5TdGFydEFjdGl2aXR5Rm9yUmVzdWx0KCkKICAgICkgeyByZXN1bHQgLT4KICAgICAgICBpZiAocmVzdWx0LnJlc3VsdENvZGUgPT0gUkVTVUxUX09LKSB7CiAgICAgICAgICAgIHBlbmRpbmdBZnRlclBlcm1pc3Npb24/Lmludm9rZSgpCiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgdmlld01vZGVsLm9uUGVybWlzc2lvbkRlbmllZCgpCiAgICAgICAgfQogICAgICAgIHBlbmRpbmdBZnRlclBlcm1pc3Npb24gPSBudWxsCiAgICB9CgogICAgcHJpdmF0ZSB2YWwgbm90aWZpY2F0aW9uUGVybWlzc2lvbkxhdW5jaGVyID0gcmVnaXN0ZXJGb3JBY3Rpdml0eVJlc3VsdCgKICAgICAgICBBY3Rpdml0eVJlc3VsdENvbnRyYWN0cy5SZXF1ZXN0UGVybWlzc2lvbigpCiAgICApIHsgLyogb3B0aW9uYWwgcGVybWlzc2lvbjsgZGVueSBwYXIgYmhpIGFwcCBjaGFsdGkgaGFpICovIH0KCiAgICBwcml2YXRlIHZhbCBmaWxlUGlja2VyID0gcmVnaXN0ZXJGb3JBY3Rpdml0eVJlc3VsdCgKICAgICAgICBBY3Rpdml0eVJlc3VsdENvbnRyYWN0cy5HZXRDb250ZW50KCkKICAgICkgeyB1cmkgLT4KICAgICAgICBpZiAodXJpICE9IG51bGwpIHZpZXdNb2RlbC5pbXBvcnRQcml2YXRlRmlsZSh1cmkpCiAgICB9CgogICAgcHJpdmF0ZSB2YWwgcXJTY2FubmVyID0gcmVnaXN0ZXJGb3JBY3Rpdml0eVJlc3VsdChTY2FuQ29udHJhY3QoKSkgeyByZXN1bHQgLT4KICAgICAgICB2YWwgY29udGVudHMgPSByZXN1bHQuY29udGVudHMKICAgICAgICBpZiAoIWNvbnRlbnRzLmlzTnVsbE9yQmxhbmsoKSkgewogICAgICAgICAgICB2aWV3TW9kZWwuaW1wb3J0UHJpdmF0ZVRleHQoY29udGVudHMsICJRUiBTZXJ2ZXIiKQogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIHZhbCBjYW1lcmFQZXJtaXNzaW9uTGF1bmNoZXIgPSByZWdpc3RlckZvckFjdGl2aXR5UmVzdWx0KAogICAgICAgIEFjdGl2aXR5UmVzdWx0Q29udHJhY3RzLlJlcXVlc3RQZXJtaXNzaW9uKCkKICAgICkgeyBncmFudGVkIC0+CiAgICAgICAgaWYgKGdyYW50ZWQpIHsKICAgICAgICAgICAgcXJTY2FubmVyLmxhdW5jaCgKICAgICAgICAgICAgICAgIFNjYW5PcHRpb25zKCkKICAgICAgICAgICAgICAgICAgICAuc2V0UHJvbXB0KFN0cmluZ3MudCgicXJQcm9tcHQiKSkKICAgICAgICAgICAgICAgICAgICAuc2V0QmVlcEVuYWJsZWQoZmFsc2UpCiAgICAgICAgICAgICAgICAgICAgLnNldE9yaWVudGF0aW9uTG9ja2VkKGZhbHNlKQogICAgICAgICAgICApCiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgdmlld01vZGVsLnBvc3ROb3RpY2UoU3RyaW5ncy50KCJjYW1lcmFEZW5pZWQiKSkKICAgICAgICB9CiAgICB9CgogICAgb3ZlcnJpZGUgZnVuIG9uQ3JlYXRlKHNhdmVkSW5zdGFuY2VTdGF0ZTogQnVuZGxlPykgewogICAgICAgIHN1cGVyLm9uQ3JlYXRlKHNhdmVkSW5zdGFuY2VTdGF0ZSkKCiAgICAgICAgLy8gQW5kcm9pZCAxMys6IFZQTiBmb3JlZ3JvdW5kLXNlcnZpY2Ugbm90aWZpY2F0aW9uIGtlIGxpeWUgcnVudGltZSBwZXJtaXNzaW9uLgogICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gMzMgJiYKICAgICAgICAgICAgQ29udGV4dENvbXBhdC5jaGVja1NlbGZQZXJtaXNzaW9uKHRoaXMsIE1hbmlmZXN0LnBlcm1pc3Npb24uUE9TVF9OT1RJRklDQVRJT05TKSAhPQogICAgICAgICAgICBQYWNrYWdlTWFuYWdlci5QRVJNSVNTSU9OX0dSQU5URUQKICAgICAgICApIHsKICAgICAgICAgICAgbm90aWZpY2F0aW9uUGVybWlzc2lvbkxhdW5jaGVyLmxhdW5jaChNYW5pZmVzdC5wZXJtaXNzaW9uLlBPU1RfTk9USUZJQ0FUSU9OUykKICAgICAgICB9CgogICAgICAgIHNldENvbnRlbnQgewogICAgICAgICAgICBBcHAoCiAgICAgICAgICAgICAgICB2aWV3TW9kZWwgPSB2aWV3TW9kZWwsCiAgICAgICAgICAgICAgICBvbkNvbm5lY3RDbGljayA9IDo6aGFuZGxlQ29ubmVjdENsaWNrLAogICAgICAgICAgICAgICAgb25CZXN0U2VydmVyQ2xpY2sgPSB7CiAgICAgICAgICAgICAgICAgICAgd2l0aFZwblBlcm1pc3Npb24geyB2aWV3TW9kZWwucmVxdWVzdENvbm5lY3QgeyB2aWV3TW9kZWwuYXV0b0Nvbm5lY3RCZXN0KCkgfSB9CiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgb25HYW1pbmdDbGljayA9IHsKICAgICAgICAgICAgICAgICAgICB3aXRoVnBuUGVybWlzc2lvbiB7IHZpZXdNb2RlbC5yZXF1ZXN0Q29ubmVjdCB7IHZpZXdNb2RlbC5zdGFydEdhbWluZ01vZGUoKSB9IH0KICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICBvblByaXZhdGVDb25uZWN0ID0geyBwczogUHJpdmF0ZVNlcnZlciAtPgogICAgICAgICAgICAgICAgICAgIHdpdGhWcG5QZXJtaXNzaW9uIHsgdmlld01vZGVsLnJlcXVlc3RDb25uZWN0IHsgdmlld01vZGVsLmNvbm5lY3RQcml2YXRlKHBzKSB9IH0KICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICBvbkltcG9ydEZpbGVDbGljayA9IHsgZmlsZVBpY2tlci5sYXVuY2goIiovKiIpIH0sCiAgICAgICAgICAgICAgICBvblNjYW5RckNsaWNrID0gOjpoYW5kbGVRclNjYW5DbGljawogICAgICAgICAgICApCiAgICAgICAgfQogICAgfQoKICAgIC8qKiBWcG5TZXJ2aWNlLnByZXBhcmUoKSBudWxsID0gcGVybWlzc2lvbiBwZWhsZSBzZSBncmFudGVkLCB3YXJuYSBzeXN0ZW0gZGlhbG9nLiAqLwogICAgcHJpdmF0ZSBmdW4gd2l0aFZwblBlcm1pc3Npb24oYWN0aW9uOiAoKSAtPiBVbml0KSB7CiAgICAgICAgaWYgKHZpZXdNb2RlbC5jb25uZWN0b3IucHJlcGFyZSgpKSB7CiAgICAgICAgICAgIGFjdGlvbigpCiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgcGVuZGluZ0FmdGVyUGVybWlzc2lvbiA9IGFjdGlvbgogICAgICAgICAgICBWcG5TZXJ2aWNlLnByZXBhcmUodGhpcyk/LmxldCB7IHZwblBlcm1pc3Npb25MYXVuY2hlci5sYXVuY2goaXQpIH0KICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBmdW4gaGFuZGxlQ29ubmVjdENsaWNrKCkgewogICAgICAgIHdoZW4gKHZpZXdNb2RlbC5jb25uZWN0b3Iuc3RhdGUudmFsdWUpIHsKICAgICAgICAgICAgaXMgVnBuQ29ubmVjdG9yLlZwblN0YXRlLkNvbm5lY3RlZCwKICAgICAgICAgICAgaXMgVnBuQ29ubmVjdG9yLlZwblN0YXRlLkNvbm5lY3RpbmcgLT4gdmlld01vZGVsLmNvbm5lY3Rvci5kaXNjb25uZWN0KCkKICAgICAgICAgICAgZWxzZSAtPiB3aXRoVnBuUGVybWlzc2lvbiB7IHZpZXdNb2RlbC5yZXF1ZXN0Q29ubmVjdCB7IHZpZXdNb2RlbC51c2VyU3RhcnRDb25uZWN0KCkgfSB9CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgZnVuIGhhbmRsZVFyU2NhbkNsaWNrKCkgewogICAgICAgIGlmIChDb250ZXh0Q29tcGF0LmNoZWNrU2VsZlBlcm1pc3Npb24odGhpcywgTWFuaWZlc3QucGVybWlzc2lvbi5DQU1FUkEpID09CiAgICAgICAgICAgIFBhY2thZ2VNYW5hZ2VyLlBFUk1JU1NJT05fR1JBTlRFRAogICAgICAgICkgewogICAgICAgICAgICBxclNjYW5uZXIubGF1bmNoKAogICAgICAgICAgICAgICAgU2Nhbk9wdGlvbnMoKQogICAgICAgICAgICAgICAgICAgIC5zZXRQcm9tcHQoU3RyaW5ncy50KCJxclByb21wdCIpKQogICAgICAgICAgICAgICAgICAgIC5zZXRCZWVwRW5hYmxlZChmYWxzZSkKICAgICAgICAgICAgICAgICAgICAuc2V0T3JpZW50YXRpb25Mb2NrZWQoZmFsc2UpCiAgICAgICAgICAgICkKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBjYW1lcmFQZXJtaXNzaW9uTGF1bmNoZXIubGF1bmNoKE1hbmlmZXN0LnBlcm1pc3Npb24uQ0FNRVJBKQogICAgICAgIH0KICAgIH0KfQo=
+package com.raftar.vpn
+
+import android.Manifest
+import android.content.pm.PackageManager
+import android.net.VpnService
+import android.os.Build
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
+import androidx.core.content.ContextCompat
+import com.journeyapps.barcodescanner.ScanContract
+import com.journeyapps.barcodescanner.ScanOptions
+import com.raftar.vpn.data.PrivateServer
+import com.raftar.vpn.ui.App
+import com.raftar.vpn.ui.MainViewModel
+import com.raftar.vpn.ui.Strings
+import com.raftar.vpn.vpn.VpnConnector
+
+class MainActivity : ComponentActivity() {
+
+    private val viewModel: MainViewModel by viewModels()
+
+    /** VPN permission milne ke baad jo action chalana ho (connect / best / gaming / private). */
+    private var pendingAfterPermission: (() -> Unit)? = null
+
+    private val vpnPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            pendingAfterPermission?.invoke()
+        } else {
+            viewModel.onPermissionDenied()
+        }
+        pendingAfterPermission = null
+    }
+
+    private val notificationPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { /* optional permission; deny par bhi app chalti hai */ }
+
+    private val filePicker = registerForActivityResult(
+        ActivityResultContracts.GetContent()
+    ) { uri ->
+        if (uri != null) viewModel.importPrivateFile(uri)
+    }
+
+    private val qrScanner = registerForActivityResult(ScanContract()) { result ->
+        val contents = result.contents
+        if (!contents.isNullOrBlank()) {
+            viewModel.importPrivateText(contents, "QR Server")
+        }
+    }
+
+    private val cameraPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            qrScanner.launch(
+                ScanOptions()
+                    .setPrompt(Strings.t("qrPrompt"))
+                    .setBeepEnabled(false)
+                    .setOrientationLocked(false)
+            )
+        } else {
+            viewModel.postNotice(Strings.t("cameraDenied"))
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Android 13+: VPN foreground-service notification ke liye runtime permission.
+        if (Build.VERSION.SDK_INT >= 33 &&
+            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) !=
+            PackageManager.PERMISSION_GRANTED
+        ) {
+            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
+
+        setContent {
+            App(
+                viewModel = viewModel,
+                onConnectClick = ::handleConnectClick,
+                onBestServerClick = {
+                    withVpnPermission { viewModel.requestConnect { viewModel.autoConnectBest() } }
+                },
+                onGamingClick = {
+                    withVpnPermission { viewModel.requestConnect { viewModel.startGamingMode() } }
+                },
+                onPrivateConnect = { ps: PrivateServer ->
+                    withVpnPermission { viewModel.requestConnect { viewModel.connectPrivate(ps) } }
+                },
+                onImportFileClick = { filePicker.launch("*/*") },
+                onScanQrClick = ::handleQrScanClick
+            )
+        }
+    }
+
+    /** VpnService.prepare() null = permission pehle se granted, warna system dialog. */
+    private fun withVpnPermission(action: () -> Unit) {
+        if (viewModel.connector.prepare()) {
+            action()
+        } else {
+            pendingAfterPermission = action
+            VpnService.prepare(this)?.let { vpnPermissionLauncher.launch(it) }
+        }
+    }
+
+    private fun handleConnectClick() {
+        when (viewModel.connector.state.value) {
+            is VpnConnector.VpnState.Connected,
+            is VpnConnector.VpnState.Connecting -> viewModel.connector.disconnect()
+            else -> withVpnPermission { viewModel.requestConnect { viewModel.userStartConnect() } }
+        }
+    }
+
+    private fun handleQrScanClick() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) ==
+            PackageManager.PERMISSION_GRANTED
+        ) {
+            qrScanner.launch(
+                ScanOptions()
+                    .setPrompt(Strings.t("qrPrompt"))
+                    .setBeepEnabled(false)
+                    .setOrientationLocked(false)
+            )
+        } else {
+            cameraPermissionLauncher.launch(Manifest.permission.CAMERA)
+        }
+    }
+}

@@ -1,1 +1,210 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi52cG4KCmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuQ29udGV4dAppbXBvcnQgYW5kcm9pZC5uZXQuVnBuU2VydmljZQppbXBvcnQgY29tLnJhZnRhci52cG4uTWFpbkFjdGl2aXR5CmltcG9ydCBjb20ucmFmdGFyLnZwbi5kYXRhLlZwblNlcnZlcgppbXBvcnQgY29tLnJhZnRhci52cG4uZGF0YS5wYXJzZVJlbW90ZUVuZHBvaW50CmltcG9ydCBjb20ucmFmdGFyLnZwbi5kYXRhLnNhbml0aXplT3ZwbkNvbmZpZwppbXBvcnQgY29tLnJhZnRhci52cG4udWkuU3RyaW5ncwppbXBvcnQgY29tLnRpbS5iYXNldnBuLmNvbm5lY3Rpb24uVnBuU2VydmljZUNvbm5lY3Rpb24KaW1wb3J0IGNvbS50aW0uYmFzZXZwbi5zdGF0ZS5Db25uZWN0aW9uU3RhdGUKaW1wb3J0IGNvbS50aW0ub3BlbnZwbi5jb25maWd1cmF0aW9uLk9wZW5WUE5Db25maWcKaW1wb3J0IGNvbS50aW0ub3BlbnZwbi5zZXJ2aWNlLk9wZW5WUE5TZXJ2aWNlCmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuQ29tcGxldGFibGVEZWZlcnJlZAppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLkNvcm91dGluZVNjb3BlCmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuRGlzcGF0Y2hlcnMKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5Kb2IKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5TdXBlcnZpc29ySm9iCmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMuZGVsYXkKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5mbG93Lk11dGFibGVTdGF0ZUZsb3cKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5mbG93LlN0YXRlRmxvdwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmZsb3cuYXNTdGF0ZUZsb3cKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5sYXVuY2gKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy53aXRoVGltZW91dE9yTnVsbAoKLyoqCiAqIHRpbTA2IE9wZW5WUE4gZW5naW5lIGthIHdyYXBwZXIuCiAqCiAqIEludGVncmF0aW9uICh2ZXJpZmllZCBhZ2FpbnN0IG9wZW52cG4tMS4xLjMgLyBiYXNldnBucHJvdG9jb2xzLTEuMS4xIGJ5dGVjb2RlKToKICogLSBDb25maWcgYE9wZW5WUE5TZXJ2aWNlLnN0YXJ0U2VydmljZSguLi4pYCBrZSB6YXJpeWUgQ09ORklHVVJBVElPTl9LRVkgaW50ZW50IGV4dHJhIG1lCiAqICAgamF0aSBoYWkg4oCUIGBWcG5TZXJ2aWNlQ29ubmVjdGlvbi5zdGFydCguLi4pYCBjb25maWcgZHJvcCBrYXIgZGV0YSBoYWksIGlzIGxpeWUgc2lyZgogKiAgIGNvbXBhbmlvbiBjYWxsIGNvbmZpZyBkZWxpdmVyIGthcnRpIGhhaS4KICogLSBgVnBuU2VydmljZUNvbm5lY3Rpb25gIChhYnN0cmFjdCkgc2lyZiBiaW5kICsgc3RhdGUgY2FsbGJhY2tzIGtlIGxpeWUgaGFpOgogKiAgIGFub255bW91cyBzdWJjbGFzcyBiYW5hbyBhdXIgYGF0dGFjaExpc3RlbmVyKClgIGNhbGwga2Fyby4KICogLSBgT3BlblZQTkNvbmZpZ1BhcnNlcmAgVlBOIEdhdGUgY29uZmlncyBwYXIgY3Jhc2gga2FydGEgaGFpICh0bHMtY3J5cHQgYmxvY2sgbmFoaSBob3RhKSwKICogICBpcyBsaXllIE9wZW5WUE5Db25maWcgbWFudWFsbHkgYmFuYXRlIGhhaW4gYXVyIGBjb25maWd1cmF0aW9uYCBtZSByYXcgc2FuaXRpemVkIGNvbmZpZwogKiAgIHJha2h0ZSBoYWluIOKAlCBlbmdpbmUgYGNvbmYuY29uZmlndXJhdGlvbiA/OiBjb25mLmJ1aWxkQ29uZmlnKClgIHVzZSBrYXJ0YSBoYWkuCiAqLwpjbGFzcyBWcG5Db25uZWN0b3IocHJpdmF0ZSB2YWwgYXBwQ29udGV4dDogQ29udGV4dCkgewoKICAgIHNlYWxlZCBpbnRlcmZhY2UgVnBuU3RhdGUgewogICAgICAgIGRhdGEgb2JqZWN0IElkbGUgOiBWcG5TdGF0ZQogICAgICAgIGRhdGEgb2JqZWN0IENvbm5lY3RpbmcgOiBWcG5TdGF0ZQogICAgICAgIGRhdGEgY2xhc3MgQ29ubmVjdGVkKHZhbCBzZXJ2ZXI6IFZwblNlcnZlcikgOiBWcG5TdGF0ZQogICAgICAgIGRhdGEgY2xhc3MgRmFpbGVkKHZhbCByZWFzb246IFN0cmluZykgOiBWcG5TdGF0ZQogICAgICAgIGRhdGEgb2JqZWN0IERpc2Nvbm5lY3RlZCA6IFZwblN0YXRlCiAgICB9CgogICAgcHJpdmF0ZSB2YWwgc2NvcGUgPSBDb3JvdXRpbmVTY29wZShTdXBlcnZpc29ySm9iKCkgKyBEaXNwYXRjaGVycy5NYWluLmltbWVkaWF0ZSkKCiAgICBwcml2YXRlIHZhbCBfc3RhdGUgPSBNdXRhYmxlU3RhdGVGbG93PFZwblN0YXRlPihWcG5TdGF0ZS5JZGxlKQogICAgdmFsIHN0YXRlOiBTdGF0ZUZsb3c8VnBuU3RhdGU+ID0gX3N0YXRlLmFzU3RhdGVGbG93KCkKCiAgICBwcml2YXRlIHZhciBjb25uZWN0aW9uOiBWcG5TZXJ2aWNlQ29ubmVjdGlvbj8gPSBudWxsCiAgICBwcml2YXRlIHZhciBjb25uZWN0Sm9iOiBKb2I/ID0gbnVsbAogICAgcHJpdmF0ZSB2YXIgYXR0ZW1wdFNpZ25hbDogQ29tcGxldGFibGVEZWZlcnJlZDxCb29sZWFuPj8gPSBudWxsCiAgICBwcml2YXRlIHZhbCBkZWFkU2VydmVycyA9IG11dGFibGVTZXRPZjxTdHJpbmc+KCkKCiAgICBAVm9sYXRpbGUgcHJpdmF0ZSB2YXIgdXNlclN0b3BwZWQgPSBmYWxzZQogICAgQFZvbGF0aWxlIHByaXZhdGUgdmFyIGFjdGl2ZVNlcnZlcjogVnBuU2VydmVyPyA9IG51bGwKCiAgICAvKiogdHJ1ZSA9IFZQTiBwZXJtaXNzaW9uIHBlaGxlIHNlIGdyYW50ZWQ7IGZhbHNlID0gY2FsbGVyIFZwblNlcnZpY2UucHJlcGFyZSgpIGludGVudCBsYXVuY2gga2FyZS4gKi8KICAgIGZ1biBwcmVwYXJlKCk6IEJvb2xlYW4gPSBWcG5TZXJ2aWNlLnByZXBhcmUoYXBwQ29udGV4dCkgPT0gbnVsbAoKICAgIC8qKgogICAgICogW3NlcnZlcnNdIHJhbmstb3JkZXJlZCBob25pIGNoYWhpeWU7IHBlaGxhIHNlcnZlciB1c2VyIGthIHNlbGVjdGVkL2Jlc3QgaG90YSBoYWkuCiAgICAgKiBIYXIgc2VydmVyIHBhciAyMHMgdGltZW91dDsgZmFpbCBob25lIHBhciBhZ2xheSBzZXJ2ZXIgcGFyIGF1dG8tZmFpbG92ZXIgKG1heCA1IGF0dGVtcHRzKSwKICAgICAqIGF0dGVtcHRzIGtlIGRhcm1peWFuIH4xLjVzIGthIHdhcWZhLgogICAgICovCiAgICBmdW4gY29ubmVjdChzZXJ2ZXJzOiBMaXN0PFZwblNlcnZlcj4sIGdldENvbmZpZzogKFZwblNlcnZlcikgLT4gU3RyaW5nPykgewogICAgICAgIGRpc2Nvbm5lY3RJbnRlcm5hbChzaWxlbnQgPSB0cnVlKQogICAgICAgIHVzZXJTdG9wcGVkID0gZmFsc2UKICAgICAgICBfc3RhdGUudmFsdWUgPSBWcG5TdGF0ZS5Db25uZWN0aW5nCiAgICAgICAgY29ubmVjdEpvYiA9IHNjb3BlLmxhdW5jaCB7CiAgICAgICAgICAgIHZhbCBjYW5kaWRhdGVzID0gc2VydmVycy5maWx0ZXIgeyBpdC5pZCAhaW4gZGVhZFNlcnZlcnMgfS50YWtlKDUpCiAgICAgICAgICAgIGlmIChjYW5kaWRhdGVzLmlzRW1wdHkoKSkgewogICAgICAgICAgICAgICAgX3N0YXRlLnZhbHVlID0gVnBuU3RhdGUuRmFpbGVkKFN0cmluZ3MudCgibm9TZXJ2ZXJzQXZhaWwiKSkKICAgICAgICAgICAgICAgIHJldHVybkBsYXVuY2gKICAgICAgICAgICAgfQogICAgICAgICAgICBmb3IgKChpbmRleCwgc2VydmVyKSBpbiBjYW5kaWRhdGVzLndpdGhJbmRleCgpKSB7CiAgICAgICAgICAgICAgICBpZiAodXNlclN0b3BwZWQpIHJldHVybkBsYXVuY2gKICAgICAgICAgICAgICAgIHZhbCByYXcgPSBnZXRDb25maWcoc2VydmVyKQogICAgICAgICAgICAgICAgaWYgKHJhdy5pc051bGxPckJsYW5rKCkpIHsKICAgICAgICAgICAgICAgICAgICBkZWFkU2VydmVycy5hZGQoc2VydmVyLmlkKQogICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBpZiAoYXR0ZW1wdENvbm5lY3Qoc2VydmVyLCByYXcpKSByZXR1cm5AbGF1bmNoIC8vIENvbm5lY3RlZCBzdGF0ZSBjYWxsYmFjayBzZXQga2FyIGNodWthCiAgICAgICAgICAgICAgICBkZWFkU2VydmVycy5hZGQoc2VydmVyLmlkKQogICAgICAgICAgICAgICAgaWYgKGluZGV4IDwgY2FuZGlkYXRlcy5sYXN0SW5kZXggJiYgIXVzZXJTdG9wcGVkKSBkZWxheSgxNTAwKQogICAgICAgICAgICB9CiAgICAgICAgICAgIGlmICghdXNlclN0b3BwZWQpIHsKICAgICAgICAgICAgICAgIF9zdGF0ZS52YWx1ZSA9IFZwblN0YXRlLkZhaWxlZChTdHJpbmdzLnQoImZhaWxvdmVyRmFpbGVkIikpCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgLyoqCiAgICAgKiBBcG5hIHByaXZhdGUgc2VydmVyICgiTWVyZSBTZXJ2ZXJzIik6IHNpbmdsZSBhdHRlbXB0LCBrb2kgZmFpbG92ZXIgbmFoaSDigJQKICAgICAqIGNvbmZpZyB1c2VyIGtpIGFwbmkgaGFpLCBpcyBsaXllIHdhaGkgZmluYWwgaGFpLgogICAgICovCiAgICBmdW4gY29ubmVjdFByaXZhdGUobmFtZTogU3RyaW5nLCByYXdDb25maWc6IFN0cmluZykgewogICAgICAgIHZhbCBwc2V1ZG8gPSBWcG5TZXJ2ZXIoCiAgICAgICAgICAgIGhvc3ROYW1lID0gbmFtZSwKICAgICAgICAgICAgaXAgPSAiIiwKICAgICAgICAgICAgY291bnRyeUxvbmcgPSAiIiwKICAgICAgICAgICAgY291bnRyeVNob3J0ID0gIiIsCiAgICAgICAgICAgIHBpbmdNcyA9IDAsCiAgICAgICAgICAgIHNjb3JlID0gMCwKICAgICAgICAgICAgc3BlZWRCcHMgPSAwLAogICAgICAgICAgICBzZXNzaW9ucyA9IDAsCiAgICAgICAgICAgIHVwdGltZVNlYyA9IDAsCiAgICAgICAgICAgIGNvbmZpZ0Jhc2U2NCA9ICIiCiAgICAgICAgKQogICAgICAgIGNvbm5lY3QobGlzdE9mKHBzZXVkbykpIHsgcmF3Q29uZmlnIH0KICAgIH0KCiAgICBmdW4gZGlzY29ubmVjdCgpID0gZGlzY29ubmVjdEludGVybmFsKHNpbGVudCA9IGZhbHNlKQoKICAgIC8qKiBOYXllIG1hbnVhbCBjb25uZWN0IHBhciBza2lwLWxpc3QgcmVzZXQgKHB1cmFuZSBkZWFkIG1hcmtzIGJob29sIGphbykuICovCiAgICBmdW4gY2xlYXJEZWFkU2VydmVycygpIHsKICAgICAgICBkZWFkU2VydmVycy5jbGVhcigpCiAgICB9CgogICAgcHJpdmF0ZSBzdXNwZW5kIGZ1biBhdHRlbXB0Q29ubmVjdChzZXJ2ZXI6IFZwblNlcnZlciwgcmF3Q29uZmlnOiBTdHJpbmcpOiBCb29sZWFuIHsKICAgICAgICB0ZWFyZG93bkF0dGVtcHQoKQogICAgICAgIHZhbCBzYW5pdGl6ZWQgPSBzYW5pdGl6ZU92cG5Db25maWcocmF3Q29uZmlnKQogICAgICAgIHZhbCBlcCA9IHBhcnNlUmVtb3RlRW5kcG9pbnQoc2FuaXRpemVkKQogICAgICAgIGlmIChlcC5ob3N0LmlzQmxhbmsoKSkgcmV0dXJuIGZhbHNlCgogICAgICAgIHZhbCBjZmcgPSBPcGVuVlBOQ29uZmlnKAogICAgICAgICAgICBuYW1lID0gc2VydmVyLmhvc3ROYW1lLAogICAgICAgICAgICBob3N0ID0gZXAuaG9zdCwKICAgICAgICAgICAgcG9ydCA9IGVwLnBvcnQsCiAgICAgICAgICAgIHR5cGUgPSBpZiAoZXAucHJvdG8gPT0gInVkcCIpICJ1ZHAtY2xpZW50IiBlbHNlICJ0Y3AtY2xpZW50IiwKICAgICAgICAgICAgY29uZmlndXJhdGlvbiA9IHNhbml0aXplZAogICAgICAgICkKCiAgICAgICAgYWN0aXZlU2VydmVyID0gc2VydmVyCiAgICAgICAgYXR0ZW1wdFNpZ25hbCA9IENvbXBsZXRhYmxlRGVmZXJyZWQoKQoKICAgICAgICAvLyAxKSBDb25maWcgc2VydmljZSB0YWsgcGFodW5jaGFuYSArIGZvcmVncm91bmQgc2VydmljZSBzdGFydCAoZW5naW5lIGlzaSBzZSBjaGFsdGEgaGFpKQogICAgICAgIE9wZW5WUE5TZXJ2aWNlLnN0YXJ0U2VydmljZShhcHBDb250ZXh0LCBjZmcsIE1haW5BY3Rpdml0eTo6Y2xhc3MuamF2YS5uYW1lLCBlbXB0eUFycmF5PFN0cmluZz4oKSkKICAgICAgICAvLyAyKSBTaXJmIHN0YXRlIGNhbGxiYWNrcyBrZSBsaXllIGJpbmQgKFZwblNlcnZpY2VDb25uZWN0aW9uLnN0YXJ0IGNvbmZpZyBkcm9wIGthciBkZXRhIGhhaSkKICAgICAgICBjb25uZWN0aW9uID0gb2JqZWN0IDogVnBuU2VydmljZUNvbm5lY3Rpb24oCiAgICAgICAgICAgIGFwcENvbnRleHQsCiAgICAgICAgICAgIE9wZW5WUE5TZXJ2aWNlOjpjbGFzcy5qYXZhLAogICAgICAgICAgICB7IHN0IC0+IG9uRW5naW5lU3RhdGUoc3QpIH0sCiAgICAgICAgICAgIHNjb3BlCiAgICAgICAgKSB7fQogICAgICAgIGNvbm5lY3Rpb24/LmF0dGFjaExpc3RlbmVyKCkKCiAgICAgICAgdmFsIGNvbm5lY3RlZCA9IHdpdGhUaW1lb3V0T3JOdWxsKDIwXzAwMCkgeyBhdHRlbXB0U2lnbmFsPy5hd2FpdCgpIH0gPzogZmFsc2UKICAgICAgICBpZiAoIWNvbm5lY3RlZCkgdGVhcmRvd25BdHRlbXB0KCkKICAgICAgICByZXR1cm4gY29ubmVjdGVkCiAgICB9CgogICAgcHJpdmF0ZSBmdW4gb25FbmdpbmVTdGF0ZShzdDogQ29ubmVjdGlvblN0YXRlKSB7CiAgICAgICAgd2hlbiAoc3QpIHsKICAgICAgICAgICAgQ29ubmVjdGlvblN0YXRlLkNPTk5FQ1RFRCAtPiB7CiAgICAgICAgICAgICAgICBpZiAodXNlclN0b3BwZWQpIHJldHVybgogICAgICAgICAgICAgICAgdmFsIHMgPSBhY3RpdmVTZXJ2ZXIgPzogcmV0dXJuCiAgICAgICAgICAgICAgICBfc3RhdGUudmFsdWUgPSBWcG5TdGF0ZS5Db25uZWN0ZWQocykKICAgICAgICAgICAgICAgIGF0dGVtcHRTaWduYWw/LmNvbXBsZXRlKHRydWUpCiAgICAgICAgICAgIH0KICAgICAgICAgICAgQ29ubmVjdGlvblN0YXRlLkNPTk5FQ1RJTkcsIENvbm5lY3Rpb25TdGF0ZS5SRUFEWUZPUkNPTk5FQ1QgLT4gewogICAgICAgICAgICAgICAgaWYgKCF1c2VyU3RvcHBlZCkgX3N0YXRlLnZhbHVlID0gVnBuU3RhdGUuQ29ubmVjdGluZwogICAgICAgICAgICB9CiAgICAgICAgICAgIENvbm5lY3Rpb25TdGF0ZS5ESVNDT05ORUNUSU5HLCBDb25uZWN0aW9uU3RhdGUuRElTQ09OTkVDVEVEIC0+IHsKICAgICAgICAgICAgICAgIHZhbCBzaWduYWxlZCA9IGF0dGVtcHRTaWduYWw/LmNvbXBsZXRlKGZhbHNlKSA/OiBmYWxzZQogICAgICAgICAgICAgICAgdmFsIHdhc0Nvbm5lY3RlZCA9IF9zdGF0ZS52YWx1ZSBpcyBWcG5TdGF0ZS5Db25uZWN0ZWQKICAgICAgICAgICAgICAgIGlmICghc2lnbmFsZWQgJiYgd2FzQ29ubmVjdGVkICYmICF1c2VyU3RvcHBlZCkgewogICAgICAgICAgICAgICAgICAgIC8vIENvbm5lY3Qga2UgQkFBRCBjb25uZWN0aW9uIHRvb3QgZ2F5aSDigJQgZmFpbG92ZXIgbmFoaSwgd2F6ZWggZXJyb3IuCiAgICAgICAgICAgICAgICAgICAgdGVhcmRvd25BdHRlbXB0KCkKICAgICAgICAgICAgICAgICAgICBfc3RhdGUudmFsdWUgPSBWcG5TdGF0ZS5GYWlsZWQoU3RyaW5ncy50KCJjb25uTG9zdCIpKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIENvbm5lY3Rpb25TdGF0ZS5QRVJNSVNTSU9OX05PVF9HUkFOVEVEIC0+IHsKICAgICAgICAgICAgICAgIGF0dGVtcHRTaWduYWw/LmNvbXBsZXRlKGZhbHNlKQogICAgICAgICAgICAgICAgaWYgKCF1c2VyU3RvcHBlZCkgX3N0YXRlLnZhbHVlID0gVnBuU3RhdGUuRmFpbGVkKFN0cmluZ3MudCgicGVybU5vdEdyYW50ZWQiKSkKICAgICAgICAgICAgfQogICAgICAgICAgICBDb25uZWN0aW9uU3RhdGUuSURMRSAtPiBVbml0CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgZnVuIHRlYXJkb3duQXR0ZW1wdCgpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBjb25uZWN0aW9uPy5zdG9wKCkKICAgICAgICB9IGNhdGNoIChfOiBFeGNlcHRpb24pIHsKICAgICAgICB9CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgY29ubmVjdGlvbj8uc3RvcFNlcnZpY2VJZk5lZWQodHJ1ZSkKICAgICAgICB9IGNhdGNoIChfOiBFeGNlcHRpb24pIHsKICAgICAgICB9CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgT3BlblZQTlNlcnZpY2Uuc3RvcFNlcnZpY2UoYXBwQ29udGV4dCkKICAgICAgICB9IGNhdGNoIChfOiBFeGNlcHRpb24pIHsKICAgICAgICB9CiAgICAgICAgY29ubmVjdGlvbiA9IG51bGwKICAgICAgICBhdHRlbXB0U2lnbmFsID0gbnVsbAogICAgfQoKICAgIHByaXZhdGUgZnVuIGRpc2Nvbm5lY3RJbnRlcm5hbChzaWxlbnQ6IEJvb2xlYW4pIHsKICAgICAgICB1c2VyU3RvcHBlZCA9IHRydWUKICAgICAgICBjb25uZWN0Sm9iPy5jYW5jZWwoKQogICAgICAgIGNvbm5lY3RKb2IgPSBudWxsCiAgICAgICAgdGVhcmRvd25BdHRlbXB0KCkKICAgICAgICBhY3RpdmVTZXJ2ZXIgPSBudWxsCiAgICAgICAgaWYgKCFzaWxlbnQpIF9zdGF0ZS52YWx1ZSA9IFZwblN0YXRlLkRpc2Nvbm5lY3RlZAogICAgfQp9Cg==
+package com.raftar.vpn.vpn
+
+import android.content.Context
+import android.net.VpnService
+import com.raftar.vpn.MainActivity
+import com.raftar.vpn.data.VpnServer
+import com.raftar.vpn.data.parseRemoteEndpoint
+import com.raftar.vpn.data.sanitizeOvpnConfig
+import com.raftar.vpn.ui.Strings
+import com.tim.basevpn.connection.VpnServiceConnection
+import com.tim.basevpn.state.ConnectionState
+import com.tim.openvpn.configuration.OpenVPNConfig
+import com.tim.openvpn.service.OpenVPNService
+import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeoutOrNull
+
+/**
+ * tim06 OpenVPN engine ka wrapper.
+ *
+ * Integration (verified against openvpn-1.1.3 / basevpnprotocols-1.1.1 bytecode):
+ * - Config `OpenVPNService.startService(...)` ke zariye CONFIGURATION_KEY intent extra me
+ *   jati hai — `VpnServiceConnection.start(...)` config drop kar deta hai, is liye sirf
+ *   companion call config deliver karti hai.
+ * - `VpnServiceConnection` (abstract) sirf bind + state callbacks ke liye hai:
+ *   anonymous subclass banao aur `attachListener()` call karo.
+ * - `OpenVPNConfigParser` VPN Gate configs par crash karta hai (tls-crypt block nahi hota),
+ *   is liye OpenVPNConfig manually banate hain aur `configuration` me raw sanitized config
+ *   rakhte hain — engine `conf.configuration ?: conf.buildConfig()` use karta hai.
+ */
+class VpnConnector(private val appContext: Context) {
+
+    sealed interface VpnState {
+        data object Idle : VpnState
+        data object Connecting : VpnState
+        data class Connected(val server: VpnServer) : VpnState
+        data class Failed(val reason: String) : VpnState
+        data object Disconnected : VpnState
+    }
+
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+
+    private val _state = MutableStateFlow<VpnState>(VpnState.Idle)
+    val state: StateFlow<VpnState> = _state.asStateFlow()
+
+    private var connection: VpnServiceConnection? = null
+    private var connectJob: Job? = null
+    private var attemptSignal: CompletableDeferred<Boolean>? = null
+    private val deadServers = mutableSetOf<String>()
+
+    @Volatile private var userStopped = false
+    @Volatile private var activeServer: VpnServer? = null
+
+    /** true = VPN permission pehle se granted; false = caller VpnService.prepare() intent launch kare. */
+    fun prepare(): Boolean = VpnService.prepare(appContext) == null
+
+    /**
+     * [servers] rank-ordered honi chahiye; pehla server user ka selected/best hota hai.
+     * Har server par 20s timeout; fail hone par aglay server par auto-failover (max 5 attempts),
+     * attempts ke darmiyan ~1.5s ka waqfa.
+     */
+    fun connect(servers: List<VpnServer>, getConfig: (VpnServer) -> String?) {
+        disconnectInternal(silent = true)
+        userStopped = false
+        _state.value = VpnState.Connecting
+        connectJob = scope.launch {
+            val candidates = servers.filter { it.id !in deadServers }.take(5)
+            if (candidates.isEmpty()) {
+                _state.value = VpnState.Failed(Strings.t("noServersAvail"))
+                return@launch
+            }
+            for ((index, server) in candidates.withIndex()) {
+                if (userStopped) return@launch
+                val raw = getConfig(server)
+                if (raw.isNullOrBlank()) {
+                    deadServers.add(server.id)
+                    continue
+                }
+                if (attemptConnect(server, raw)) return@launch // Connected state callback set kar chuka
+                deadServers.add(server.id)
+                if (index < candidates.lastIndex && !userStopped) delay(1500)
+            }
+            if (!userStopped) {
+                _state.value = VpnState.Failed(Strings.t("failoverFailed"))
+            }
+        }
+    }
+
+    /**
+     * Apna private server ("Mere Servers"): single attempt, koi failover nahi —
+     * config user ki apni hai, is liye wahi final hai.
+     */
+    fun connectPrivate(name: String, rawConfig: String) {
+        val pseudo = VpnServer(
+            hostName = name,
+            ip = "",
+            countryLong = "",
+            countryShort = "",
+            pingMs = 0,
+            score = 0,
+            speedBps = 0,
+            sessions = 0,
+            uptimeSec = 0,
+            configBase64 = ""
+        )
+        connect(listOf(pseudo)) { rawConfig }
+    }
+
+    fun disconnect() = disconnectInternal(silent = false)
+
+    /** Naye manual connect par skip-list reset (purane dead marks bhool jao). */
+    fun clearDeadServers() {
+        deadServers.clear()
+    }
+
+    private suspend fun attemptConnect(server: VpnServer, rawConfig: String): Boolean {
+        teardownAttempt()
+        val sanitized = sanitizeOvpnConfig(rawConfig)
+        val ep = parseRemoteEndpoint(sanitized)
+        if (ep.host.isBlank()) return false
+
+        val cfg = OpenVPNConfig(
+            name = server.hostName,
+            host = ep.host,
+            port = ep.port,
+            type = if (ep.proto == "udp") "udp-client" else "tcp-client",
+            configuration = sanitized
+        )
+
+        activeServer = server
+        attemptSignal = CompletableDeferred()
+
+        // 1) Config service tak pahunchana + foreground service start (engine isi se chalta hai)
+        OpenVPNService.startService(appContext, cfg, MainActivity::class.java.name, emptyArray<String>())
+        // 2) Sirf state callbacks ke liye bind (VpnServiceConnection.start config drop kar deta hai)
+        connection = object : VpnServiceConnection(
+            appContext,
+            OpenVPNService::class.java,
+            { st -> onEngineState(st) },
+            scope
+        ) {}
+        connection?.attachListener()
+
+        val connected = withTimeoutOrNull(20_000) { attemptSignal?.await() } ?: false
+        if (!connected) teardownAttempt()
+        return connected
+    }
+
+    private fun onEngineState(st: ConnectionState) {
+        when (st) {
+            ConnectionState.CONNECTED -> {
+                if (userStopped) return
+                val s = activeServer ?: return
+                _state.value = VpnState.Connected(s)
+                attemptSignal?.complete(true)
+            }
+            ConnectionState.CONNECTING, ConnectionState.READYFORCONNECT -> {
+                if (!userStopped) _state.value = VpnState.Connecting
+            }
+            ConnectionState.DISCONNECTING, ConnectionState.DISCONNECTED -> {
+                val signaled = attemptSignal?.complete(false) ?: false
+                val wasConnected = _state.value is VpnState.Connected
+                if (!signaled && wasConnected && !userStopped) {
+                    // Connect ke BAAD connection toot gayi — failover nahi, wazeh error.
+                    teardownAttempt()
+                    _state.value = VpnState.Failed(Strings.t("connLost"))
+                }
+            }
+            ConnectionState.PERMISSION_NOT_GRANTED -> {
+                attemptSignal?.complete(false)
+                if (!userStopped) _state.value = VpnState.Failed(Strings.t("permNotGranted"))
+            }
+            ConnectionState.IDLE -> Unit
+        }
+    }
+
+    private fun teardownAttempt() {
+        try {
+            connection?.stop()
+        } catch (_: Exception) {
+        }
+        try {
+            connection?.stopServiceIfNeed(true)
+        } catch (_: Exception) {
+        }
+        try {
+            OpenVPNService.stopService(appContext)
+        } catch (_: Exception) {
+        }
+        connection = null
+        attemptSignal = null
+    }
+
+    private fun disconnectInternal(silent: Boolean) {
+        userStopped = true
+        connectJob?.cancel()
+        connectJob = null
+        teardownAttempt()
+        activeServer = null
+        if (!silent) _state.value = VpnState.Disconnected
+    }
+}

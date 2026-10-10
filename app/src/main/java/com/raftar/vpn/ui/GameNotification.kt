@@ -1,1 +1,58 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi51aQoKaW1wb3J0IGFuZHJvaWQuYXBwLk5vdGlmaWNhdGlvbkNoYW5uZWwKaW1wb3J0IGFuZHJvaWQuYXBwLk5vdGlmaWNhdGlvbk1hbmFnZXIKaW1wb3J0IGFuZHJvaWQuYXBwLlBlbmRpbmdJbnRlbnQKaW1wb3J0IGFuZHJvaWQuY29udGVudC5Db250ZXh0CmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuSW50ZW50CmltcG9ydCBhbmRyb2lkLm9zLkJ1aWxkCmltcG9ydCBhbmRyb2lkeC5jb3JlLmFwcC5Ob3RpZmljYXRpb25Db21wYXQKaW1wb3J0IGNvbS5yYWZ0YXIudnBuLk1haW5BY3Rpdml0eQoKLyoqCiAqIEdhbWluZyBNb2RlIGtpIG9uZ29pbmcgbm90aWZpY2F0aW9uIOKAlCBsaXZlIHBpbmcgZGlraGF0aSBoYWkuCiAqIChWUE4ga2EgZm9yZWdyb3VuZCBzZXJ2aWNlIGxpYnJhcnkga2UgOm9wZW52cG4gcHJvY2VzcyBtZSBjaGFsdGEgaGFpLAogKiBpcyBsaXllIHllIGFsYWcgb25nb2luZyBub3RpZmljYXRpb24gaGFpLikKICovCmNsYXNzIEdhbWVOb3RpZmljYXRpb24ocHJpdmF0ZSB2YWwgY29udGV4dDogQ29udGV4dCkgewoKICAgIHByaXZhdGUgdmFsIG5tID0gY29udGV4dC5nZXRTeXN0ZW1TZXJ2aWNlKE5vdGlmaWNhdGlvbk1hbmFnZXI6OmNsYXNzLmphdmEpCiAgICBwcml2YXRlIHZhbCBjaGFubmVsSWQgPSAicmFmdGFyX2dhbWluZyIKCiAgICBpbml0IHsKICAgICAgICBpZiAoQnVpbGQuVkVSU0lPTi5TREtfSU5UID49IDI2KSB7CiAgICAgICAgICAgIG5tLmNyZWF0ZU5vdGlmaWNhdGlvbkNoYW5uZWwoCiAgICAgICAgICAgICAgICBOb3RpZmljYXRpb25DaGFubmVsKGNoYW5uZWxJZCwgIkdhbWluZyBNb2RlIiwgTm90aWZpY2F0aW9uTWFuYWdlci5JTVBPUlRBTkNFX0xPVykKICAgICAgICAgICAgKQogICAgICAgIH0KICAgIH0KCiAgICBmdW4gc2hvdyhwaW5nTXM6IExvbmc/KSB7CiAgICAgICAgdmFsIGludGVudCA9IEludGVudChjb250ZXh0LCBNYWluQWN0aXZpdHk6OmNsYXNzLmphdmEpCiAgICAgICAgdmFsIHBpID0gUGVuZGluZ0ludGVudC5nZXRBY3Rpdml0eSgKICAgICAgICAgICAgY29udGV4dCwgMCwgaW50ZW50LAogICAgICAgICAgICBQZW5kaW5nSW50ZW50LkZMQUdfSU1NVVRBQkxFIG9yIFBlbmRpbmdJbnRlbnQuRkxBR19VUERBVEVfQ1VSUkVOVAogICAgICAgICkKICAgICAgICB2YWwgcGluZ1RleHQgPSBwaW5nTXM/LmxldCB7ICIkaXQgbXMiIH0gPzogIuKApiIKICAgICAgICB2YWwgbiA9IE5vdGlmaWNhdGlvbkNvbXBhdC5CdWlsZGVyKGNvbnRleHQsIGNoYW5uZWxJZCkKICAgICAgICAgICAgLnNldFNtYWxsSWNvbihhbmRyb2lkLlIuZHJhd2FibGUuaWNfZGlhbG9nX2luZm8pCiAgICAgICAgICAgIC5zZXRDb250ZW50VGl0bGUoU3RyaW5ncy50KCJnYW1pbmdOb3RpZlRpdGxlIikpCiAgICAgICAgICAgIC5zZXRDb250ZW50VGV4dCgiJHtTdHJpbmdzLnQoImdhbWluZ1BpbmciKX06ICRwaW5nVGV4dCIpCiAgICAgICAgICAgIC5zZXRDb250ZW50SW50ZW50KHBpKQogICAgICAgICAgICAuc2V0T25nb2luZyh0cnVlKQogICAgICAgICAgICAuYnVpbGQoKQogICAgICAgIHRyeSB7CiAgICAgICAgICAgIG5tLm5vdGlmeShOT1RJRl9JRCwgbikKICAgICAgICB9IGNhdGNoIChfOiBTZWN1cml0eUV4Y2VwdGlvbikgewogICAgICAgICAgICAvLyBQT1NUX05PVElGSUNBVElPTlMgZGVuaWVkIOKAlCBhcHAga2UgYW5kYXIgcGluZyBwaGlyIGJoaSBkaWtodGEgaGFpLgogICAgICAgIH0KICAgIH0KCiAgICBmdW4gY2FuY2VsKCkgewogICAgICAgIG5tLmNhbmNlbChOT1RJRl9JRCkKICAgIH0KCiAgICBwcml2YXRlIGNvbXBhbmlvbiBvYmplY3QgewogICAgICAgIGNvbnN0IHZhbCBOT1RJRl9JRCA9IDQyNDIKICAgIH0KfQo=
+package com.raftar.vpn.ui
+
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import androidx.core.app.NotificationCompat
+import com.raftar.vpn.MainActivity
+
+/**
+ * Gaming Mode ki ongoing notification — live ping dikhati hai.
+ * (VPN ka foreground service library ke :openvpn process me chalta hai,
+ * is liye ye alag ongoing notification hai.)
+ */
+class GameNotification(private val context: Context) {
+
+    private val nm = context.getSystemService(NotificationManager::class.java)
+    private val channelId = "raftar_gaming"
+
+    init {
+        if (Build.VERSION.SDK_INT >= 26) {
+            nm.createNotificationChannel(
+                NotificationChannel(channelId, "Gaming Mode", NotificationManager.IMPORTANCE_LOW)
+            )
+        }
+    }
+
+    fun show(pingMs: Long?) {
+        val intent = Intent(context, MainActivity::class.java)
+        val pi = PendingIntent.getActivity(
+            context, 0, intent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        )
+        val pingText = pingMs?.let { "$it ms" } ?: "…"
+        val n = NotificationCompat.Builder(context, channelId)
+            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setContentTitle(Strings.t("gamingNotifTitle"))
+            .setContentText("${Strings.t("gamingPing")}: $pingText")
+            .setContentIntent(pi)
+            .setOngoing(true)
+            .build()
+        try {
+            nm.notify(NOTIF_ID, n)
+        } catch (_: SecurityException) {
+            // POST_NOTIFICATIONS denied — app ke andar ping phir bhi dikhta hai.
+        }
+    }
+
+    fun cancel() {
+        nm.cancel(NOTIF_ID)
+    }
+
+    private companion object {
+        const val NOTIF_ID = 4242
+    }
+}

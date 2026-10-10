@@ -1,1 +1,9 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlcz4KICAgIDwhLS0gUmFmdGFyIFZQTiBicmFuZCBwYWxldHRlICh0ZWFsL2JsdWUpIC0tPgogICAgPGNvbG9yIG5hbWU9InJhZnRhcl90ZWFsIj4jMDBCRkE1PC9jb2xvcj4KICAgIDxjb2xvciBuYW1lPSJyYWZ0YXJfdGVhbF9kYXJrIj4jMDA5Njg4PC9jb2xvcj4KICAgIDxjb2xvciBuYW1lPSJyYWZ0YXJfYmx1ZSI+IzBENDdBMTwvY29sb3I+CiAgICA8Y29sb3IgbmFtZT0icmFmdGFyX2RhcmsiPiMwNjJBNUU8L2NvbG9yPgogICAgPGNvbG9yIG5hbWU9ImljX2xhdW5jaGVyX2JhY2tncm91bmQiPiMwRDQ3QTE8L2NvbG9yPgo8L3Jlc291cmNlcz4K
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Raftar VPN brand palette (teal/blue) -->
+    <color name="raftar_teal">#00BFA5</color>
+    <color name="raftar_teal_dark">#009688</color>
+    <color name="raftar_blue">#0D47A1</color>
+    <color name="raftar_dark">#062A5E</color>
+    <color name="ic_launcher_background">#0D47A1</color>
+</resources>

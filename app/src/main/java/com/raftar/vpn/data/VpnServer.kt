@@ -1,1 +1,23 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi5kYXRhCgovKioKICogVlBOIEdhdGUgQVBJIHNlIG1pbG5lIHdhbGEgYWlrIGZyZWUgc2VydmVyLgogKiBDU1YgY29sdW1uczogSG9zdE5hbWUsIElQLCBTY29yZSwgUGluZywgU3BlZWQsIENvdW50cnlMb25nLCBDb3VudHJ5U2hvcnQsCiAqIE51bVZwblNlc3Npb25zLCBVcHRpbWUsIFRvdGFsVXNlcnMsIFRvdGFsVHJhZmZpYywgTG9nVHlwZSwgT3BlcmF0b3IsIE1lc3NhZ2UsCiAqIE9wZW5WUE5fQ29uZmlnRGF0YV9CYXNlNjQKICovCmRhdGEgY2xhc3MgVnBuU2VydmVyKAogICAgdmFsIGhvc3ROYW1lOiBTdHJpbmcsCiAgICB2YWwgaXA6IFN0cmluZywKICAgIHZhbCBjb3VudHJ5TG9uZzogU3RyaW5nLAogICAgdmFsIGNvdW50cnlTaG9ydDogU3RyaW5nLAogICAgdmFsIHBpbmdNczogSW50LAogICAgdmFsIHNjb3JlOiBMb25nLAogICAgdmFsIHNwZWVkQnBzOiBMb25nLAogICAgdmFsIHNlc3Npb25zOiBJbnQsCiAgICB2YWwgdXB0aW1lU2VjOiBMb25nLAogICAgdmFsIGNvbmZpZ0Jhc2U2NDogU3RyaW5nCikgewogICAgLyoqIFNlc3Npb24tc2NvcGVkIGRlYWQtc2VydmVyIHNraXAgbGlzdCBrZSBsaXllIHN0YWJsZSBpZC4gKi8KICAgIHZhbCBpZDogU3RyaW5nIGdldCgpID0gIiRob3N0TmFtZXwkaXAiCn0K
+package com.raftar.vpn.data
+
+/**
+ * VPN Gate API se milne wala aik free server.
+ * CSV columns: HostName, IP, Score, Ping, Speed, CountryLong, CountryShort,
+ * NumVpnSessions, Uptime, TotalUsers, TotalTraffic, LogType, Operator, Message,
+ * OpenVPN_ConfigData_Base64
+ */
+data class VpnServer(
+    val hostName: String,
+    val ip: String,
+    val countryLong: String,
+    val countryShort: String,
+    val pingMs: Int,
+    val score: Long,
+    val speedBps: Long,
+    val sessions: Int,
+    val uptimeSec: Long,
+    val configBase64: String
+) {
+    /** Session-scoped dead-server skip list ke liye stable id. */
+    val id: String get() = "$hostName|$ip"
+}

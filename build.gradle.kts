@@ -1,1 +1,5 @@
-Ly8gVG9wLWxldmVsIGJ1aWxkIGZpbGU6IHNpcmYgcGx1Z2luIHZlcnNpb25zIHlhaGFuIHBpbiBob3RpIGhhaW4uCnBsdWdpbnMgewogICAgaWQoImNvbS5hbmRyb2lkLmFwcGxpY2F0aW9uIikgdmVyc2lvbiAiOC41LjIiIGFwcGx5IGZhbHNlCiAgICBpZCgib3JnLmpldGJyYWlucy5rb3RsaW4uYW5kcm9pZCIpIHZlcnNpb24gIjEuOS4yNCIgYXBwbHkgZmFsc2UKfQo=
+// Top-level build file: sirf plugin versions yahan pin hoti hain.
+plugins {
+    id("com.android.application") version "8.5.2" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.24" apply false
+}

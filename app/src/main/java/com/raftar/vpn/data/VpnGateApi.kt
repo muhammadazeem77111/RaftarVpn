@@ -1,1 +1,217 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi5kYXRhCgppbXBvcnQgYW5kcm9pZC5jb250ZW50LkNvbnRleHQKaW1wb3J0IGFuZHJvaWQub3MuU3lzdGVtQ2xvY2sKaW1wb3J0IGFuZHJvaWQudXRpbC5CYXNlNjQKaW1wb3J0IGtvdGxpbnguY29yb3V0aW5lcy5EaXNwYXRjaGVycwppbXBvcnQga290bGlueC5jb3JvdXRpbmVzLmRlbGF5CmltcG9ydCBrb3RsaW54LmNvcm91dGluZXMud2l0aENvbnRleHQKaW1wb3J0IG9raHR0cDMuT2tIdHRwQ2xpZW50CmltcG9ydCBva2h0dHAzLlJlcXVlc3QKaW1wb3J0IGphdmEuaW8uRmlsZQppbXBvcnQgamF2YS5pby5JT0V4Y2VwdGlvbgppbXBvcnQgamF2YS5uZXQuSW5ldFNvY2tldEFkZHJlc3MKaW1wb3J0IGphdmEubmV0LlNvY2tldAppbXBvcnQgamF2YS51dGlsLmNvbmN1cnJlbnQuVGltZVVuaXQKCi8qKgogKiBWUE4gR2F0ZSBwdWJsaWMgQVBJOiBodHRwczovL3d3dy52cG5nYXRlLm5ldC9hcGkvaXBob25lLwogKiBQbGFpbiBDU1YgKH4xLjMgTUIpLCBrb2kga2V5L2FjY291bnQgbmFoaS4gUGVobGkgbGluZSAnKicgc2UgKHNraXApLCBoZWFkZXIgJyMnIHNlIChza2lwKSwKICogYWFraHJpIGxpbmUgJyonIGZvb3RlciAoc2tpcCkuIE1lc3NhZ2UgZmllbGQgbWUgY29tbWFzIGhvIHNha3RlIGhhaW4gLT4gc3BsaXQgbGltaXQ9MTUuCiAqIENvbmZpZyBiYXNlNjQgY29sdW1uIDE0IChsYXN0KSBtZSBoYWkuCiAqCiAqIEZldGNoIHJlc2lsaWVuY2U6IHZwbmdhdGUubmV0IGt1Y2ggbmV0d29ya3MgcGFyIGJsb2NrZWQgaG90YSBoYWkuIFZlcmlmaWVkIGJhYXQgeWUgaGFpCiAqIGtlIHB1YmxpYyAibWlycm9yIiBzaXRlcyBDU1YgY2FjaGUgbmFoaSBrYXJ0aW4g4oCUIHNhYiB3YXBhcyBpc2kgZW5kcG9pbnQgcGFyIGphdGkgaGFpbiwKICogaXMgbGl5ZSBrb2kgd29ya2luZyBtaXJyb3IgVVJMIG5haGkuIElzIGxpeWU6IGh0dHBzIHByaW1hcnkgLT4gaHR0cCBmYWxsYmFjayAtPgogKiBleHBvbmVudGlhbCBiYWNrb2ZmIHJldHJ5IC0+IHNhYWYgZXJyb3IgbWVzc2FnZS4KICovCmNsYXNzIFZwbkdhdGVBcGkocHJpdmF0ZSB2YWwgY29udGV4dDogQ29udGV4dCkgewoKICAgIGNvbXBhbmlvbiBvYmplY3QgewogICAgICAgIHByaXZhdGUgdmFsIEVORFBPSU5UUyA9IGxpc3RPZigKICAgICAgICAgICAgImh0dHBzOi8vd3d3LnZwbmdhdGUubmV0L2FwaS9pcGhvbmUvIiwKICAgICAgICAgICAgImh0dHA6Ly93d3cudnBuZ2F0ZS5uZXQvYXBpL2lwaG9uZS8iCiAgICAgICAgKQoKICAgICAgICAvKiogUmVjb21tZW5kZWQgc2VjdGlvbiBrZSBsaXllIG1pbmltdW0gdXB0aW1lOiAxIGhvdXIuICovCiAgICAgICAgY29uc3QgdmFsIFVQVElNRV9USFJFU0hPTERfU0VDID0gMzYwMEwKCiAgICAgICAgLyoqIFRDUCByZWFjaGFiaWxpdHkgcHJvYmUga2EgdGltZW91dC4gKi8KICAgICAgICBjb25zdCB2YWwgUkVBQ0hBQklMSVRZX1RJTUVPVVRfTVMgPSAzMDAwCiAgICB9CgogICAgcHJpdmF0ZSB2YWwgY2xpZW50ID0gT2tIdHRwQ2xpZW50LkJ1aWxkZXIoKQogICAgICAgIC5jb25uZWN0VGltZW91dCgyMCwgVGltZVVuaXQuU0VDT05EUykKICAgICAgICAucmVhZFRpbWVvdXQoOTAsIFRpbWVVbml0LlNFQ09ORFMpCiAgICAgICAgLmJ1aWxkKCkKCiAgICBwcml2YXRlIHZhbCBjYWNoZUZpbGU6IEZpbGUgZ2V0KCkgPSBGaWxlKGNvbnRleHQuZmlsZXNEaXIsICJ2cG5nYXRlX2NhY2hlLmNzdiIpCgogICAgLyoqIEFha2hyaSBrYW15YWIgZmV0Y2gga2EgcmF3IENTViDigJQgdGFha2UgYXBwIGtodWxuZSBwYXIgbGlzdCBmb3JhbiBuYXphciBhYXllLiAqLwogICAgc3VzcGVuZCBmdW4gbG9hZENhY2hlZCgpOiBMaXN0PFZwblNlcnZlcj4gPSB3aXRoQ29udGV4dChEaXNwYXRjaGVycy5JTykgewogICAgICAgIHZhbCBmID0gY2FjaGVGaWxlCiAgICAgICAgaWYgKCFmLmV4aXN0cygpKSBlbXB0eUxpc3QoKSBlbHNlIHBhcnNlQ3N2KGYucmVhZFRleHQoKSkKICAgIH0KCiAgICAvKiogTmV0d29yayBzZSB0YXphIGxpc3QgbGFvICsgY2FjaGUgdXBkYXRlIGthcm8uIEZhaWwgaG8gdG8gd2F6ZWggZXJyb3Iga2Ugc2F0aCB0aHJvdy4gKi8KICAgIHN1c3BlbmQgZnVuIGZldGNoRnJlc2goKTogTGlzdDxWcG5TZXJ2ZXI+ID0gd2l0aENvbnRleHQoRGlzcGF0Y2hlcnMuSU8pIHsKICAgICAgICB2YXIgbGFzdEVycm9yOiBFeGNlcHRpb24/ID0gbnVsbAogICAgICAgIGZvciAodXJsIGluIEVORFBPSU5UUykgewogICAgICAgICAgICB2YXIgYmFja29mZk1zID0gMjAwMEwKICAgICAgICAgICAgcmVwZWF0KDMpIHsgYXR0ZW1wdCAtPgogICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICB2YWwgcmVxdWVzdCA9IFJlcXVlc3QuQnVpbGRlcigpCiAgICAgICAgICAgICAgICAgICAgICAgIC51cmwodXJsKQogICAgICAgICAgICAgICAgICAgICAgICAuaGVhZGVyKCJVc2VyLUFnZW50IiwgIk1vemlsbGEvNS4wIChMaW51eDsgQW5kcm9pZCAxNCkgUmFmdGFyVnBuLzEuMCIpCiAgICAgICAgICAgICAgICAgICAgICAgIC5idWlsZCgpCiAgICAgICAgICAgICAgICAgICAgY2xpZW50Lm5ld0NhbGwocmVxdWVzdCkuZXhlY3V0ZSgpLnVzZSB7IHJlc3AgLT4KICAgICAgICAgICAgICAgICAgICAgICAgaWYgKCFyZXNwLmlzU3VjY2Vzc2Z1bCkgdGhyb3cgSU9FeGNlcHRpb24oIkhUVFAgJHtyZXNwLmNvZGV9IikKICAgICAgICAgICAgICAgICAgICAgICAgdmFsIGJvZHkgPSByZXNwLmJvZHk/LnN0cmluZygpID86IHRocm93IElPRXhjZXB0aW9uKCJraGFhbGkgamF3YWIiKQogICAgICAgICAgICAgICAgICAgICAgICBjYWNoZUZpbGUud3JpdGVUZXh0KGJvZHkpCiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybkB3aXRoQ29udGV4dCBwYXJzZUNzdihib2R5KQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0gY2F0Y2ggKGU6IEV4Y2VwdGlvbikgewogICAgICAgICAgICAgICAgICAgIGxhc3RFcnJvciA9IGUKICAgICAgICAgICAgICAgICAgICBpZiAoYXR0ZW1wdCA8IDIpIGRlbGF5KGJhY2tvZmZNcykKICAgICAgICAgICAgICAgICAgICBiYWNrb2ZmTXMgKj0gMgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIHRocm93IElPRXhjZXB0aW9uKAogICAgICAgICAgICAiVlBOIEdhdGUga2kgc2VydmVyIGxpc3QgbmFoaSBtaWwgc2FraSDigJQgbGFndGEgaGFpIHZwbmdhdGUubmV0IGlzIG5ldHdvcmsgcGFyICIgKwogICAgICAgICAgICAgICAgImJsb2NrZWQgaGFpIHlhIGludGVybmV0IGRvd24gaGFpLiBDb25uZWN0aW9uIGNoZWNrIGthcm8gYXVyIGRvYmFyYSBSZWZyZXNoIGRhYmFvLiIKICAgICAgICApCiAgICB9CgogICAgcHJpdmF0ZSBmdW4gcGFyc2VDc3YodGV4dDogU3RyaW5nKTogTGlzdDxWcG5TZXJ2ZXI+IHsKICAgICAgICB2YWwgb3V0ID0gQXJyYXlMaXN0PFZwblNlcnZlcj4oNTEyKQogICAgICAgIGZvciAocmF3TGluZSBpbiB0ZXh0LmxpbmVTZXF1ZW5jZSgpKSB7CiAgICAgICAgICAgIHZhbCBsaW5lID0gcmF3TGluZS50cmltKCkKICAgICAgICAgICAgaWYgKGxpbmUuaXNFbXB0eSgpIHx8IGxpbmUuc3RhcnRzV2l0aCgiIyIpIHx8IGxpbmUuc3RhcnRzV2l0aCgiKiIpKSBjb250aW51ZQogICAgICAgICAgICB2YWwgcCA9IGxpbmUuc3BsaXQoIiwiLCBsaW1pdCA9IDE1KQogICAgICAgICAgICBpZiAocC5zaXplIDwgMTUpIGNvbnRpbnVlCiAgICAgICAgICAgIHZhbCBzY29yZSA9IHBbMl0udG9Mb25nT3JOdWxsKCkgPzogMEwKICAgICAgICAgICAgdmFsIHBpbmcgPSBwWzNdLnRvSW50T3JOdWxsKCkgPzogMAogICAgICAgICAgICBpZiAoc2NvcmUgPD0gMCB8fCBwaW5nIDw9IDApIGNvbnRpbnVlCiAgICAgICAgICAgIHZhbCBiNjQgPSBwWzE0XS50cmltKCkKICAgICAgICAgICAgaWYgKGI2NC5pc0VtcHR5KCkpIGNvbnRpbnVlCiAgICAgICAgICAgIG91dC5hZGQoCiAgICAgICAgICAgICAgICBWcG5TZXJ2ZXIoCiAgICAgICAgICAgICAgICAgICAgaG9zdE5hbWUgPSBwWzBdLnRyaW0oKSwKICAgICAgICAgICAgICAgICAgICBpcCA9IHBbMV0udHJpbSgpLAogICAgICAgICAgICAgICAgICAgIGNvdW50cnlMb25nID0gcFs1XS50cmltKCksCiAgICAgICAgICAgICAgICAgICAgY291bnRyeVNob3J0ID0gcFs2XS50cmltKCksCiAgICAgICAgICAgICAgICAgICAgcGluZ01zID0gcGluZywKICAgICAgICAgICAgICAgICAgICBzY29yZSA9IHNjb3JlLAogICAgICAgICAgICAgICAgICAgIHNwZWVkQnBzID0gcFs0XS50b0xvbmdPck51bGwoKSA/OiAwTCwKICAgICAgICAgICAgICAgICAgICBzZXNzaW9ucyA9IHBbN10udG9JbnRPck51bGwoKSA/OiAwLAogICAgICAgICAgICAgICAgICAgIHVwdGltZVNlYyA9IHBbOF0udG9Mb25nT3JOdWxsKCkgPzogMEwsCiAgICAgICAgICAgICAgICAgICAgY29uZmlnQmFzZTY0ID0gYjY0CiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICkKICAgICAgICB9CiAgICAgICAgcmV0dXJuIHJhbmsob3V0KQogICAgfQoKICAgIC8qKiBSYW5raW5nOiBwZWhsZSBzY29yZSBkZXNjLCBwaGlyIHBpbmcgYXNjLiAqLwogICAgZnVuIHJhbmsoc2VydmVyczogTGlzdDxWcG5TZXJ2ZXI+KTogTGlzdDxWcG5TZXJ2ZXI+ID0KICAgICAgICBzZXJ2ZXJzLnNvcnRlZFdpdGgoY29tcGFyZUJ5RGVzY2VuZGluZzxWcG5TZXJ2ZXI+IHsgaXQuc2NvcmUgfS50aGVuQnkgeyBpdC5waW5nTXMgfSkKCiAgICAvKioKICAgICAqICJSZWNvbW1lbmRlZCIgc2VydmVyOiBoZWFsdGh5ICsga2FtLWF6LWthbSAxIGhvdXIgc2Ugb25saW5lLgogICAgICogVENQIHJlYWNoYWJpbGl0eSBpcyBzZSBhbGFnIHByb2JlIGhvdGkgaGFpIChzZXNzaW9uIGNhY2hlKS4KICAgICAqLwogICAgZnVuIGlzUmVjb21tZW5kZWQoc2VydmVyOiBWcG5TZXJ2ZXIpOiBCb29sZWFuID0KICAgICAgICBzZXJ2ZXIuc2NvcmUgPiAwICYmIHNlcnZlci5waW5nTXMgPiAwICYmIHNlcnZlci51cHRpbWVTZWMgPj0gVVBUSU1FX1RIUkVTSE9MRF9TRUMKCiAgICAvKiogQmFzZTY0IGNvbmZpZyAtPiAub3ZwbiB0ZXh0LiBOdWxsID0gY29ycnVwdCByb3csIHNraXAga2Fyby4gKi8KICAgIGZ1biBkZWNvZGVDb25maWcoc2VydmVyOiBWcG5TZXJ2ZXIpOiBTdHJpbmc/ID0gdHJ5IHsKICAgICAgICB2YWwgYnl0ZXMgPSBCYXNlNjQuZGVjb2RlKHNlcnZlci5jb25maWdCYXNlNjQsIEJhc2U2NC5ERUZBVUxUKQogICAgICAgIHZhbCB0ZXh0ID0gU3RyaW5nKGJ5dGVzLCBDaGFyc2V0cy5VVEZfOCkKICAgICAgICBpZiAoInJlbW90ZSIgaW4gdGV4dCkgdGV4dCBlbHNlIG51bGwKICAgIH0gY2F0Y2ggKF86IEV4Y2VwdGlvbikgewogICAgICAgIG51bGwKICAgIH0KCiAgICAvKioKICAgICAqIFF1aWNrIFRDUCByZWFjaGFiaWxpdHkgY2hlY2s6IGNvbmZpZyBzZSBPcGVuVlBOIHBvcnQgbmlrYWxvLCBzZXJ2ZXIgSVAgcGFyCiAgICAgKiAzcyB0aW1lb3V0IGtlIHNhdGggc29ja2V0IGtob2xvLiBCYW5kL2RlYWQgc2VydmVyIGZvcmFuIGJhaGFyLgogICAgICovCiAgICBzdXNwZW5kIGZ1biBjaGVja1RjcFJlYWNoYWJsZShzZXJ2ZXI6IFZwblNlcnZlcik6IEJvb2xlYW4gPQogICAgICAgIG1lYXN1cmVUY3Aoc2VydmVyKSAhPSBudWxsCgogICAgLyoqCiAgICAgKiBUQ1AgY29ubmVjdCB0aW1pbmcgKG1zKSDigJQgUmFmdGFyIFJhY2UgYXVyIEdhbWluZyBNb2RlIGtlIGxpeWUuCiAgICAgKiBOdWxsID0gdW5yZWFjaGFibGUgKHllaGkgImJsb2NrZWQvZGVhZCIga2EgZW1waXJpY2FsIGZpbHRlciBoYWkpLgogICAgICovCiAgICBzdXNwZW5kIGZ1biBtZWFzdXJlVGNwKHNlcnZlcjogVnBuU2VydmVyKTogTG9uZz8gPSB3aXRoQ29udGV4dChEaXNwYXRjaGVycy5JTykgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHZhbCBjZmcgPSBkZWNvZGVDb25maWcoc2VydmVyKSA/OiByZXR1cm5Ad2l0aENvbnRleHQgbnVsbAogICAgICAgICAgICB2YWwgZXAgPSBwYXJzZVJlbW90ZUVuZHBvaW50KGNmZykKICAgICAgICAgICAgaWYgKGVwLmhvc3QuaXNCbGFuaygpKSByZXR1cm5Ad2l0aENvbnRleHQgbnVsbAogICAgICAgICAgICB2YWwgc3RhcnQgPSBTeXN0ZW1DbG9jay5lbGFwc2VkUmVhbHRpbWUoKQogICAgICAgICAgICBTb2NrZXQoKS51c2UgeyBzb2NrZXQgLT4KICAgICAgICAgICAgICAgIHNvY2tldC5jb25uZWN0KEluZXRTb2NrZXRBZGRyZXNzKGVwLmhvc3QsIGVwLnBvcnQpLCBSRUFDSEFCSUxJVFlfVElNRU9VVF9NUykKICAgICAgICAgICAgfQogICAgICAgICAgICBTeXN0ZW1DbG9jay5lbGFwc2VkUmVhbHRpbWUoKSAtIHN0YXJ0CiAgICAgICAgfSBjYXRjaCAoXzogRXhjZXB0aW9uKSB7CiAgICAgICAgICAgIG51bGwKICAgICAgICB9CiAgICB9Cn0KCi8qKgogKiBWUE4gR2F0ZSAoU29mdEV0aGVyKSBjb25maWdzIGtlIGxpeWUgc2FuaXRpemVyIOKAlCBPcGVuVlBOMyBjb3JlIGtlIGRhdGEtY2hhbm5lbAogKiBjaXBoZXIgcnVsZXMga2UgbXV0YWJpcToKICogLSBDQkMgZm9yY2Uga2FybmUgd2FsaSBjaXBoZXIvZGF0YS1jaXBoZXJzL2tleXNpemUgbGluZXMgaGF0YW8KICogICAoImJhZCBjaXBoZXIgZm9yIGRhdGEgY2hhbm5lbCB1c2UiIGxvb3Agc2UgYmFjaG5lIGtlIGxpeWUpCiAqIC0gY29ubmVjdC1yZXRyeSBoYXRhbyAoZmFpbCBmYXN0LCB0YWFrZSBhcHAtbGV2ZWwgZmFpbG92ZXIgY2hhbCBzYWtlKQogKiAtIFBoaXIgQ0hBQ0hBMjAtUE9MWTEzMDUgKHBlaGxlKSArIEFFUy1HQ00gZmFsbGJhY2sgbGFnYW8g4oCUIFNvZnRFdGhlciBzZXJ2ZXJzCiAqICAgcGFyIEFFUy1HQ00ga2EgREVDUllQVF9FUlJPUiBidWcgaG90YSBoYWksIGlzIGxpeWUgQ2hhQ2hhMjAgcGVobGUuCiAqIC0gRE5TIGluamVjdCBrYXJvIChrdWNoIHNlcnZlcnMgRE5TIHB1c2ggbmFoaSBrYXJ0ZSkgYXVyIElQdjYgYmxvY2sga2FybwogKiAgIChBbmRyb2lkIElQdjYtZmlyc3QgbG9va3VwIHBhciBhdGFrIGphdGEgaGFpKS4KICovCmZ1biBzYW5pdGl6ZU92cG5Db25maWcocmF3OiBTdHJpbmcpOiBTdHJpbmcgewogICAgdmFsIGRyb3BQcmVmaXhlcyA9IHNldE9mKCJjaXBoZXIiLCAiZGF0YS1jaXBoZXJzIiwgImRhdGEtY2lwaGVycy1mYWxsYmFjayIsICJrZXlzaXplIiwgImNvbm5lY3QtcmV0cnkiKQogICAgdmFsIGtlcHQgPSByYXcubGluZVNlcXVlbmNlKCkKICAgICAgICAuZmlsdGVyIHsgbGluZSAtPgogICAgICAgICAgICB2YWwgdCA9IGxpbmUudHJpbVN0YXJ0KCkKICAgICAgICAgICAgaWYgKHQuaXNFbXB0eSgpIHx8IHQuc3RhcnRzV2l0aCgiIyIpIHx8IHQuc3RhcnRzV2l0aCgiOyIpKSByZXR1cm5AZmlsdGVyIHRydWUKICAgICAgICAgICAgdmFsIGhlYWQgPSB0LnN1YnN0cmluZ0JlZm9yZSgnICcpLnN1YnN0cmluZ0JlZm9yZSgnXHQnKS5sb3dlcmNhc2UoKQogICAgICAgICAgICBoZWFkICFpbiBkcm9wUHJlZml4ZXMKICAgICAgICB9CiAgICAgICAgLmpvaW5Ub1N0cmluZygiXG4iKQogICAgcmV0dXJuIGJ1aWxkU3RyaW5nIHsKICAgICAgICBhcHBlbmQoa2VwdC50cmltRW5kKCkpCiAgICAgICAgYXBwZW5kKCJcbmNpcGhlciBDSEFDSEEyMC1QT0xZMTMwNSIpCiAgICAgICAgYXBwZW5kKCJcbmRhdGEtY2lwaGVycyBDSEFDSEEyMC1QT0xZMTMwNTpBRVMtMjU2LUdDTTpBRVMtMTI4LUdDTSIpCiAgICAgICAgYXBwZW5kKCJcbmRoY3Atb3B0aW9uIEROUyAxLjEuMS4xIikKICAgICAgICBhcHBlbmQoIlxuZGhjcC1vcHRpb24gRE5TIDguOC44LjgiKQogICAgICAgIGFwcGVuZCgiXG5ibG9jay1pcHY2XG4iKQogICAgfQp9CgpkYXRhIGNsYXNzIFJlbW90ZUVuZHBvaW50KHZhbCBob3N0OiBTdHJpbmcsIHZhbCBwb3J0OiBJbnQsIHZhbCBwcm90bzogU3RyaW5nKQoKLyoqIENvbmZpZyBraSBgcmVtb3RlYCAvIGBwcm90b2AgbGluZXMgc2UgaG9zdCwgcG9ydCBhdXIgcHJvdG8gbmlrYWxvIChjb21tZW50cyBza2lwKS4gKi8KZnVuIHBhcnNlUmVtb3RlRW5kcG9pbnQoY29uZmlnOiBTdHJpbmcpOiBSZW1vdGVFbmRwb2ludCB7CiAgICB2YXIgaG9zdCA9ICIiCiAgICB2YXIgcG9ydCA9IDExOTQKICAgIHZhciBwcm90byA9ICJ0Y3AiCiAgICBmb3IgKHJhdyBpbiBjb25maWcubGluZVNlcXVlbmNlKCkpIHsKICAgICAgICB2YWwgbGluZSA9IHJhdy50cmltKCkKICAgICAgICBpZiAobGluZS5pc0VtcHR5KCkgfHwgbGluZS5zdGFydHNXaXRoKCIjIikgfHwgbGluZS5zdGFydHNXaXRoKCI7IikpIGNvbnRpbnVlCiAgICAgICAgdmFsIHBhcnRzID0gbGluZS5zcGxpdChSZWdleCgiXFxzKyIpKQogICAgICAgIHdoZW4gKHBhcnRzWzBdLmxvd2VyY2FzZSgpKSB7CiAgICAgICAgICAgICJyZW1vdGUiIC0+IGlmIChwYXJ0cy5zaXplID4gMSAmJiBob3N0LmlzRW1wdHkoKSkgewogICAgICAgICAgICAgICAgaG9zdCA9IHBhcnRzWzFdCiAgICAgICAgICAgICAgICBwb3J0ID0gcGFydHMuZ2V0T3JOdWxsKDIpPy50b0ludE9yTnVsbCgpID86IDExOTQKICAgICAgICAgICAgfQogICAgICAgICAgICAicHJvdG8iIC0+IHsKICAgICAgICAgICAgICAgIHZhbCBwID0gcGFydHMuZ2V0T3JOdWxsKDEpPy5sb3dlcmNhc2UoKS5vckVtcHR5KCkKICAgICAgICAgICAgICAgIHByb3RvID0gaWYgKCJ1ZHAiIGluIHApICJ1ZHAiIGVsc2UgInRjcCIKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KICAgIHJldHVybiBSZW1vdGVFbmRwb2ludChob3N0LCBwb3J0LCBwcm90bykKfQo=
+package com.raftar.vpn.data
+
+import android.content.Context
+import android.os.SystemClock
+import android.util.Base64
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import java.io.File
+import java.io.IOException
+import java.net.InetSocketAddress
+import java.net.Socket
+import java.util.concurrent.TimeUnit
+
+/**
+ * VPN Gate public API: https://www.vpngate.net/api/iphone/
+ * Plain CSV (~1.3 MB), koi key/account nahi. Pehli line '*' se (skip), header '#' se (skip),
+ * aakhri line '*' footer (skip). Message field me commas ho sakte hain -> split limit=15.
+ * Config base64 column 14 (last) me hai.
+ *
+ * Fetch resilience: vpngate.net kuch networks par blocked hota hai. Verified baat ye hai
+ * ke public "mirror" sites CSV cache nahi kartin — sab wapas isi endpoint par jati hain,
+ * is liye koi working mirror URL nahi. Is liye: https primary -> http fallback ->
+ * exponential backoff retry -> saaf error message.
+ */
+class VpnGateApi(private val context: Context) {
+
+    companion object {
+        private val ENDPOINTS = listOf(
+            "https://www.vpngate.net/api/iphone/",
+            "http://www.vpngate.net/api/iphone/"
+        )
+
+        /** Recommended section ke liye minimum uptime: 1 hour. */
+        const val UPTIME_THRESHOLD_SEC = 3600L
+
+        /** TCP reachability probe ka timeout. */
+        const val REACHABILITY_TIMEOUT_MS = 3000
+    }
+
+    private val client = OkHttpClient.Builder()
+        .connectTimeout(20, TimeUnit.SECONDS)
+        .readTimeout(90, TimeUnit.SECONDS)
+        .build()
+
+    private val cacheFile: File get() = File(context.filesDir, "vpngate_cache.csv")
+
+    /** Aakhri kamyab fetch ka raw CSV — taake app khulne par list foran nazar aaye. */
+    suspend fun loadCached(): List<VpnServer> = withContext(Dispatchers.IO) {
+        val f = cacheFile
+        if (!f.exists()) emptyList() else parseCsv(f.readText())
+    }
+
+    /** Network se taza list lao + cache update karo. Fail ho to wazeh error ke sath throw. */
+    suspend fun fetchFresh(): List<VpnServer> = withContext(Dispatchers.IO) {
+        var lastError: Exception? = null
+        for (url in ENDPOINTS) {
+            var backoffMs = 2000L
+            repeat(3) { attempt ->
+                try {
+                    val request = Request.Builder()
+                        .url(url)
+                        .header("User-Agent", "Mozilla/5.0 (Linux; Android 14) RaftarVpn/1.0")
+                        .build()
+                    client.newCall(request).execute().use { resp ->
+                        if (!resp.isSuccessful) throw IOException("HTTP ${resp.code}")
+                        val body = resp.body?.string() ?: throw IOException("khaali jawab")
+                        cacheFile.writeText(body)
+                        return@withContext parseCsv(body)
+                    }
+                } catch (e: Exception) {
+                    lastError = e
+                    if (attempt < 2) delay(backoffMs)
+                    backoffMs *= 2
+                }
+            }
+        }
+        throw IOException(
+            "VPN Gate ki server list nahi mil saki — lagta hai vpngate.net is network par " +
+                "blocked hai ya internet down hai. Connection check karo aur dobara Refresh dabao."
+        )
+    }
+
+    private fun parseCsv(text: String): List<VpnServer> {
+        val out = ArrayList<VpnServer>(512)
+        for (rawLine in text.lineSequence()) {
+            val line = rawLine.trim()
+            if (line.isEmpty() || line.startsWith("#") || line.startsWith("*")) continue
+            val p = line.split(",", limit = 15)
+            if (p.size < 15) continue
+            val score = p[2].toLongOrNull() ?: 0L
+            val ping = p[3].toIntOrNull() ?: 0
+            if (score <= 0 || ping <= 0) continue
+            val b64 = p[14].trim()
+            if (b64.isEmpty()) continue
+            out.add(
+                VpnServer(
+                    hostName = p[0].trim(),
+                    ip = p[1].trim(),
+                    countryLong = p[5].trim(),
+                    countryShort = p[6].trim(),
+                    pingMs = ping,
+                    score = score,
+                    speedBps = p[4].toLongOrNull() ?: 0L,
+                    sessions = p[7].toIntOrNull() ?: 0,
+                    uptimeSec = p[8].toLongOrNull() ?: 0L,
+                    configBase64 = b64
+                )
+            )
+        }
+        return rank(out)
+    }
+
+    /** Ranking: pehle score desc, phir ping asc. */
+    fun rank(servers: List<VpnServer>): List<VpnServer> =
+        servers.sortedWith(compareByDescending<VpnServer> { it.score }.thenBy { it.pingMs })
+
+    /**
+     * "Recommended" server: healthy + kam-az-kam 1 hour se online.
+     * TCP reachability is se alag probe hoti hai (session cache).
+     */
+    fun isRecommended(server: VpnServer): Boolean =
+        server.score > 0 && server.pingMs > 0 && server.uptimeSec >= UPTIME_THRESHOLD_SEC
+
+    /** Base64 config -> .ovpn text. Null = corrupt row, skip karo. */
+    fun decodeConfig(server: VpnServer): String? = try {
+        val bytes = Base64.decode(server.configBase64, Base64.DEFAULT)
+        val text = String(bytes, Charsets.UTF_8)
+        if ("remote" in text) text else null
+    } catch (_: Exception) {
+        null
+    }
+
+    /**
+     * Quick TCP reachability check: config se OpenVPN port nikalo, server IP par
+     * 3s timeout ke sath socket kholo. Band/dead server foran bahar.
+     */
+    suspend fun checkTcpReachable(server: VpnServer): Boolean =
+        measureTcp(server) != null
+
+    /**
+     * TCP connect timing (ms) — Raftar Race aur Gaming Mode ke liye.
+     * Null = unreachable (yehi "blocked/dead" ka empirical filter hai).
+     */
+    suspend fun measureTcp(server: VpnServer): Long? = withContext(Dispatchers.IO) {
+        try {
+            val cfg = decodeConfig(server) ?: return@withContext null
+            val ep = parseRemoteEndpoint(cfg)
+            if (ep.host.isBlank()) return@withContext null
+            val start = SystemClock.elapsedRealtime()
+            Socket().use { socket ->
+                socket.connect(InetSocketAddress(ep.host, ep.port), REACHABILITY_TIMEOUT_MS)
+            }
+            SystemClock.elapsedRealtime() - start
+        } catch (_: Exception) {
+            null
+        }
+    }
+}
+
+/**
+ * VPN Gate (SoftEther) configs ke liye sanitizer — OpenVPN3 core ke data-channel
+ * cipher rules ke mutabiq:
+ * - CBC force karne wali cipher/data-ciphers/keysize lines hatao
+ *   ("bad cipher for data channel use" loop se bachne ke liye)
+ * - connect-retry hatao (fail fast, taake app-level failover chal sake)
+ * - Phir CHACHA20-POLY1305 (pehle) + AES-GCM fallback lagao — SoftEther servers
+ *   par AES-GCM ka DECRYPT_ERROR bug hota hai, is liye ChaCha20 pehle.
+ * - DNS inject karo (kuch servers DNS push nahi karte) aur IPv6 block karo
+ *   (Android IPv6-first lookup par atak jata hai).
+ */
+fun sanitizeOvpnConfig(raw: String): String {
+    val dropPrefixes = setOf("cipher", "data-ciphers", "data-ciphers-fallback", "keysize", "connect-retry")
+    val kept = raw.lineSequence()
+        .filter { line ->
+            val t = line.trimStart()
+            if (t.isEmpty() || t.startsWith("#") || t.startsWith(";")) return@filter true
+            val head = t.substringBefore(' ').substringBefore('\t').lowercase()
+            head !in dropPrefixes
+        }
+        .joinToString("\n")
+    return buildString {
+        append(kept.trimEnd())
+        append("\ncipher CHACHA20-POLY1305")
+        append("\ndata-ciphers CHACHA20-POLY1305:AES-256-GCM:AES-128-GCM")
+        append("\ndhcp-option DNS 1.1.1.1")
+        append("\ndhcp-option DNS 8.8.8.8")
+        append("\nblock-ipv6\n")
+    }
+}
+
+data class RemoteEndpoint(val host: String, val port: Int, val proto: String)
+
+/** Config ki `remote` / `proto` lines se host, port aur proto nikalo (comments skip). */
+fun parseRemoteEndpoint(config: String): RemoteEndpoint {
+    var host = ""
+    var port = 1194
+    var proto = "tcp"
+    for (raw in config.lineSequence()) {
+        val line = raw.trim()
+        if (line.isEmpty() || line.startsWith("#") || line.startsWith(";")) continue
+        val parts = line.split(Regex("\\s+"))
+        when (parts[0].lowercase()) {
+            "remote" -> if (parts.size > 1 && host.isEmpty()) {
+                host = parts[1]
+                port = parts.getOrNull(2)?.toIntOrNull() ?: 1194
+            }
+            "proto" -> {
+                val p = parts.getOrNull(1)?.lowercase().orEmpty()
+                proto = if ("udp" in p) "udp" else "tcp"
+            }
+        }
+    }
+    return RemoteEndpoint(host, port, proto)
+}

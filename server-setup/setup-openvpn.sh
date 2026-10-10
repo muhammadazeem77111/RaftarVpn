@@ -1,1 +1,188 @@
-IyEvYmluL2Jhc2gKIwojIFJhZnRhciBWUE4g4oCUIE9wZW5WUE4gc2VydmVyIHNldHVwICh1bmF0dGVuZGVkKQojIFVidW50dSAyMi4wNCBwYXIgcm9vdCBtZSBjaGFsYW86ICBzdWRvIC4vc2V0dXAtb3BlbnZwbi5zaAojIE5heWEgY2xpZW50IGJhbmFuYTogICAgICAgICAgICAgICAgc3VkbyAuL3NldHVwLW9wZW52cG4uc2ggbmV3LWNsaWVudCA8bmFtZT4KIwojIEthcnRhIGt5YSBoYWk6CiMgICAtIG9wZW52cG4gKyBlYXN5LXJzYSBpbnN0YWxsCiMgICAtIGVhc3ktcnNhIDMueCBQS0kgKENBLCBzZXJ2ZXIgY2VydCwgREgsIHRscy1jcnlwdCBrZXkpIC0tYmF0Y2gsIG5vcGFzcwojICAgLSAvZXRjL29wZW52cG4vc2VydmVyL3NlcnZlci5jb25mIChVRFAgMTE5NCwgdHVuLCBBRVMtMjU2LUdDTSwgcmVkaXJlY3QtZ2F0ZXdheSkKIyAgIC0gbmV0LmlwdjQuaXBfZm9yd2FyZCArIGlwdGFibGVzIE1BU1FVRVJBREUgKE5BVCkgKyBwZXJzaXN0CiMgICAtIG9wZW52cG4tc2VydmVyQHNlcnZlciBzeXN0ZW1kIHNlcnZpY2UgZW5hYmxlICsgc3RhcnQKIwpzZXQgLWUKCmlmIFsgIiRFVUlEIiAtbmUgMCBdOyB0aGVuCiAgICBlY2hvICJFUlJPUjogcm9vdCAoc3VkbykgbWUgY2hhbGFvOiBzdWRvICQwIgogICAgZXhpdCAxCmZpCgpQT1JUPTExOTQKUFJPVE89dWRwCkVBU1lSU0FfRElSPS9ldGMvb3BlbnZwbi9lYXN5LXJzYQpTRVJWRVJfQ049c2VydmVyCgpjb21tYW5kIC12IGlwID4vZGV2L251bGwgMj4mMSB8fCB7IGVjaG8gIkVSUk9SOiAnaXAnIGNvbW1hbmQgbmFoaSBtaWxhIjsgZXhpdCAxOyB9CgppbnN0YWxsX3NlcnZlcigpIHsKICAgIGVjaG8gIj09PiBQYWNrYWdlcyBpbnN0YWxsIGhvIHJhaGUgaGFpbi4uLiIKICAgIGFwdC1nZXQgdXBkYXRlIC1xcQogICAgREVCSUFOX0ZST05URU5EPW5vbmludGVyYWN0aXZlIGFwdC1nZXQgaW5zdGFsbCAteSAtcXEgXAogICAgICAgIG9wZW52cG4gZWFzeS1yc2EgaXB0YWJsZXMgaXB0YWJsZXMtcGVyc2lzdGVudCBjdXJsID4vZGV2L251bGwKCiAgICBlY2hvICI9PT4gUEtJIGJhbmEgcmFoYSBob29uIChlYXN5LXJzYSAzLngpLi4uIgogICAgbWtkaXIgLXAgIiRFQVNZUlNBX0RJUiIKICAgIGlmIFsgISAtZiAiJEVBU1lSU0FfRElSL2Vhc3lyc2EiIF07IHRoZW4KICAgICAgICBjcCAtciAvdXNyL3NoYXJlL2Vhc3ktcnNhLyogIiRFQVNZUlNBX0RJUi8iCiAgICBmaQogICAgY2QgIiRFQVNZUlNBX0RJUiIKCiAgICBpZiBbICEgLWQgcGtpIF07IHRoZW4KICAgICAgICAuL2Vhc3lyc2EgaW5pdC1wa2kgPi9kZXYvbnVsbCAyPiYxCiAgICBmaQoKICAgIGV4cG9ydCBFQVNZUlNBX0JBVENIPTEKICAgIGlmIFsgISAtZiBwa2kvY2EuY3J0IF07IHRoZW4KICAgICAgICBFQVNZUlNBX1JFUV9DTj0iUmFmdGFyVlBOLUNBIiAuL2Vhc3lyc2EgLS1iYXRjaCBidWlsZC1jYSBub3Bhc3MgPi9kZXYvbnVsbCAyPiYxCiAgICBmaQogICAgaWYgWyAhIC1mICJwa2kvaXNzdWVkLyR7U0VSVkVSX0NOfS5jcnQiIF07IHRoZW4KICAgICAgICAuL2Vhc3lyc2EgLS1iYXRjaCBidWlsZC1zZXJ2ZXItZnVsbCAiJFNFUlZFUl9DTiIgbm9wYXNzID4vZGV2L251bGwgMj4mMQogICAgZmkKICAgIGlmIFsgISAtZiBwa2kvZGgucGVtIF07IHRoZW4KICAgICAgICAuL2Vhc3lyc2EgZ2VuLWRoID4vZGV2L251bGwgMj4mMQogICAgZmkKICAgIGlmIFsgISAtZiB0YS5rZXkgXTsgdGhlbgogICAgICAgIG9wZW52cG4gLS1nZW5rZXkgc2VjcmV0IHRhLmtleQogICAgZmkKICAgIHVuc2V0IEVBU1lSU0FfQkFUQ0gKCiAgICBlY2hvICI9PT4gc2VydmVyLmNvbmYgbGlraCByYWhhIGhvb24uLi4iCiAgICBta2RpciAtcCAvZXRjL29wZW52cG4vc2VydmVyCiAgICBjYXQgPiAvZXRjL29wZW52cG4vc2VydmVyL3NlcnZlci5jb25mIDw8RU9GCnBvcnQgJFBPUlQKcHJvdG8gJFBST1RPCmRldiB0dW4KY2EgJEVBU1lSU0FfRElSL3BraS9jYS5jcnQKY2VydCAkRUFTWVJTQV9ESVIvcGtpL2lzc3VlZC8ke1NFUlZFUl9DTn0uY3J0CmtleSAkRUFTWVJTQV9ESVIvcGtpL3ByaXZhdGUvJHtTRVJWRVJfQ059LmtleQpkaCAkRUFTWVJTQV9ESVIvcGtpL2RoLnBlbQp0bHMtY3J5cHQgJEVBU1lSU0FfRElSL3RhLmtleQpzZXJ2ZXIgMTAuOC4wLjAgMjU1LjI1NS4yNTUuMAp0b3BvbG9neSBzdWJuZXQKcHVzaCAicmVkaXJlY3QtZ2F0ZXdheSBkZWYxIGJ5cGFzcy1kaGNwIgpwdXNoICJkaGNwLW9wdGlvbiBETlMgMS4xLjEuMSIKcHVzaCAiZGhjcC1vcHRpb24gRE5TIDguOC44LjgiCmtlZXBhbGl2ZSAxMCAxMjAKY2lwaGVyIEFFUy0yNTYtR0NNCnBlcnNpc3Qta2V5CnBlcnNpc3QtdHVuCnVzZXIgbm9ib2R5Cmdyb3VwIG5vZ3JvdXAKc3RhdHVzIC92YXIvbG9nL29wZW52cG4tc3RhdHVzLmxvZwp2ZXJiIDMKZXhwbGljaXQtZXhpdC1ub3RpZnkgMQpFT0YKICAgIGNobW9kIDYwMCAvZXRjL29wZW52cG4vc2VydmVyL3NlcnZlci5jb25mCgogICAgZWNobyAiPT0+IElQIGZvcndhcmRpbmcgKyBOQVQuLi4iCiAgICBlY2hvICduZXQuaXB2NC5pcF9mb3J3YXJkPTEnID4gL2V0Yy9zeXNjdGwuZC85OS1yYWZ0YXItdnBuLmNvbmYKICAgIHN5c2N0bCAtcSAtcCAvZXRjL3N5c2N0bC5kLzk5LXJhZnRhci12cG4uY29uZgoKICAgIElGQUNFPSQoaXAgcm91dGUgfCBhd2sgJy9eZGVmYXVsdC8ge3ByaW50ICQ1OyBleGl0fScpCiAgICBpZiBbIC16ICIkSUZBQ0UiIF07IHRoZW4KICAgICAgICBlY2hvICJFUlJPUjogZGVmYXVsdCBuZXR3b3JrIGludGVyZmFjZSBuYWhpIG1pbGkiCiAgICAgICAgZXhpdCAxCiAgICBmaQogICAgIyBEdXBsaWNhdGUgcnVsZSBzZSBiYWNobmUga2UgbGl5ZSBwZWhsZSBkZWxldGUgKGZhaWwgaG8gdG8gaWdub3JlKSwgcGhpciBhZGQuCiAgICBpcHRhYmxlcyAtdCBuYXQgLUQgUE9TVFJPVVRJTkcgLXMgMTAuOC4wLjAvMjQgLW8gIiRJRkFDRSIgLWogTUFTUVVFUkFERSAyPi9kZXYvbnVsbCB8fCB0cnVlCiAgICBpcHRhYmxlcyAtdCBuYXQgLUEgUE9TVFJPVVRJTkcgLXMgMTAuOC4wLjAvMjQgLW8gIiRJRkFDRSIgLWogTUFTUVVFUkFERQogICAgIyBPcGVuVlBOIHBvcnQgaW5ib3VuZCAoT3JhY2xlIFNlY3VyaXR5IExpc3QgbWUgYmhpIGtob2xuYSB6YXJvb3JpIGhhaSEpCiAgICBpcHRhYmxlcyAtRCBJTlBVVCAtcCB1ZHAgLS1kcG9ydCAiJFBPUlQiIC1qIEFDQ0VQVCAyPi9kZXYvbnVsbCB8fCB0cnVlCiAgICBpcHRhYmxlcyAtQSBJTlBVVCAtcCB1ZHAgLS1kcG9ydCAiJFBPUlQiIC1qIEFDQ0VQVAogICAgbmV0ZmlsdGVyLXBlcnNpc3RlbnQgc2F2ZSA+L2Rldi9udWxsIDI+JjEgfHwgdHJ1ZQoKICAgIGVjaG8gIj09PiBPcGVuVlBOIHNlcnZpY2Ugc3RhcnQuLi4iCiAgICBzeXN0ZW1jdGwgZW5hYmxlIC0tbm93IG9wZW52cG4tc2VydmVyQHNlcnZlciA+L2Rldi9udWxsIDI+JjEKCiAgICBlY2hvICIiCiAgICBlY2hvICJPSyEgT3BlblZQTiBzZXJ2ZXIgY2hhbCByYWhhIGhhaSAoVURQICRQT1JUKS4iCiAgICBlY2hvICJDbGllbnQgYmFuYW86ICBzdWRvICQwIG5ldy1jbGllbnQgPG5hbWU+IgogICAgZWNobyAiKE9yYWNsZSBDbG91ZCBTZWN1cml0eSBMaXN0IG1lIFVEUCAkUE9SVCBpbmJvdW5kIHJ1bGUga2hvbG5hIG1hdCBiaG9vbG8hKSIKfQoKbmV3X2NsaWVudCgpIHsKICAgIE5BTUU9IiQxIgogICAgaWYgWyAteiAiJE5BTUUiIF07IHRoZW4KICAgICAgICBlY2hvICJVc2FnZTogc3VkbyAkMCBuZXctY2xpZW50IDxuYW1lPiIKICAgICAgICBleGl0IDEKICAgIGZpCiAgICAjIE5hYW0gbWUgc2lyZiBzYWZlIGNoYXJhY3RlcnMKICAgIGlmICEgZWNobyAiJE5BTUUiIHwgZ3JlcCAtcUUgJ15bQS1aYS16MC05Ll8tXSskJzsgdGhlbgogICAgICAgIGVjaG8gIkVSUk9SOiBuYWFtIG1lIHNpcmYgQS1aIGEteiAwLTkgLiBfIC0gaXN0ZW1hbCBrYXJvIgogICAgICAgIGV4aXQgMQogICAgZmkKCiAgICBjZCAiJEVBU1lSU0FfRElSIgogICAgZXhwb3J0IEVBU1lSU0FfQkFUQ0g9MQogICAgLi9lYXN5cnNhIC0tYmF0Y2ggYnVpbGQtY2xpZW50LWZ1bGwgIiROQU1FIiBub3Bhc3MgPi9kZXYvbnVsbCAyPiYxCiAgICB1bnNldCBFQVNZUlNBX0JBVENICgogICAgIyBTZXJ2ZXIga2EgcHVibGljIElQIChhcmcgc2UgeWEgYXV0by1kZXRlY3QpCiAgICBTRVJWRVJfSVA9IiQyIgogICAgaWYgWyAteiAiJFNFUlZFUl9JUCIgXTsgdGhlbgogICAgICAgIFNFUlZFUl9JUD0kKGN1cmwgLXMgLS1tYXgtdGltZSAxMCBpZmNvbmZpZy5tZSB8fCB0cnVlKQogICAgZmkKICAgIGlmIFsgLXogIiRTRVJWRVJfSVAiIF07IHRoZW4KICAgICAgICBlY2hvICJFUlJPUjogc2VydmVyIGthIHB1YmxpYyBJUCBtYWxvb20gbmEgaG8gc2FrYS4iCiAgICAgICAgZWNobyAiRG9iYXJhIGNoYWxhbzogc3VkbyAkMCBuZXctY2xpZW50ICROQU1FIDxTRVJWRVJfUFVCTElDX0lQPiIKICAgICAgICBleGl0IDEKICAgIGZpCgogICAgT1VURklMRT0iL3Jvb3QvJHtOQU1FfS5vdnBuIgogICAgewogICAgICAgIGVjaG8gImNsaWVudCIKICAgICAgICBlY2hvICJkZXYgdHVuIgogICAgICAgIGVjaG8gInByb3RvICRQUk9UTyIKICAgICAgICBlY2hvICJyZW1vdGUgJFNFUlZFUl9JUCAkUE9SVCIKICAgICAgICBlY2hvICJyZXNvbHYtcmV0cnkgaW5maW5pdGUiCiAgICAgICAgZWNobyAibm9iaW5kIgogICAgICAgIGVjaG8gInBlcnNpc3Qta2V5IgogICAgICAgIGVjaG8gInBlcnNpc3QtdHVuIgogICAgICAgIGVjaG8gInJlbW90ZS1jZXJ0LXRscyBzZXJ2ZXIiCiAgICAgICAgZWNobyAiY2lwaGVyIEFFUy0yNTYtR0NNIgogICAgICAgIGVjaG8gInZlcmIgMyIKICAgICAgICBlY2hvICI8Y2E+IgogICAgICAgIGNhdCAiJEVBU1lSU0FfRElSL3BraS9jYS5jcnQiCiAgICAgICAgZWNobyAiPC9jYT4iCiAgICAgICAgZWNobyAiPGNlcnQ+IgogICAgICAgIGF3ayAnL0JFR0lOIENFUlRJRklDQVRFLywvRU5EIENFUlRJRklDQVRFLycgIiRFQVNZUlNBX0RJUi9wa2kvaXNzdWVkLyR7TkFNRX0uY3J0IgogICAgICAgIGVjaG8gIjwvY2VydD4iCiAgICAgICAgZWNobyAiPGtleT4iCiAgICAgICAgY2F0ICIkRUFTWVJTQV9ESVIvcGtpL3ByaXZhdGUvJHtOQU1FfS5rZXkiCiAgICAgICAgZWNobyAiPC9rZXk+IgogICAgICAgIGVjaG8gIjx0bHMtY3J5cHQ+IgogICAgICAgIGNhdCAiJEVBU1lSU0FfRElSL3RhLmtleSIKICAgICAgICBlY2hvICI8L3Rscy1jcnlwdD4iCiAgICB9ID4gIiRPVVRGSUxFIgogICAgY2htb2QgNjAwICIkT1VURklMRSIKCiAgICBlY2hvICIiCiAgICBlY2hvICJPSyEgQ2xpZW50IGZpbGUgYmFuIGdheWk6ICRPVVRGSUxFIgogICAgZWNobyAiSXNlIGFwbmUgcGhvbmUvY29tcHV0ZXIgcGFyIGxhbyBhdXIgUmFmdGFyIFZQTiBhcHAga2UgJ01lcmUgU2VydmVycycgbWUgaW1wb3J0IGthcm8uIgp9CgpjYXNlICIkezE6LWluc3RhbGx9IiBpbgogICAgaW5zdGFsbHwiIikKICAgICAgICBpbnN0YWxsX3NlcnZlcgogICAgICAgIDs7CiAgICBuZXctY2xpZW50KQogICAgICAgIG5ld19jbGllbnQgIiQyIiAiJDMiCiAgICAgICAgOzsKICAgICopCiAgICAgICAgZWNobyAiVXNhZ2U6IgogICAgICAgIGVjaG8gIiAgc3VkbyAkMCAgICAgICAgICAgICAgIyBzZXJ2ZXIgaW5zdGFsbCIKICAgICAgICBlY2hvICIgIHN1ZG8gJDAgbmV3LWNsaWVudCA8bmFtZT4gW3NlcnZlci1wdWJsaWMtaXBdIgogICAgICAgIGV4aXQgMQogICAgICAgIDs7CmVzYWMK
+#!/bin/bash
+#
+# Raftar VPN — OpenVPN server setup (unattended)
+# Ubuntu 22.04 par root me chalao:  sudo ./setup-openvpn.sh
+# Naya client banana:                sudo ./setup-openvpn.sh new-client <name>
+#
+# Karta kya hai:
+#   - openvpn + easy-rsa install
+#   - easy-rsa 3.x PKI (CA, server cert, DH, tls-crypt key) --batch, nopass
+#   - /etc/openvpn/server/server.conf (UDP 1194, tun, AES-256-GCM, redirect-gateway)
+#   - net.ipv4.ip_forward + iptables MASQUERADE (NAT) + persist
+#   - openvpn-server@server systemd service enable + start
+#
+set -e
+
+if [ "$EUID" -ne 0 ]; then
+    echo "ERROR: root (sudo) me chalao: sudo $0"
+    exit 1
+fi
+
+PORT=1194
+PROTO=udp
+EASYRSA_DIR=/etc/openvpn/easy-rsa
+SERVER_CN=server
+
+command -v ip >/dev/null 2>&1 || { echo "ERROR: 'ip' command nahi mila"; exit 1; }
+
+install_server() {
+    echo "==> Packages install ho rahe hain..."
+    apt-get update -qq
+    DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
+        openvpn easy-rsa iptables iptables-persistent curl >/dev/null
+
+    echo "==> PKI bana raha hoon (easy-rsa 3.x)..."
+    mkdir -p "$EASYRSA_DIR"
+    if [ ! -f "$EASYRSA_DIR/easyrsa" ]; then
+        cp -r /usr/share/easy-rsa/* "$EASYRSA_DIR/"
+    fi
+    cd "$EASYRSA_DIR"
+
+    if [ ! -d pki ]; then
+        ./easyrsa init-pki >/dev/null 2>&1
+    fi
+
+    export EASYRSA_BATCH=1
+    if [ ! -f pki/ca.crt ]; then
+        EASYRSA_REQ_CN="RaftarVPN-CA" ./easyrsa --batch build-ca nopass >/dev/null 2>&1
+    fi
+    if [ ! -f "pki/issued/${SERVER_CN}.crt" ]; then
+        ./easyrsa --batch build-server-full "$SERVER_CN" nopass >/dev/null 2>&1
+    fi
+    if [ ! -f pki/dh.pem ]; then
+        ./easyrsa gen-dh >/dev/null 2>&1
+    fi
+    if [ ! -f ta.key ]; then
+        openvpn --genkey secret ta.key
+    fi
+    unset EASYRSA_BATCH
+
+    echo "==> server.conf likh raha hoon..."
+    mkdir -p /etc/openvpn/server
+    cat > /etc/openvpn/server/server.conf <<EOF
+port $PORT
+proto $PROTO
+dev tun
+ca $EASYRSA_DIR/pki/ca.crt
+cert $EASYRSA_DIR/pki/issued/${SERVER_CN}.crt
+key $EASYRSA_DIR/pki/private/${SERVER_CN}.key
+dh $EASYRSA_DIR/pki/dh.pem
+tls-crypt $EASYRSA_DIR/ta.key
+server 10.8.0.0 255.255.255.0
+topology subnet
+push "redirect-gateway def1 bypass-dhcp"
+push "dhcp-option DNS 1.1.1.1"
+push "dhcp-option DNS 8.8.8.8"
+keepalive 10 120
+cipher AES-256-GCM
+persist-key
+persist-tun
+user nobody
+group nogroup
+status /var/log/openvpn-status.log
+verb 3
+explicit-exit-notify 1
+EOF
+    chmod 600 /etc/openvpn/server/server.conf
+
+    echo "==> IP forwarding + NAT..."
+    echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/99-raftar-vpn.conf
+    sysctl -q -p /etc/sysctl.d/99-raftar-vpn.conf
+
+    IFACE=$(ip route | awk '/^default/ {print $5; exit}')
+    if [ -z "$IFACE" ]; then
+        echo "ERROR: default network interface nahi mili"
+        exit 1
+    fi
+    # Duplicate rule se bachne ke liye pehle delete (fail ho to ignore), phir add.
+    iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o "$IFACE" -j MASQUERADE 2>/dev/null || true
+    iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o "$IFACE" -j MASQUERADE
+    # OpenVPN port inbound (Oracle Security List me bhi kholna zaroori hai!)
+    iptables -D INPUT -p udp --dport "$PORT" -j ACCEPT 2>/dev/null || true
+    iptables -A INPUT -p udp --dport "$PORT" -j ACCEPT
+    netfilter-persistent save >/dev/null 2>&1 || true
+
+    echo "==> OpenVPN service start..."
+    systemctl enable --now openvpn-server@server >/dev/null 2>&1
+
+    echo ""
+    echo "OK! OpenVPN server chal raha hai (UDP $PORT)."
+    echo "Client banao:  sudo $0 new-client <name>"
+    echo "(Oracle Cloud Security List me UDP $PORT inbound rule kholna mat bhoolo!)"
+}
+
+new_client() {
+    NAME="$1"
+    if [ -z "$NAME" ]; then
+        echo "Usage: sudo $0 new-client <name>"
+        exit 1
+    fi
+    # Naam me sirf safe characters
+    if ! echo "$NAME" | grep -qE '^[A-Za-z0-9._-]+$'; then
+        echo "ERROR: naam me sirf A-Z a-z 0-9 . _ - istemal karo"
+        exit 1
+    fi
+
+    cd "$EASYRSA_DIR"
+    export EASYRSA_BATCH=1
+    ./easyrsa --batch build-client-full "$NAME" nopass >/dev/null 2>&1
+    unset EASYRSA_BATCH
+
+    # Server ka public IP (arg se ya auto-detect)
+    SERVER_IP="$2"
+    if [ -z "$SERVER_IP" ]; then
+        SERVER_IP=$(curl -s --max-time 10 ifconfig.me || true)
+    fi
+    if [ -z "$SERVER_IP" ]; then
+        echo "ERROR: server ka public IP maloom na ho saka."
+        echo "Dobara chalao: sudo $0 new-client $NAME <SERVER_PUBLIC_IP>"
+        exit 1
+    fi
+
+    OUTFILE="/root/${NAME}.ovpn"
+    {
+        echo "client"
+        echo "dev tun"
+        echo "proto $PROTO"
+        echo "remote $SERVER_IP $PORT"
+        echo "resolv-retry infinite"
+        echo "nobind"
+        echo "persist-key"
+        echo "persist-tun"
+        echo "remote-cert-tls server"
+        echo "cipher AES-256-GCM"
+        echo "verb 3"
+        echo "<ca>"
+        cat "$EASYRSA_DIR/pki/ca.crt"
+        echo "</ca>"
+        echo "<cert>"
+        awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/' "$EASYRSA_DIR/pki/issued/${NAME}.crt"
+        echo "</cert>"
+        echo "<key>"
+        cat "$EASYRSA_DIR/pki/private/${NAME}.key"
+        echo "</key>"
+        echo "<tls-crypt>"
+        cat "$EASYRSA_DIR/ta.key"
+        echo "</tls-crypt>"
+    } > "$OUTFILE"
+    chmod 600 "$OUTFILE"
+
+    echo ""
+    echo "OK! Client file ban gayi: $OUTFILE"
+    echo "Ise apne phone/computer par lao aur Raftar VPN app ke 'Mere Servers' me import karo."
+}
+
+case "${1:-install}" in
+    install|"")
+        install_server
+        ;;
+    new-client)
+        new_client "$2" "$3"
+        ;;
+    *)
+        echo "Usage:"
+        echo "  sudo $0              # server install"
+        echo "  sudo $0 new-client <name> [server-public-ip]"
+        exit 1
+        ;;
+esac

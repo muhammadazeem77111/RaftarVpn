@@ -1,1 +1,27 @@
-cGFja2FnZSBjb20ucmFmdGFyLnZwbi5kYXRhCgppbXBvcnQgYW5kcm9pZC5jb250ZW50LkNvbnRleHQKCi8qKgogKiBVc2VyLXJlcG9ydGVkIGJhZCBzZXJ2ZXJzIGtpIGxvY2FsIGJsb2NrbGlzdC4KICogS29pIGdsb2JhbCBibG9ja2xpc3QgcmVsaWFibGUgbmFoaSDigJQgaXMgbGl5ZSBlbXBpcmljYWwgdGFyZWVxYToKICogam8gc2VydmVyIHJlYWNoYWJpbGl0eSBjaGVjayBmYWlsIGthcmUgd29oIGF1dG8tZmlsdGVyIGhvdGEgaGFpLAogKiBhdXIgdXNlciBsb25nLXByZXNzIGthcmtlIGtpc2kgYmhpIHNlcnZlciBrbyByZXBvcnQga2FyIHNha3RhIGhhaTsKICogcmVwb3J0ZWQgc2VydmVyIGlzIHVzZXIga2UgbGl5ZSBkb2JhcmEga2FiaGkgbGlzdCBtZSBuYWhpIGFheWVnYS4KICovCmNsYXNzIEJsb2NrbGlzdFN0b3JlKGNvbnRleHQ6IENvbnRleHQpIHsKCiAgICBwcml2YXRlIHZhbCBwcmVmcyA9IGNvbnRleHQuZ2V0U2hhcmVkUHJlZmVyZW5jZXMoInJhZnRhcl9ibG9ja2xpc3QiLCBDb250ZXh0Lk1PREVfUFJJVkFURSkKCiAgICBmdW4gaXNCbG9ja2VkKHNlcnZlcklkOiBTdHJpbmcpOiBCb29sZWFuID0gcHJlZnMuZ2V0Qm9vbGVhbihrZXkoc2VydmVySWQpLCBmYWxzZSkKCiAgICBmdW4gYmxvY2soc2VydmVySWQ6IFN0cmluZykgewogICAgICAgIHByZWZzLmVkaXQoKS5wdXRCb29sZWFuKGtleShzZXJ2ZXJJZCksIHRydWUpLmFwcGx5KCkKICAgIH0KCiAgICBmdW4gdW5ibG9jayhzZXJ2ZXJJZDogU3RyaW5nKSB7CiAgICAgICAgcHJlZnMuZWRpdCgpLnJlbW92ZShrZXkoc2VydmVySWQpKS5hcHBseSgpCiAgICB9CgogICAgcHJpdmF0ZSBmdW4ga2V5KHNlcnZlcklkOiBTdHJpbmcpID0gImJfJHtzZXJ2ZXJJZC5oYXNoQ29kZSgpfSIKfQo=
+package com.raftar.vpn.data
+
+import android.content.Context
+
+/**
+ * User-reported bad servers ki local blocklist.
+ * Koi global blocklist reliable nahi — is liye empirical tareeqa:
+ * jo server reachability check fail kare woh auto-filter hota hai,
+ * aur user long-press karke kisi bhi server ko report kar sakta hai;
+ * reported server is user ke liye dobara kabhi list me nahi aayega.
+ */
+class BlocklistStore(context: Context) {
+
+    private val prefs = context.getSharedPreferences("raftar_blocklist", Context.MODE_PRIVATE)
+
+    fun isBlocked(serverId: String): Boolean = prefs.getBoolean(key(serverId), false)
+
+    fun block(serverId: String) {
+        prefs.edit().putBoolean(key(serverId), true).apply()
+    }
+
+    fun unblock(serverId: String) {
+        prefs.edit().remove(key(serverId)).apply()
+    }
+
+    private fun key(serverId: String) = "b_${serverId.hashCode()}"
+}

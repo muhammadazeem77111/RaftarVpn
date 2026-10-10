@@ -1,1 +1,92 @@
-cGx1Z2lucyB7CiAgICBpZCgiY29tLmFuZHJvaWQuYXBwbGljYXRpb24iKQogICAgaWQoIm9yZy5qZXRicmFpbnMua290bGluLmFuZHJvaWQiKQp9CgphbmRyb2lkIHsKICAgIG5hbWVzcGFjZSA9ICJjb20ucmFmdGFyLnZwbiIKICAgIGNvbXBpbGVTZGsgPSAzNAoKICAgIGRlZmF1bHRDb25maWcgewogICAgICAgIGFwcGxpY2F0aW9uSWQgPSAiY29tLnJhZnRhci52cG4iCiAgICAgICAgbWluU2RrID0gMjYKICAgICAgICB0YXJnZXRTZGsgPSAzNAogICAgICAgIC8vIENJIG1lIGhhciBidWlsZCBrYSB2ZXJzaW9uQ29kZSB1bmlxdWUgaG9uYSBjaGFoaXllLCB3YXJuYSBBbmRyb2lkIHB1cmFuaSBBUEsgcmFraHRhIGhhaS4KICAgICAgICB2ZXJzaW9uQ29kZSA9IFN5c3RlbS5nZXRlbnYoIkdJVEhVQl9SVU5fTlVNQkVSIik/LnRvSW50T3JOdWxsKCkgPzogMQogICAgICAgIHZlcnNpb25OYW1lID0gIjEuMCIKICAgIH0KCiAgICBzaWduaW5nQ29uZmlncyB7CiAgICAgICAgY3JlYXRlKCJyZWxlYXNlIikgewogICAgICAgICAgICAvLyBSZWxlYXNlIHdvcmtmbG93IHNlY3JldHMgc2UgYWF0YSBoYWkgKFJFQURNRTogIlNpZ25pbmcgJiBQbGF5IFN0b3JlIHVwbG9hZCIpLgogICAgICAgICAgICAvLyBEZWJ1ZyBidWlsZCBwYXIgaXNrYSBpc3RlbWFsIG5haGkgaG90YS4KICAgICAgICAgICAgc3RvcmVGaWxlID0gZmlsZShTeXN0ZW0uZ2V0ZW52KCJLRVlTVE9SRV9QQVRIIikgPzogInJlbGVhc2Uua2V5c3RvcmUiKQogICAgICAgICAgICBzdG9yZVBhc3N3b3JkID0gU3lzdGVtLmdldGVudigiS0VZU1RPUkVfUEFTU1dPUkQiKQogICAgICAgICAgICBrZXlBbGlhcyA9IFN5c3RlbS5nZXRlbnYoIktFWV9BTElBUyIpCiAgICAgICAgICAgIGtleVBhc3N3b3JkID0gU3lzdGVtLmdldGVudigiS0VZX1BBU1NXT1JEIikKICAgICAgICB9CiAgICB9CgogICAgYnVpbGRUeXBlcyB7CiAgICAgICAgZGVidWcgewogICAgICAgICAgICAvLyBkZWZhdWx0CiAgICAgICAgfQogICAgICAgIHJlbGVhc2UgewogICAgICAgICAgICAvLyB2MTogUjgvbWluaWZ5IE9GRiB0YWFrZSBuYXRpdmUgbGliIChsaWJvdnBuMy5zbykga2Ugc2F0aCBrb2kgaXNzdWUgbmEgaG8uCiAgICAgICAgICAgIGlzTWluaWZ5RW5hYmxlZCA9IGZhbHNlCiAgICAgICAgICAgIGlzU2hyaW5rUmVzb3VyY2VzID0gZmFsc2UKICAgICAgICAgICAgc2lnbmluZ0NvbmZpZyA9IHNpZ25pbmdDb25maWdzLmdldEJ5TmFtZSgicmVsZWFzZSIpCiAgICAgICAgfQogICAgfQoKICAgIGNvbXBpbGVPcHRpb25zIHsKICAgICAgICBzb3VyY2VDb21wYXRpYmlsaXR5ID0gSmF2YVZlcnNpb24uVkVSU0lPTl8xNwogICAgICAgIHRhcmdldENvbXBhdGliaWxpdHkgPSBKYXZhVmVyc2lvbi5WRVJTSU9OXzE3CiAgICB9CiAgICBrb3RsaW5PcHRpb25zIHsKICAgICAgICBqdm1UYXJnZXQgPSAiMTciCiAgICB9CgogICAgYnVpbGRGZWF0dXJlcyB7CiAgICAgICAgY29tcG9zZSA9IHRydWUKICAgICAgICBidWlsZENvbmZpZyA9IHRydWUKICAgIH0KICAgIC8vIEtvdGxpbiAxLjkuMjQga2UgbGl5ZSBjb21wb3NlIGNvbXBpbGVyIHZlcnNpb24gKEFHUCA4LjUueCBrZSBzYXRoIHZlcmlmaWVkKS4KICAgIGNvbXBvc2VPcHRpb25zIHsKICAgICAgICBrb3RsaW5Db21waWxlckV4dGVuc2lvblZlcnNpb24gPSAiMS41LjE0IgogICAgfQoKICAgIHBhY2thZ2luZyB7CiAgICAgICAgcmVzb3VyY2VzIHsKICAgICAgICAgICAgZXhjbHVkZXMgKz0gIi9NRVRBLUlORi97QUwyLjAsTEdQTDIuMX0iCiAgICAgICAgfQogICAgfQp9CgpkZXBlbmRlbmNpZXMgewogICAgLy8gT3BlblZQTiBlbmdpbmU6IHRpbTA2IGZvcmsgKEFwYWNoZS0yLjApLCBNYXZlbiBDZW50cmFsIHNlLiBBQVIgbWUgbGlib3ZwbjMuc28gKDQgQUJJcykKICAgIC8vIGF1ciBhcG5pIE9wZW5WUE5TZXJ2aWNlIG1vam9vZCBoYWkg4oCUIG1hbmlmZXN0IG1lIGRvYmFyYSBkZWNsYXJlIE5BIGthcm8uCiAgICBpbXBsZW1lbnRhdGlvbigiaW8uZ2l0aHViLnRpbTA2Om9wZW52cG46MS4xLjMiKQogICAgLy8gVHJhbnNpdGl2ZSBkZXAgcGluIGtpIGh1aSAoaW5zcGVjdCBraSBodWkgQVBJIGlzaSB2ZXJzaW9uIGtpIGhhaSkuCiAgICBpbXBsZW1lbnRhdGlvbigiaW8uZ2l0aHViLnRpbTA2OmJhc2V2cG5wcm90b2NvbHM6MS4xLjEiKQoKICAgIHZhbCBjb21wb3NlQm9tID0gcGxhdGZvcm0oImFuZHJvaWR4LmNvbXBvc2U6Y29tcG9zZS1ib206MjAyNC4wNi4wMCIpCiAgICBpbXBsZW1lbnRhdGlvbihjb21wb3NlQm9tKQogICAgYW5kcm9pZFRlc3RJbXBsZW1lbnRhdGlvbihjb21wb3NlQm9tKQoKICAgIGltcGxlbWVudGF0aW9uKCJhbmRyb2lkeC5jb21wb3NlLm1hdGVyaWFsMzptYXRlcmlhbDMiKQogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4LmNvbXBvc2UudWk6dWkiKQogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4LmFjdGl2aXR5OmFjdGl2aXR5LWNvbXBvc2U6MS45LjIiKQogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4LmNvcmU6Y29yZS1rdHg6MS4xMy4xIikKICAgIGltcGxlbWVudGF0aW9uKCJhbmRyb2lkeC5saWZlY3ljbGU6bGlmZWN5Y2xlLXJ1bnRpbWUtY29tcG9zZToyLjguMyIpCiAgICBpbXBsZW1lbnRhdGlvbigiYW5kcm9pZHgubGlmZWN5Y2xlOmxpZmVjeWNsZS12aWV3bW9kZWwtY29tcG9zZToyLjguMyIpCgogICAgLy8gUHJpdmF0ZSAub3ZwbiBjb25maWdzIG9uLWRldmljZSBlbmNyeXB0ZWQgc3RvcmFnZSBrZSBsaXllLgogICAgaW1wbGVtZW50YXRpb24oImFuZHJvaWR4LnNlY3VyaXR5OnNlY3VyaXR5LWNyeXB0bzoxLjAuMCIpCgogICAgLy8gUVIgY29kZSBzY2FuIChhcG5lIHNlcnZlciBraSBjb25maWcgUVIgc2UgaW1wb3J0IGthcm5lIGtlIGxpeWUpLgogICAgaW1wbGVtZW50YXRpb24oImNvbS5qb3VybmV5YXBwczp6eGluZy1hbmRyb2lkLWVtYmVkZGVkOjQuMy4wIikKCiAgICBpbXBsZW1lbnRhdGlvbigiY29tLnNxdWFyZXVwLm9raHR0cDM6b2todHRwOjQuMTIuMCIpCiAgICBpbXBsZW1lbnRhdGlvbigib3JnLmpldGJyYWlucy5rb3RsaW54OmtvdGxpbngtY29yb3V0aW5lcy1hbmRyb2lkOjEuOC4xIikKfQo=
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace = "com.raftar.vpn"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.raftar.vpn"
+        minSdk = 26
+        targetSdk = 34
+        // CI me har build ka versionCode unique hona chahiye, warna Android purani APK rakhta hai.
+        versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 1
+        versionName = "1.0"
+    }
+
+    signingConfigs {
+        create("release") {
+            // Release workflow secrets se aata hai (README: "Signing & Play Store upload").
+            // Debug build par iska istemal nahi hota.
+            storeFile = file(System.getenv("KEYSTORE_PATH") ?: "release.keystore")
+            storePassword = System.getenv("KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("KEY_ALIAS")
+            keyPassword = System.getenv("KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        debug {
+            // default
+        }
+        release {
+            // v1: R8/minify OFF taake native lib (libovpn3.so) ke sath koi issue na ho.
+            isMinifyEnabled = false
+            isShrinkResources = false
+            signingConfig = signingConfigs.getByName("release")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+    // Kotlin 1.9.24 ke liye compose compiler version (AGP 8.5.x ke sath verified).
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.14"
+    }
+
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+}
+
+dependencies {
+    // OpenVPN engine: tim06 fork (Apache-2.0), Maven Central se. AAR me libovpn3.so (4 ABIs)
+    // aur apni OpenVPNService mojood hai — manifest me dobara declare NA karo.
+    implementation("io.github.tim06:openvpn:1.1.3")
+    // Transitive dep pin ki hui (inspect ki hui API isi version ki hai).
+    implementation("io.github.tim06:basevpnprotocols:1.1.1")
+
+    val composeBom = platform("androidx.compose:compose-bom:2024.06.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.activity:activity-compose:1.9.2")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3")
+
+    // Private .ovpn configs on-device encrypted storage ke liye.
+    implementation("androidx.security:security-crypto:1.0.0")
+
+    // QR code scan (apne server ki config QR se import karne ke liye).
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+}
