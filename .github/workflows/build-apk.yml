@@ -1,0 +1,85 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK packages
+        run: |
+          sdkmanager --install "platforms;android-34" "build-tools;34.0.0" "platform-tools"
+          yes | sdkmanager --licenses > /dev/null || true
+
+      - uses: gradle/gradle-build-action@v3
+        with:
+          gradle-version: "8.7"
+
+      - name: Build debug APK
+        id: build
+        run: |
+          set -o pipefail
+          gradle assembleDebug --no-daemon 2>&1 | tee build.log
+          echo "apk=$(ls app/build/outputs/apk/debug/*.apk | head -1)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: RaftarVpn-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+
+      - name: Publish rolling test release
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          APK="${{ steps.build.outputs.apk }}"
+          TAG="test-build"
+          gh release delete "$TAG" --yes 2>/dev/null || true
+          git push origin ":refs/tags/$TAG" 2>/dev/null || true
+          gh release create "$TAG" "$APK" \
+            --title "Raftar VPN — test build" \
+            --notes "Tazatarin test APK (debug-signed). Har push par update hoti hai. Releases se download karo."
+
+      - name: Write build status file
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ "${{ steps.build.outcome }}" = "success" ]; then
+            {
+              echo "# Build status: KAMYAB"
+              echo ""
+              echo "APK tayyar hai: repo ke **Releases** me **test-build** se download karo."
+              echo "Waqt: $(date -u '+%Y-%m-%d %H:%M UTC')"
+            } > BUILD_STATUS.md
+          else
+            {
+              echo "# Build status: NAKAM"
+              echo ""
+              echo '```'
+              tail -n 80 build.log 2>/dev/null || echo "(log nahi mila)"
+              echo '```'
+              echo '```'
+            } > BUILD_STATUS.md
+          fi
+          git add BUILD_STATUS.md
+          git commit -m "build status [skip ci]" || echo "nothing to commit"
+          git push origin HEAD:main
