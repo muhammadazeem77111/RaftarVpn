@@ -29,10 +29,9 @@ Daemon will be stopped at the end of the build
 > Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug
 > Task :app:parseDebugLocalResources
-> Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
+> Task :app:mergeDebugResources
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
@@ -40,20 +39,24 @@ Daemon will be stopped at the end of the build
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
 > Task :app:desugarDebugFileDependencies
-> Task :app:processDebugResources
-> Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugStartupProfile
+> Task :app:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeExtDexDebug
+> Task :app:mergeLibDexDebug
 
-> Task :app:compileDebugKotlin
-e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/PrivateServers.kt:5:33 Unresolved reference: MasterKey
-e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/PrivateServers.kt:28:9 Type mismatch: inferred type is Context but String was expected
-e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/PrivateServers.kt:30:9 Unresolved reference: MasterKey
-e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/PrivateServers.kt:30:49 Unresolved reference: MasterKey
-e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/PrivateServers.kt:32:36 Unresolved reference: ValueEncryptionScheme
-e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/ui/App.kt:124:53 Composable calls are not allowed inside the calculation parameter of inline fun <T> remember(key1: Any?, crossinline calculation: () -> TypeVariable(T)): TypeVariable(T)
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libdatastore_shared_counter.so, libovpn3.so.
+
+> Task :app:processDebugResources
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
 
 > Task :app:compileDebugKotlin FAILED
-> Task :app:mergeExtDexDebug
+e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/PrivateServers.kt:34:36 Unresolved reference: ValueEncryptionScheme
 
 FAILURE: Build failed with an exception.
 
@@ -68,6 +71,6 @@ Execution failed for task ':app:compileDebugKotlin'.
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 2m 10s
-24 actionable tasks: 24 executed
+BUILD FAILED in 2m 8s
+31 actionable tasks: 31 executed
 ```
