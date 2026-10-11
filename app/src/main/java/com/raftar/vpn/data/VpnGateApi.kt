@@ -139,12 +139,14 @@ class VpnGateApi(private val context: Context) {
      * Kya yeh server TCP 443 par hai? Aise servers firewalls/ISPs se asani se guzarte
      * hain (HTTPS jaisa traffic) — connect ke waqt inhe PEHLE try karo.
      */
-    fun isTcp443(server: VpnServer): Boolean = try {
-        val cfg = decodeConfig(server) ?: return false
-        val ep = parseRemoteEndpoint(cfg)
-        ep.proto == "tcp" && ep.port == 443
-    } catch (_: Exception) {
-        false
+    fun isTcp443(server: VpnServer): Boolean {
+        return try {
+            val cfg = decodeConfig(server) ?: return false
+            val ep = parseRemoteEndpoint(cfg)
+            ep.proto == "tcp" && ep.port == 443
+        } catch (_: Exception) {
+            false
+        }
     }
 
     /**
