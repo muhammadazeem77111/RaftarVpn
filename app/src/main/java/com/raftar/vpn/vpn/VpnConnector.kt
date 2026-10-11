@@ -213,7 +213,7 @@ class VpnConnector(private val appContext: Context) {
     private suspend fun tcpPreCheck(host: String, port: Int): Boolean =
         withContext(Dispatchers.IO) {
             try {
-                Socket().use { it.connect(InetSocketAddress(host, port), 2500) }
+                Socket().use { it.connect(InetSocketAddress(host, port), 5000) }
                 true
             } catch (_: Exception) {
                 false

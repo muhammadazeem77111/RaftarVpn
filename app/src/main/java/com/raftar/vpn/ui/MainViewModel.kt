@@ -294,7 +294,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun select(server: VpnServer) {
-        _selected.value = server
+        // Dobara tap = deselect (toggle).
+        _selected.value = if (_selected.value?.id == server.id) null else server
     }
 
     /** Long-press: user ne kharab server report kiya — is user ke liye hamesha ke liye bahar. */
