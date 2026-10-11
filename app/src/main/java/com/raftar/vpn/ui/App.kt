@@ -9,6 +9,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -30,6 +32,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
@@ -98,6 +101,30 @@ fun App(
         PrivacyScreen(onBack = { showPrivacy = false })
         return
     }
+    if (showL2tp) {
+        AlertDialog(
+            onDismissRequest = { showL2tp = false },
+            title = { Text(tr("l2tpTitle"), fontWeight = FontWeight.Bold) },
+            text = {
+                Column(Modifier.verticalScroll(rememberScrollState())) {
+                    Text(tr("l2tpBody"), fontSize = 13.sp, lineHeight = 19.sp)
+                    val example = ranked.firstOrNull()?.hostName
+                    if (example != null) {
+                        Spacer(Modifier.height(8.dp))
+                        Text(
+                            "${tr("l2tpServerHint")} $example.opengw.net",
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 13.sp,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showL2tp = false }) { Text(tr("ok")) }
+            }
+        )
+    }
 
     val ranked by viewModel.ranked.collectAsState()
     val reachability by viewModel.reachability.collectAsState()
@@ -118,6 +145,7 @@ fun App(
     val proxies by viewModel.proxies.collectAsState()
     val proxyLoading by viewModel.proxyLoading.collectAsState()
     val speed by viewModel.speed.collectAsState()
+    val countryFilter by viewModel.countryFilter.collectAsState()
     val snackbar = remember { SnackbarHostState() }
 
     LaunchedEffect(notice) {
@@ -134,6 +162,7 @@ fun App(
     var tab by remember { mutableIntStateOf(0) }
     var reportTarget by remember { mutableStateOf<VpnServer?>(null) }
     var showMenu by remember { mutableStateOf(false) }
+    var showL2tp by remember { mutableStateOf(false) }
 
     // Connection timer (00:00:00).
     val connectedAt by viewModel.connectedAt.collectAsState()
@@ -151,13 +180,20 @@ fun App(
     }
 
     // Tamam countries ke servers — aik hi flat list (favorites sab se pehle).
-    val filtered = remember(ranked, query) {
+    // Country chips: har available country, count ke sath.
+    val countryCounts = remember(ranked) {
+        ranked.groupBy { it.countryShort }
+            .map { (iso, list) -> Triple(iso, list.first().countryLong, list.size) }
+            .sortedByDescending { it.third }
+    }
+    val filtered = remember(ranked, query, countryFilter) {
         val q = query.trim().lowercase()
-        if (q.isEmpty()) ranked
-        else ranked.filter {
-            it.countryLong.lowercase().contains(q) ||
-                it.hostName.lowercase().contains(q) ||
-                it.ip.contains(q)
+        ranked.filter { s ->
+            (countryFilter == null || s.countryShort == countryFilter) &&
+                (q.isEmpty() ||
+                    s.countryLong.lowercase().contains(q) ||
+                    s.hostName.lowercase().contains(q) ||
+                    s.ip.contains(q))
         }
     }
     val allServers = remember(filtered, favorites) {
@@ -235,6 +271,10 @@ fun App(
                                 onClick = { showMenu = false; showPrivacy = true },
                                 modifier = Modifier.fillMaxWidth()
                             ) { Text(tr("privacyPolicy")) }
+                            TextButton(
+                                onClick = { showMenu = false; showL2tp = true },
+                                modifier = Modifier.fillMaxWidth()
+                            ) { Text(tr("l2tpGuide")) }
                         }
                     },
                     confirmButton = {
@@ -329,6 +369,32 @@ fun App(
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp)
                             )
+                        }
+                        // Country filter chips — kisi bhi country ke servers foran dekho.
+                        item {
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth(),
+                                contentPadding = PaddingValues(horizontal = 20.dp),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                item {
+                                    FilterChip(
+                                        selected = countryFilter == null,
+                                        onClick = { viewModel.setCountryFilter(null) },
+                                        label = { Text("${tr("all")} (${ranked.size})") }
+                                    )
+                                }
+                                items(countryCounts, key = { it.first }) { (iso, name, count) ->
+                                    FilterChip(
+                                        selected = countryFilter == iso,
+                                        onClick = {
+                                            viewModel.setCountryFilter(if (countryFilter == iso) null else iso)
+                                        },
+                                        label = { Text("${flagEmoji(iso)} $name ($count)") }
+                                    )
+                                }
+                            }
+                            Spacer(Modifier.height(8.dp))
                         }
                         if (loading && allServers.isEmpty()) {
                             item {

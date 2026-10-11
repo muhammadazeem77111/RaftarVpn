@@ -107,6 +107,14 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         _favorites.value = favoritesStore.toggle(id)
     }
 
+    // ---- country filter (null = All countries) ----
+    private val _countryFilter = MutableStateFlow<String?>(null)
+    val countryFilter: StateFlow<String?> = _countryFilter.asStateFlow()
+
+    fun setCountryFilter(iso: String?) {
+        _countryFilter.value = iso
+    }
+
     // ---- free proxies ----
     private val proxyApi = ProxyApi()
     private val _proxies = MutableStateFlow<List<FreeProxy>>(emptyList())
