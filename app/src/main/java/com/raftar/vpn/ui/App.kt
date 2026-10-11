@@ -1,9 +1,16 @@
 package com.raftar.vpn.ui
 
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,6 +26,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -52,12 +60,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import android.os.SystemClock
+import kotlinx.coroutines.delay
 import com.raftar.vpn.R
 import com.raftar.vpn.data.PrivateServer
 import com.raftar.vpn.data.VpnServer
@@ -129,6 +141,22 @@ fun App(
 
     var tab by remember { mutableIntStateOf(0) }
     var reportTarget by remember { mutableStateOf<VpnServer?>(null) }
+    var showMenu by remember { mutableStateOf(false) }
+
+    // Connection timer (screenshot jaisa 00:00:00).
+    val connectedAt by viewModel.connectedAt.collectAsState()
+    var elapsedSec by remember { mutableStateOf(0L) }
+    LaunchedEffect(connectedAt) {
+        val start = connectedAt
+        if (start == null) {
+            elapsedSec = 0L
+        } else {
+            while (true) {
+                elapsedSec = (SystemClock.elapsedRealtime() - start) / 1000
+                delay(1000)
+            }
+        }
+    }
 
     // Country navigation: null = countries list, warna us country ke servers.
     var openCountry by remember { mutableStateOf<String?>(null) }
@@ -154,6 +182,12 @@ fun App(
     val activeGroup = remember(groups, openCountry) {
         groups.firstOrNull { it.name == openCountry }
     }
+    val favorites by viewModel.favorites.collectAsState()
+    val sortedGroups = remember(groups, favorites) {
+        groups.sortedWith(
+            compareByDescending<CountryGroup> { it.name in favorites }.thenBy { it.name }
+        )
+    }
 
     if (showDisclosure) {
         DisclosureDialog(
@@ -178,11 +212,34 @@ fun App(
         )
     }
 
-    MaterialTheme {
+    RaftarTheme {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text(tr("appName"), fontWeight = FontWeight.Bold) },
+                    navigationIcon = {
+                        TextButton(onClick = { showMenu = true }) {
+                            Text("☰", fontSize = 22.sp)
+                        }
+                    },
+                    title = {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Box(
+                                Modifier.size(34.dp)
+                                    .clip(RoundedCornerShape(10.dp))
+                                    .background(Color(0xFF0D47A1)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    "R",
+                                    color = Color.White,
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 18.sp
+                                )
+                            }
+                            Spacer(Modifier.width(8.dp))
+                            Text(tr("appName"), fontWeight = FontWeight.Bold)
+                        }
+                    },
                     actions = {
                         TextButton(onClick = { viewModel.refresh() }) { Text(tr("refresh")) }
                     }
@@ -190,35 +247,28 @@ fun App(
             },
             snackbarHost = { SnackbarHost(snackbar) }
         ) { pad ->
+            if (showMenu) {
+                AlertDialog(
+                    onDismissRequest = { showMenu = false },
+                    title = { Text(tr("appName"), fontWeight = FontWeight.Bold) },
+                    text = {
+                        Column {
+                            TextButton(
+                                onClick = { showMenu = false; viewModel.refresh() },
+                                modifier = Modifier.fillMaxWidth()
+                            ) { Text(tr("refresh")) }
+                            TextButton(
+                                onClick = { showMenu = false; showPrivacy = true },
+                                modifier = Modifier.fillMaxWidth()
+                            ) { Text(tr("privacyPolicy")) }
+                        }
+                    },
+                    confirmButton = {
+                        TextButton(onClick = { showMenu = false }) { Text(tr("cancel")) }
+                    }
+                )
+            }
             Column(Modifier.padding(pad).fillMaxSize()) {
-                HeroCard(
-                    vpnState = vpnState,
-                    selected = selected,
-                    attemptInfo = attemptInfo,
-                    gaming = gaming,
-                    gamePing = gamePing,
-                    onConnectClick = onConnectClick
-                )
-
-                QuickActions(
-                    onBestServerClick = onBestServerClick,
-                    onGamingClick = onGamingClick,
-                    findingBest = findingBest,
-                    gaming = gaming,
-                    gamePing = gamePing,
-                    enabled = ranked.isNotEmpty()
-                )
-
-                RaceCard(race = race)
-
-                if (probing) {
-                    Text(
-                        tr("probing"),
-                        style = MaterialTheme.typography.bodySmall,
-                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
-                    )
-                }
-
                 TabRow(selectedTabIndex = tab) {
                     Tab(selected = tab == 0, onClick = { tab = 0 }, text = { Text(tr("tabFree")) })
                     Tab(selected = tab == 1, onClick = { tab = 1 }, text = { Text(tr("tabPrivate")) })
@@ -226,43 +276,103 @@ fun App(
 
                 if (tab == 0) {
                     if (activeGroup == null) {
-                        OutlinedTextField(
-                            value = query,
-                            onValueChange = viewModel::setQuery,
-                            label = { Text(tr("searchHint")) },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth().padding(12.dp)
-                        )
-                        if (loading && ranked.isEmpty()) {
-                            Box(
-                                Modifier.fillMaxWidth().padding(24.dp),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                CircularProgressIndicator()
+                        LazyColumn(Modifier.weight(1f)) {
+                            item {
+                                AutoFastestCard(
+                                    onClick = onBestServerClick,
+                                    findingBest = findingBest,
+                                    enabled = ranked.isNotEmpty()
+                                )
                             }
-                        } else if (groups.isEmpty()) {
-                            Box(
-                                Modifier.fillMaxWidth().padding(24.dp),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text(tr("noResults"))
+                            item {
+                                PowerButton(
+                                    vpnState = vpnState,
+                                    attemptInfo = attemptInfo,
+                                    onConnectClick = onConnectClick
+                                )
                             }
-                        } else {
-                            LazyColumn(Modifier.weight(1f)) {
-                                items(groups, key = { it.name }) { g ->
-                                    CountryRow(
-                                        group = g,
-                                        onClick = { openCountry = g.name }
+                            item {
+                                StatusCard(
+                                    vpnState = vpnState,
+                                    elapsedSec = elapsedSec,
+                                    gaming = gaming,
+                                    gamePing = gamePing
+                                )
+                            }
+                            item {
+                                OutlinedButton(
+                                    onClick = onGamingClick,
+                                    enabled = !findingBest && ranked.isNotEmpty(),
+                                    shape = RoundedCornerShape(18.dp),
+                                    modifier = Modifier.fillMaxWidth()
+                                        .padding(horizontal = 12.dp, vertical = 2.dp)
+                                ) {
+                                    Text(
+                                        if (gaming) "${tr("gamingMode")} • ${gamePing?.let { "$it ms" } ?: "…"}"
+                                        else tr("gamingMode"),
+                                        fontWeight = FontWeight.Bold
                                     )
                                 }
                             }
+                            if (race is RaceState.Running || race is RaceState.Done) {
+                                item { RaceCard(race = race) }
+                            }
+                            if (probing) {
+                                item {
+                                    Text(
+                                        tr("probing"),
+                                        style = MaterialTheme.typography.bodySmall,
+                                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+                                    )
+                                }
+                            }
+                            item {
+                                OutlinedTextField(
+                                    value = query,
+                                    onValueChange = viewModel::setQuery,
+                                    label = { Text(tr("searchHint")) },
+                                    singleLine = true,
+                                    shape = RoundedCornerShape(24.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(12.dp)
+                                )
+                            }
+                            if (loading && ranked.isEmpty()) {
+                                item {
+                                    Box(
+                                        Modifier.fillMaxWidth().padding(24.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        CircularProgressIndicator()
+                                    }
+                                }
+                            } else if (sortedGroups.isEmpty()) {
+                                item {
+                                    Box(
+                                        Modifier.fillMaxWidth().padding(24.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(tr("noResults"))
+                                    }
+                                }
+                            } else {
+                                items(sortedGroups, key = { it.name }) { g ->
+                                    CountryCard(
+                                        group = g,
+                                        isFavorite = g.name in favorites,
+                                        onOpen = { openCountry = g.name },
+                                        onToggleFavorite = { viewModel.toggleFavorite(g.name) }
+                                    )
+                                }
+                            }
+                            item {
+                                Text(
+                                    "${tr("sharedIpNote")} ${tr("reportHint")}.",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                                )
+                            }
                         }
-                        Text(
-                            "${tr("sharedIpNote")} ${tr("reportHint")}.",
-                            style = MaterialTheme.typography.bodySmall,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.fillMaxWidth().padding(8.dp)
-                        )
                     } else {
                         CountryDetailBar(
                             group = activeGroup,
@@ -311,81 +421,48 @@ fun App(
     }
 }
 
-/** Bara hero card: status + gol connect button (dusri VPN apps ki tarah). */
+/** Bara gol power button (screenshot jaisa) — beech me glow ke saath. */
 @Composable
-private fun HeroCard(
+private fun PowerButton(
     vpnState: VpnConnector.VpnState,
-    selected: VpnServer?,
     attemptInfo: String?,
-    gaming: Boolean,
-    gamePing: Long?,
     onConnectClick: () -> Unit
 ) {
     val connected = vpnState is VpnConnector.VpnState.Connected
     val connecting = vpnState == VpnConnector.VpnState.Connecting
-    val failed = vpnState is VpnConnector.VpnState.Failed
+    val buttonColor = if (connected) Color(0xFFE53935) else Color(0xFF00BFA5)
 
-    val statusText = when (vpnState) {
-        VpnConnector.VpnState.Idle -> tr("statusDisconnected")
-        VpnConnector.VpnState.Connecting -> attemptInfo ?: tr("statusConnecting")
-        is VpnConnector.VpnState.Connected -> {
-            val s = vpnState.server
-            val where = s.countryLong.ifBlank { tr("tabPrivate") }
-            "${tr("connectedTo")} • ${flagEmoji(s.countryShort)} $where"
-        }
-        is VpnConnector.VpnState.Failed -> tr("statusFailed")
-        VpnConnector.VpnState.Disconnected -> tr("statusDisconnected")
-    }
-    val buttonLabel = when {
-        connected -> tr("disconnect")
-        connecting -> tr("cancel")
-        failed -> tr("retry")
-        else -> tr("connect")
-    }
-    val buttonColor = when {
-        connected -> Color(0xFFE53935)
-        else -> colorResource(R.color.raftar_teal)
-    }
+    val pulse = rememberInfiniteTransition(label = "pulse")
+    val pulseAlpha by pulse.animateFloat(
+        initialValue = 0.75f,
+        targetValue = 1f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(900),
+            repeatMode = RepeatMode.Reverse
+        ),
+        label = "pulseAlpha"
+    )
 
-    Card(
-        modifier = Modifier.fillMaxWidth().padding(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = if (connected) colorResource(R.color.raftar_dark)
-            else MaterialTheme.colorScheme.surfaceVariant
-        )
+    Column(
+        Modifier.fillMaxWidth().padding(top = 6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Column(
-            Modifier.padding(20.dp).fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                statusText,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = if (connected) Color.White else Color.Unspecified,
-                textAlign = TextAlign.Center
+        Box(contentAlignment = Alignment.Center) {
+            // halka glow
+            Box(
+                Modifier
+                    .size(230.dp)
+                    .clip(CircleShape)
+                    .background(
+                        Brush.radialGradient(
+                            listOf(Color(0xFFB9F5EA), Color.Transparent)
+                        )
+                    )
             )
-            if (!connected && !connecting && selected != null) {
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    "${flagEmoji(selected.countryShort)} ${selected.countryLong} • ${selected.pingMs} ms",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = if (connected) Color.White else Color.Unspecified
-                )
-            }
-            if (gaming && connected) {
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    "${tr("gamingMode")} • ${tr("gamingPing")}: ${gamePing?.let { "$it ms" } ?: "…"}",
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = colorResource(R.color.raftar_teal)
-                )
-            }
-            Spacer(Modifier.height(16.dp))
             Box(
                 modifier = Modifier
                     .size(150.dp)
+                    .graphicsLayer { alpha = if (connecting) pulseAlpha else 1f }
                     .clip(CircleShape)
                     .background(buttonColor)
                     .clickable(onClick = onConnectClick),
@@ -401,62 +478,164 @@ private fun HeroCard(
                     Text("⏻", fontSize = 56.sp, color = Color.White)
                 }
             }
-            Spacer(Modifier.height(12.dp))
+        }
+        val hint = when {
+            connected -> tr("disconnect")
+            connecting -> attemptInfo ?: tr("cancel")
+            vpnState is VpnConnector.VpnState.Failed -> tr("retry")
+            else -> tr("notConnectedHint")
+        }
+        Text(
+            hint,
+            style = MaterialTheme.typography.bodySmall,
+            color = Color(0xFF4A6076),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 6.dp)
+        )
+    }
+}
+
+/** Status card: dot + status + timer (screenshot jaisa). */
+@Composable
+private fun StatusCard(
+    vpnState: VpnConnector.VpnState,
+    elapsedSec: Long,
+    gaming: Boolean,
+    gamePing: Long?
+) {
+    val connected = vpnState is VpnConnector.VpnState.Connected
+    val connecting = vpnState == VpnConnector.VpnState.Connecting
+    val statusText = when (vpnState) {
+        is VpnConnector.VpnState.Connected -> {
+            val s = vpnState.server
+            val where = s.countryLong.ifBlank { tr("tabPrivate") }
+            "${tr("connectedTo")} • ${flagEmoji(s.countryShort)} $where"
+        }
+        VpnConnector.VpnState.Connecting -> tr("statusConnecting")
+        is VpnConnector.VpnState.Failed -> tr("statusFailed")
+        else -> tr("statusDisconnected")
+    }
+    val dotColor = when {
+        connected -> Color(0xFF00C853)
+        connecting -> Color(0xFFFFB300)
+        else -> Color(0xFFB0BEC5)
+    }
+    Card(
+        shape = RoundedCornerShape(18.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 6.dp)
+    ) {
+        Column(
+            Modifier.fillMaxWidth().padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(10.dp).background(dotColor, CircleShape))
+                Spacer(Modifier.width(8.dp))
+                Text(statusText, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            }
+            Spacer(Modifier.height(4.dp))
             Text(
-                buttonLabel.uppercase(),
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.titleSmall,
-                color = if (connected) Color.White else Color.Unspecified
+                "🕐 ${formatElapsed(elapsedSec)}",
+                color = Color(0xFF4A6076),
+                style = MaterialTheme.typography.bodyMedium
+            )
+            if (gaming && connected) {
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    "${tr("gamingMode")} • ${tr("gamingPing")}: ${gamePing?.let { "$it ms" } ?: "…"}",
+                    fontWeight = FontWeight.Bold,
+                    color = Color(0xFF009688)
+                )
+            }
+        }
+    }
+}
+
+private fun formatElapsed(totalSec: Long): String {
+    val h = totalSec / 3600
+    val m = (totalSec % 3600) / 60
+    val s = totalSec % 60
+    return "%02d:%02d:%02d".format(h, m, s)
+}
+
+/** Signal strength bars (ping ke hisab se) — Green VPN jaisa look. */
+@Composable
+private fun SignalBars(pingMs: Int, modifier: Modifier = Modifier) {
+    val filled = when {
+        pingMs <= 0 -> 1
+        pingMs < 120 -> 4
+        pingMs < 220 -> 3
+        pingMs < 400 -> 2
+        else -> 1
+    }
+    Row(
+        modifier,
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.spacedBy(2.dp)
+    ) {
+        repeat(4) { i ->
+            Box(
+                Modifier
+                    .width(4.dp)
+                    .height((7 + i * 5).dp)
+                    .background(
+                        if (i < filled) Color(0xFF00C853) else Color(0xFFD7E3E0),
+                        RoundedCornerShape(2.dp)
+                    )
             )
         }
     }
 }
 
-/** Best Server + Gaming Mode — side by side. */
+/** "Auto · Fastest" card — sab se tez server par foran connect. */
 @Composable
-private fun QuickActions(
-    onBestServerClick: () -> Unit,
-    onGamingClick: () -> Unit,
+private fun AutoFastestCard(
+    onClick: () -> Unit,
     findingBest: Boolean,
-    gaming: Boolean,
-    gamePing: Long?,
     enabled: Boolean
 ) {
-    Row(
-        Modifier.fillMaxWidth().padding(horizontal = 12.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    Card(
+        onClick = onClick,
+        enabled = !findingBest && enabled,
+        shape = RoundedCornerShape(18.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        border = BorderStroke(1.5.dp, Color(0xFF00BFA5)),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 6.dp)
     ) {
-        Button(
-            onClick = onBestServerClick,
-            enabled = !findingBest && enabled,
-            colors = ButtonDefaults.buttonColors(
-                containerColor = colorResource(R.color.raftar_teal)
-            ),
-            modifier = Modifier.weight(1f)
+        Row(
+            Modifier.fillMaxWidth().padding(14.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            if (findingBest) {
-                CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp)
-                Spacer(Modifier.width(8.dp))
-                Text(tr("findingBest"))
-            } else {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(tr("bestServer"), fontWeight = FontWeight.Bold)
-                    Text(tr("bestServerSub"), style = MaterialTheme.typography.bodySmall)
-                }
+            Box(
+                Modifier
+                    .size(42.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(Color(0xFF0D47A1)),
+                contentAlignment = Alignment.Center
+            ) {
+                Text("⚡", fontSize = 22.sp)
             }
-        }
-        OutlinedButton(
-            onClick = onGamingClick,
-            enabled = !findingBest && enabled,
-            modifier = Modifier.weight(1f)
-        ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
                 Text(
-                    if (gaming) "${tr("gamingMode")} • ${gamePing?.let { "$it ms" } ?: "…"}"
-                    else tr("gamingMode"),
-                    fontWeight = FontWeight.Bold
+                    tr("autoFastest"),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 17.sp,
+                    color = Color(0xFF009688)
                 )
-                Text(tr("gamingModeSub"), style = MaterialTheme.typography.bodySmall)
+                Text(
+                    tr("quickConnect"),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color(0xFF4A6076)
+                )
+            }
+            if (findingBest) {
+                CircularProgressIndicator(Modifier.size(24.dp), strokeWidth = 2.5.dp)
+            } else {
+                Text("⌄", fontSize = 22.sp, color = Color(0xFF4A6076))
             }
         }
     }
@@ -510,27 +689,53 @@ private fun RaceCard(race: RaceState) {
     }
 }
 
-/** Country row: flag + naam + servers count + best ping. Tap -> servers khulte hain. */
+/** Country card (screenshot jaisa): flag + "Name · FREE" + signal + star. Tap -> servers. */
 @Composable
-private fun CountryRow(group: CountryGroup, onClick: () -> Unit) {
+private fun CountryCard(
+    group: CountryGroup,
+    isFavorite: Boolean,
+    onOpen: () -> Unit,
+    onToggleFavorite: () -> Unit
+) {
     val bestPing = group.servers.minOfOrNull { it.pingMs } ?: 0
-    ListItem(
-        headlineContent = {
+    Card(
+        shape = RoundedCornerShape(18.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 5.dp)
+    ) {
+        Row(
+            Modifier.fillMaxWidth().clickable(onClick = onOpen).padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(flagEmoji(group.iso), fontSize = 30.sp)
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text(
+                    "${group.name} · ${tr("freeLabel")}",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+                Text(
+                    "${group.servers.size} ${tr("serversLabel")}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color(0xFF4A6076)
+                )
+            }
+            SignalBars(bestPing)
+            Spacer(Modifier.width(10.dp))
             Text(
-                "${flagEmoji(group.iso)}  ${group.name}",
-                fontWeight = FontWeight.Bold,
-                fontSize = 17.sp
+                text = if (isFavorite) "★" else "☆",
+                fontSize = 24.sp,
+                color = if (isFavorite) Color(0xFFFFB300) else Color(0xFFB0BEC5),
+                modifier = Modifier.clickable(
+                    indication = null,
+                    interactionSource = remember { MutableInteractionSource() },
+                    onClick = onToggleFavorite
+                )
             )
-        },
-        supportingContent = {
-            Text("${group.servers.size} ${tr("serversLabel")} • ${tr("bestPingLabel")} $bestPing ms")
-        },
-        trailingContent = {
-            Text("›", fontSize = 24.sp, color = MaterialTheme.colorScheme.primary)
-        },
-        modifier = Modifier.clickable(onClick = onClick)
-    )
-    HorizontalDivider()
+        }
+    }
 }
 
 /** Country ke andar: back button + country header. */
@@ -572,33 +777,45 @@ private fun ServerRow(
         false -> Color(0xFFC62828)
         null -> Color(0xFF9E9E9E)
     }
-    ListItem(
-        headlineContent = {
-            Text(
-                "${server.hostName} • ${server.ip}",
-                fontWeight = if (isConnected) FontWeight.Bold else FontWeight.Normal
-            )
-        },
-        supportingContent = {
-            Text(
-                "${tr("gamingPing")} ${server.pingMs} ms • ${formatSpeed(server.speedBps)} • " +
-                    "${server.sessions} users • up ${formatUptime(server.uptimeSec)} • ${tr("sharedIp")}"
-            )
-        },
-        leadingContent = {
-            Box(Modifier.size(10.dp).background(dotColor, CircleShape))
-        },
-        trailingContent = {
-            when {
-                isConnected -> Text("✓", color = Color(0xFF2E7D32), fontWeight = FontWeight.Bold)
-                isSelected -> Text("›", fontSize = 22.sp, color = MaterialTheme.colorScheme.primary)
-            }
-        },
+    Card(
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
+        border = if (isConnected) BorderStroke(1.5.dp, Color(0xFF00C853)) else null,
         modifier = Modifier
-            .combinedClickable(onClick = onClick, onLongClick = onLongClick)
-            .alpha(if (dead) 0.45f else 1f)
-    )
-    HorizontalDivider()
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 4.dp)
+            .alpha(if (dead) 0.5f else 1f)
+    ) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .combinedClickable(onClick = onClick, onLongClick = onLongClick)
+                .padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(Modifier.size(10.dp).background(dotColor, CircleShape))
+            Spacer(Modifier.width(10.dp))
+            Column(Modifier.weight(1f)) {
+                Text(
+                    server.hostName,
+                    fontWeight = if (isConnected) FontWeight.Bold else FontWeight.SemiBold,
+                    fontSize = 15.sp
+                )
+                Text(
+                    "${server.ip} • ${server.pingMs} ms • ${formatSpeed(server.speedBps)} • ${tr("sharedIp")}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color(0xFF4A6076)
+                )
+            }
+            SignalBars(server.pingMs)
+            Spacer(Modifier.width(8.dp))
+            when {
+                isConnected -> Text("✓", color = Color(0xFF00C853), fontWeight = FontWeight.Bold, fontSize = 20.sp)
+                isSelected -> Text("›", fontSize = 22.sp, color = Color(0xFF00BFA5))
+            }
+        }
+    }
 }
 
 @Composable
@@ -745,7 +962,7 @@ private fun DisclosureDialog(onAccept: () -> Unit, onDecline: () -> Unit) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun PrivacyScreen(onBack: () -> Unit) {
-    MaterialTheme {
+    RaftarTheme {
         Scaffold(
             topBar = {
                 TopAppBar(

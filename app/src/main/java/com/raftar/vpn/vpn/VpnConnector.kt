@@ -2,6 +2,7 @@ package com.raftar.vpn.vpn
 
 import android.content.Context
 import android.net.VpnService
+import android.os.SystemClock
 import com.raftar.vpn.MainActivity
 import com.raftar.vpn.data.VpnServer
 import com.raftar.vpn.data.parseRemoteEndpoint
@@ -54,6 +55,10 @@ class VpnConnector(private val appContext: Context) {
     /** UI ke liye: is waqt konsa server try ho raha hai ("Trying X (2/5)…"), null = koi attempt nahi. */
     private val _attemptInfo = MutableStateFlow<String?>(null)
     val attemptInfo: StateFlow<String?> = _attemptInfo.asStateFlow()
+
+    /** Connected kab hue (timer ke liye, elapsedRealtime ms). null = connected nahi. */
+    private val _connectedAt = MutableStateFlow<Long?>(null)
+    val connectedAt: StateFlow<Long?> = _connectedAt.asStateFlow()
 
     private var connection: VpnServiceConnection? = null
     private var connectJob: Job? = null
@@ -167,6 +172,7 @@ class VpnConnector(private val appContext: Context) {
                 if (userStopped) return
                 val s = activeServer ?: return
                 _attemptInfo.value = null
+                _connectedAt.value = SystemClock.elapsedRealtime()
                 _state.value = VpnState.Connected(s)
                 attemptSignal?.complete(true)
             }
@@ -214,6 +220,7 @@ class VpnConnector(private val appContext: Context) {
         teardownAttempt()
         activeServer = null
         _attemptInfo.value = null
+        _connectedAt.value = null
         if (!silent) _state.value = VpnState.Disconnected
     }
 }

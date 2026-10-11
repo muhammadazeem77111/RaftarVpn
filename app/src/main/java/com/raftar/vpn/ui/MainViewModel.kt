@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.raftar.vpn.data.BlocklistStore
+import com.raftar.vpn.data.FavoritesStore
 import com.raftar.vpn.data.PrivateServer
 import com.raftar.vpn.data.PrivateServerStore
 import com.raftar.vpn.data.VpnGateApi
@@ -39,6 +40,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val api = VpnGateApi(ctx)
     private val privateStore = PrivateServerStore(ctx)
     private val blocklist = BlocklistStore(ctx)
+    private val favoritesStore = FavoritesStore(ctx)
     private val gameNotif = GameNotification(ctx)
     private val settings = ctx.getSharedPreferences("raftar_settings", Context.MODE_PRIVATE)
     val connector = VpnConnector(ctx)
@@ -90,6 +92,14 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val _privateServers = MutableStateFlow(privateStore.list())
     val privateServers: StateFlow<List<PrivateServer>> = _privateServers.asStateFlow()
 
+    // ---- favorites ----
+    private val _favorites = MutableStateFlow(favoritesStore.all())
+    val favorites: StateFlow<Set<String>> = _favorites.asStateFlow()
+
+    fun toggleFavorite(countryName: String) {
+        _favorites.value = favoritesStore.toggle(countryName)
+    }
+
     // ---- disclosure ----
     private val _showDisclosure = MutableStateFlow(false)
     val showDisclosure: StateFlow<Boolean> = _showDisclosure.asStateFlow()
@@ -99,6 +109,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Konsa server try ho raha hai (connect ke waqt progress dikhane ke liye). */
     val attemptInfo: StateFlow<String?> = connector.attemptInfo
+
+    /** Connected- elapsed timer ke liye. */
+    val connectedAt: StateFlow<Long?> = connector.connectedAt
 
     init {
         refresh(auto = true)
