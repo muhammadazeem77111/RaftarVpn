@@ -120,8 +120,9 @@ fun App(
                 it.ip.contains(q)
         }
     }
-    val grouped = remember(filtered) {
-        filtered.groupBy { it.countryLong.ifBlank { tr("unknownCountry") } }.toSortedMap()
+    val unknownLabel = tr("unknownCountry")
+    val grouped = remember(filtered, unknownLabel) {
+        filtered.groupBy { it.countryLong.ifBlank { unknownLabel } }.toSortedMap()
     }
 
     if (showDisclosure) {

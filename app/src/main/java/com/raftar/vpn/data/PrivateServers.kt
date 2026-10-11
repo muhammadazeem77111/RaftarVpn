@@ -2,7 +2,7 @@ package com.raftar.vpn.data
 
 import android.content.Context
 import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKey
+import androidx.security.crypto.MasterKeys
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.UUID
@@ -24,10 +24,12 @@ fun isValidOvpn(text: String): Boolean = "remote" in text.lowercase()
  */
 class PrivateServerStore(context: Context) {
 
+    // NOTE: security-crypto 1.0.0 me MasterKey nahi hai (woh 1.1.0-alpha me aya),
+    // is liye stable MasterKeys API use ho rahi hai.
     private val prefs = EncryptedSharedPreferences.create(
-        context,
         "raftar_private_servers",
-        MasterKey.Builder(context).setKeyScheme(MasterKey.KeyScheme.AES256_GCM).build(),
+        MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC),
+        context,
         EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
         EncryptedSharedPreferences.ValueEncryptionScheme.AES256_GCM
     )
