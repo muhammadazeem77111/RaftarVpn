@@ -139,7 +139,16 @@ class VpnConnector(private val appContext: Context) {
 
     private suspend fun attemptConnect(server: VpnServer, rawConfig: String): Boolean {
         teardownAttempt()
-        val sanitized = sanitizeOvpnConfig(rawConfig)
+        var sanitized = sanitizeOvpnConfig(rawConfig)
+        // VPNGate servers ko username/password chahiye (vpn/vpn) — auth file ke zariye.
+        // (Private servers ki apni credentials hoti hain, unhe haath nahi lagana.)
+        if (server.ip.isNotBlank()) {
+            val authFile = java.io.File(appContext.filesDir, "vpngate_auth.txt")
+            if (!authFile.exists()) {
+                authFile.writeText("vpn\nvpn\n")
+            }
+            sanitized += "\nauth-user-pass ${authFile.absolutePath}\n"
+        }
         val ep = parseRemoteEndpoint(sanitized)
         if (ep.host.isBlank()) return false
         // Tez pre-check: TCP server zinda hai? Dead par engine ke 20s zaya nahi karte.
