@@ -30,7 +30,9 @@ class VpnGateApi(private val context: Context) {
     companion object {
         private val ENDPOINTS = listOf(
             "https://www.vpngate.net/api/iphone/",
-            "http://www.vpngate.net/api/iphone/"
+            "http://www.vpngate.net/api/iphone/",
+            // Free community mirror (jsDelivr CDN) — vpngate.net block ho to backup.
+            "https://cdn.jsdelivr.net/gh/GeorgeXie2333/vpngate-list-mirror@latest/data/vpngate.csv"
         )
 
         /** Recommended section ke liye minimum uptime: 1 hour. */

@@ -96,8 +96,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val _favorites = MutableStateFlow(favoritesStore.all())
     val favorites: StateFlow<Set<String>> = _favorites.asStateFlow()
 
-    fun toggleFavorite(countryName: String) {
-        _favorites.value = favoritesStore.toggle(countryName)
+    fun toggleFavorite(id: String) {
+        _favorites.value = favoritesStore.toggle(id)
     }
 
     // ---- disclosure ----

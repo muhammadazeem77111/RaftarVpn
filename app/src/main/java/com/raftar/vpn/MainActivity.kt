@@ -71,8 +71,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Dark theme: status bar bhi navy (screenshot wali lavender patti khatam).
-        window.statusBarColor = 0xFF0A1A2E.toInt()
+        // Dark theme: status bar bhi navy.
+        window.statusBarColor = 0xFF081420.toInt()
 
         // Android 13+: VPN foreground-service notification ke liye runtime permission.
         if (Build.VERSION.SDK_INT >= 33 &&
@@ -91,9 +91,6 @@ class MainActivity : ComponentActivity() {
                 },
                 onGamingClick = {
                     withVpnPermission { viewModel.requestConnect { viewModel.startGamingMode() } }
-                },
-                onServerClick = { server ->
-                    withVpnPermission { viewModel.requestConnect { viewModel.connectTo(server) } }
                 },
                 onPrivateConnect = { ps: PrivateServer ->
                     withVpnPermission { viewModel.requestConnect { viewModel.connectPrivate(ps) } }
