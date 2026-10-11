@@ -101,6 +101,30 @@ fun App(
         PrivacyScreen(onBack = { showPrivacy = false })
         return
     }
+
+    val ranked by viewModel.ranked.collectAsState()
+    val reachability by viewModel.reachability.collectAsState()
+    val probing by viewModel.probing.collectAsState()
+    val loading by viewModel.loading.collectAsState()
+    val findingBest by viewModel.findingBest.collectAsState()
+    val selected by viewModel.selected.collectAsState()
+    val vpnState by viewModel.vpnState.collectAsState()
+    val attemptInfo by viewModel.attemptInfo.collectAsState()
+    val notice by viewModel.notice.collectAsState()
+    val query by viewModel.query.collectAsState()
+    val race by viewModel.race.collectAsState()
+    val gaming by viewModel.gaming.collectAsState()
+    val gamePing by viewModel.gamePing.collectAsState()
+    val privateServers by viewModel.privateServers.collectAsState()
+    val showDisclosure by viewModel.showDisclosure.collectAsState()
+    val favorites by viewModel.favorites.collectAsState()
+    val proxies by viewModel.proxies.collectAsState()
+    val proxyLoading by viewModel.proxyLoading.collectAsState()
+    val speed by viewModel.speed.collectAsState()
+    val countryFilter by viewModel.countryFilter.collectAsState()
+    val snackbar = remember { SnackbarHostState() }
+
+    // L2TP guide dialog (ranked/showL2tp declare hone ke baad).
     if (showL2tp) {
         AlertDialog(
             onDismissRequest = { showL2tp = false },
@@ -125,28 +149,6 @@ fun App(
             }
         )
     }
-
-    val ranked by viewModel.ranked.collectAsState()
-    val reachability by viewModel.reachability.collectAsState()
-    val probing by viewModel.probing.collectAsState()
-    val loading by viewModel.loading.collectAsState()
-    val findingBest by viewModel.findingBest.collectAsState()
-    val selected by viewModel.selected.collectAsState()
-    val vpnState by viewModel.vpnState.collectAsState()
-    val attemptInfo by viewModel.attemptInfo.collectAsState()
-    val notice by viewModel.notice.collectAsState()
-    val query by viewModel.query.collectAsState()
-    val race by viewModel.race.collectAsState()
-    val gaming by viewModel.gaming.collectAsState()
-    val gamePing by viewModel.gamePing.collectAsState()
-    val privateServers by viewModel.privateServers.collectAsState()
-    val showDisclosure by viewModel.showDisclosure.collectAsState()
-    val favorites by viewModel.favorites.collectAsState()
-    val proxies by viewModel.proxies.collectAsState()
-    val proxyLoading by viewModel.proxyLoading.collectAsState()
-    val speed by viewModel.speed.collectAsState()
-    val countryFilter by viewModel.countryFilter.collectAsState()
-    val snackbar = remember { SnackbarHostState() }
 
     LaunchedEffect(notice) {
         notice?.let {
