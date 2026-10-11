@@ -32,6 +32,7 @@ Daemon will be stopped at the end of the build
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
@@ -39,24 +40,14 @@ Daemon will be stopped at the end of the build
 > Task :app:mergeDebugAssets
 > Task :app:desugarDebugFileDependencies
 > Task :app:compressDebugAssets
-> Task :app:mergeDebugStartupProfile
-> Task :app:mergeDebugJniLibFolders
-> Task :app:checkDebugDuplicateClasses
-> Task :app:processDebugManifestForPackage
-> Task :app:mergeDebugNativeLibs
 > Task :app:processDebugResources
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugStartupProfile
+> Task :app:compileDebugKotlin
+e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/VpnGateApi.kt:143:43 Returns are not allowed for functions with expression body. Use block body in '{...}'
+
 > Task :app:mergeExtDexDebug
-> Task :app:mergeLibDexDebug
-
-> Task :app:stripDebugDebugSymbols
-Unable to strip the following libraries, packaging them as they are: libdatastore_shared_counter.so, libovpn3.so.
-
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
-> Task :app:writeDebugSigningConfigVersions
-
 > Task :app:compileDebugKotlin FAILED
-e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/data/VpnGateApi.kt:141:43 Returns are not allowed for functions with expression body. Use block body in '{...}'
 
 FAILURE: Build failed with an exception.
 
@@ -71,6 +62,6 @@ Execution failed for task ':app:compileDebugKotlin'.
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 1m 39s
-31 actionable tasks: 31 executed
+BUILD FAILED in 2m 20s
+24 actionable tasks: 24 executed
 ```
