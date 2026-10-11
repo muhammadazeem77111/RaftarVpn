@@ -57,13 +57,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import android.os.SystemClock
 import kotlinx.coroutines.delay
 import com.raftar.vpn.R
+import com.raftar.vpn.data.FreeProxy
 import com.raftar.vpn.data.PrivateServer
 import com.raftar.vpn.data.VpnServer
 import com.raftar.vpn.vpn.VpnConnector
@@ -112,6 +115,9 @@ fun App(
     val privateServers by viewModel.privateServers.collectAsState()
     val showDisclosure by viewModel.showDisclosure.collectAsState()
     val favorites by viewModel.favorites.collectAsState()
+    val proxies by viewModel.proxies.collectAsState()
+    val proxyLoading by viewModel.proxyLoading.collectAsState()
+    val speed by viewModel.speed.collectAsState()
     val snackbar = remember { SnackbarHostState() }
 
     LaunchedEffect(notice) {
@@ -239,7 +245,8 @@ fun App(
             Column(Modifier.padding(pad).fillMaxSize()) {
                 TabRow(selectedTabIndex = tab) {
                     Tab(selected = tab == 0, onClick = { tab = 0 }, text = { Text(tr("tabFree")) })
-                    Tab(selected = tab == 1, onClick = { tab = 1 }, text = { Text(tr("tabPrivate")) })
+                    Tab(selected = tab == 1, onClick = { tab = 1 }, text = { Text(tr("tabProxy")) })
+                    Tab(selected = tab == 2, onClick = { tab = 2 }, text = { Text(tr("tabPrivate")) })
                 }
 
                 if (tab == 0) {
@@ -248,7 +255,8 @@ fun App(
                             StatusHero(
                                 vpnState = vpnState,
                                 selected = selected,
-                                elapsedSec = elapsedSec
+                                elapsedSec = elapsedSec,
+                                speed = speed
                             )
                         }
                         item {
@@ -363,6 +371,13 @@ fun App(
                             )
                         }
                     }
+                } else if (tab == 1) {
+                    ProxyTab(
+                        viewModel = viewModel,
+                        proxies = proxies,
+                        loading = proxyLoading,
+                        modifier = Modifier.weight(1f)
+                    )
                 } else {
                     PrivateTab(
                         viewModel = viewModel,
@@ -399,7 +414,8 @@ fun App(
 private fun StatusHero(
     vpnState: VpnConnector.VpnState,
     selected: VpnServer?,
-    elapsedSec: Long
+    elapsedSec: Long,
+    speed: Pair<Long, Long>?
 ) {
     val connected = vpnState is VpnConnector.VpnState.Connected
     val connecting = vpnState == VpnConnector.VpnState.Connecting
@@ -434,7 +450,22 @@ private fun StatusHero(
             fontSize = 14.sp,
             lineHeight = 20.sp
         )
+        if (connected && speed != null) {
+            Spacer(Modifier.height(6.dp))
+            Text(
+                "${tr("speedDown")} ${formatLiveSpeed(speed.first)}   ${tr("speedUp")} ${formatLiveSpeed(speed.second)}",
+                color = MaterialTheme.colorScheme.primary,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+        }
     }
+}
+
+private fun formatLiveSpeed(bps: Long): String = when {
+    bps < 1024 -> "$bps B/s"
+    bps < 1024 * 1024 -> String.format(Locale.US, "%.1f KB/s", bps / 1024.0)
+    else -> String.format(Locale.US, "%.1f MB/s", bps / (1024.0 * 1024.0))
 }
 
 /** Bari full-width CONNECT button (Surfshark jaisi). */
@@ -812,4 +843,87 @@ private fun formatSpeed(bps: Long): String = when {
     bps >= 1_000_000 -> "%.1f Mbps".format(bps / 1_000_000.0)
     bps >= 1_000 -> "%.0f Kbps".format(bps / 1_000.0)
     else -> "$bps bps"
+}
+
+/** Free SOCKS5 proxy list tab — copy karke Telegram waghera me use karo. */
+@Composable
+private fun ProxyTab(
+    viewModel: MainViewModel,
+    proxies: List<FreeProxy>,
+    loading: Boolean,
+    modifier: Modifier = Modifier
+) {
+    val clipboard = LocalClipboardManager.current
+    Column(modifier = modifier.padding(horizontal = 20.dp)) {
+        Text(
+            tr("proxyWarning"),
+            color = Color(0xFFFFB74D),
+            fontSize = 12.sp,
+            lineHeight = 17.sp,
+            modifier = Modifier.padding(vertical = 10.dp)
+        )
+        Button(
+            onClick = { viewModel.refreshProxies() },
+            enabled = !loading,
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.colorScheme.onPrimary
+            ),
+            shape = RoundedCornerShape(14.dp)
+        ) {
+            if (loading) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(18.dp),
+                    strokeWidth = 2.dp,
+                    color = MaterialTheme.colorScheme.onPrimary
+                )
+                Spacer(Modifier.width(8.dp))
+            }
+            Text(
+                if (proxies.isEmpty()) tr("proxyLoad") else tr("refresh"),
+                fontWeight = FontWeight.Bold
+            )
+        }
+        Spacer(Modifier.height(8.dp))
+        if (proxies.isEmpty() && !loading) {
+            Text(
+                tr("proxyEmpty"),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                fontSize = 13.sp,
+                modifier = Modifier.padding(vertical = 12.dp)
+            )
+        } else {
+            LazyColumn(modifier = Modifier.fillMaxSize()) {
+                items(proxies, key = { "${it.ip}:${it.port}" }) { p ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(Modifier.weight(1f)) {
+                            Text(
+                                "${p.ip}:${p.port}",
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 14.sp
+                            )
+                            Text(
+                                "SOCKS5 · " + (p.pingMs?.let { "$it ms" } ?: "…"),
+                                fontSize = 12.sp,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        TextButton(onClick = {
+                            clipboard.setText(AnnotatedString("${p.ip}:${p.port}"))
+                        }) {
+                            Text(tr("copy"), color = MaterialTheme.colorScheme.primary)
+                        }
+                    }
+                    HorizontalDivider(
+                        color = MaterialTheme.colorScheme.outline,
+                        thickness = 0.5.dp
+                    )
+                }
+            }
+        }
+    }
 }

@@ -13,6 +13,7 @@
          woh tim06 AAR ke apne manifest se merge hoti hai (specialUse + subtype vpn ke sath). -->
 
     <application
+        android:name=".RaftarApp"
         android:label="Raftar VPN"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -28,6 +29,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Notification shade se one-tap VPN on/off -->
+        <service
+            android:name=".RaftarTileService"
+            android:icon="@drawable/ic_power"
+            android:label="Raftar VPN"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
 
     </application>
 </manifest>

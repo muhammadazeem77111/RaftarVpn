@@ -2,13 +2,18 @@ package com.raftar.vpn.ui
 
 import android.app.Application
 import android.content.Context
+import android.net.TrafficStats
 import android.net.Uri
+import android.os.SystemClock
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.raftar.vpn.RaftarApp
 import com.raftar.vpn.data.BlocklistStore
 import com.raftar.vpn.data.FavoritesStore
+import com.raftar.vpn.data.FreeProxy
 import com.raftar.vpn.data.PrivateServer
 import com.raftar.vpn.data.PrivateServerStore
+import com.raftar.vpn.data.ProxyApi
 import com.raftar.vpn.data.VpnGateApi
 import com.raftar.vpn.data.VpnServer
 import com.raftar.vpn.data.isValidOvpn
@@ -43,7 +48,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val favoritesStore = FavoritesStore(ctx)
     private val gameNotif = GameNotification(ctx)
     private val settings = ctx.getSharedPreferences("raftar_settings", Context.MODE_PRIVATE)
-    val connector = VpnConnector(ctx)
+
+    /** App-scoped connector — Quick Settings Tile bhi isi ko use karta hai. */
+    val connector: VpnConnector = (app as RaftarApp).connector
 
     // ---- free servers ----
     private val _servers = MutableStateFlow<List<VpnServer>>(emptyList())
@@ -100,6 +107,35 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         _favorites.value = favoritesStore.toggle(id)
     }
 
+    // ---- free proxies ----
+    private val proxyApi = ProxyApi()
+    private val _proxies = MutableStateFlow<List<FreeProxy>>(emptyList())
+    val proxies: StateFlow<List<FreeProxy>> = _proxies.asStateFlow()
+
+    private val _proxyLoading = MutableStateFlow(false)
+    val proxyLoading: StateFlow<Boolean> = _proxyLoading.asStateFlow()
+
+    /** Free SOCKS5 list lao + top 25 ka ping test (kaam karne wale pehle). */
+    fun refreshProxies() {
+        viewModelScope.launch {
+            _proxyLoading.value = true
+            try {
+                val list = proxyApi.fetchSocks5()
+                val head = list.take(25)
+                val tested = coroutineScope {
+                    head.map { p -> async { p.copy(pingMs = proxyApi.ping(p)) } }.awaitAll()
+                }
+                val alive = tested.filter { it.pingMs != null }.sortedBy { it.pingMs }
+                val dead = tested.filter { it.pingMs == null }
+                _proxies.value = alive + dead + list.drop(25)
+            } catch (e: Exception) {
+                _notice.value = e.message ?: Strings.t("proxyError")
+            } finally {
+                _proxyLoading.value = false
+            }
+        }
+    }
+
     // ---- disclosure ----
     private val _showDisclosure = MutableStateFlow(false)
     val showDisclosure: StateFlow<Boolean> = _showDisclosure.asStateFlow()
@@ -113,18 +149,56 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     /** Connected- elapsed timer ke liye. */
     val connectedAt: StateFlow<Long?> = connector.connectedAt
 
+    // ---- live speed (TrafficStats; engine traffic callback emit nahi karta) ----
+    /** down, up bytes/sec — sirf connected rehne par. */
+    private val _speed = MutableStateFlow<Pair<Long, Long>?>(null)
+    val speed: StateFlow<Pair<Long, Long>?> = _speed.asStateFlow()
+    private var speedJob: Job? = null
+
+    // ---- auto-reconnect guard ----
+    private var lastConnectServer: VpnServer? = null
+    private var wasConnected = false
+    private var autoRetried = false
+
     init {
         refresh(auto = true)
-        // Gaming ping monitor lifecycle: connect par start, disconnect par stop.
+        // Quick Settings Tile se one-tap connect.
+        (app as RaftarApp).quickConnect = { userStartConnect() }
+        // State lifecycle: gaming ping + speed monitor, auto-reconnect guard.
         viewModelScope.launch {
             connector.state.collect { st ->
                 when (st) {
-                    is VpnConnector.VpnState.Connected -> if (_gaming.value) startPingMonitor(st.server)
+                    is VpnConnector.VpnState.Connected -> {
+                        wasConnected = true
+                        autoRetried = false
+                        if (_gaming.value) startPingMonitor(st.server)
+                        startSpeedMonitor()
+                    }
                     is VpnConnector.VpnState.Disconnected,
-                    is VpnConnector.VpnState.Failed,
                     is VpnConnector.VpnState.Idle -> {
+                        wasConnected = false
                         _gaming.value = false
                         stopPingMonitor()
+                        stopSpeedMonitor()
+                    }
+                    is VpnConnector.VpnState.Failed -> {
+                        _gaming.value = false
+                        stopPingMonitor()
+                        stopSpeedMonitor()
+                        // Chalti connection achanak toot jaye to ek dafa khud dobara try.
+                        if (wasConnected && !autoRetried) {
+                            autoRetried = true
+                            val s = lastConnectServer
+                            if (s != null) {
+                                viewModelScope.launch {
+                                    delay(3000)
+                                    if (connector.state.value is VpnConnector.VpnState.Failed) {
+                                        startConnect(s, isAutoRetry = true)
+                                    }
+                                }
+                            }
+                        }
+                        wasConnected = false
                     }
                     else -> Unit
                 }
@@ -332,6 +406,36 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         gameNotif.cancel()
     }
 
+    private fun startSpeedMonitor() {
+        if (speedJob?.isActive == true) return
+        val uid = ctx.applicationInfo.uid
+        speedJob = viewModelScope.launch {
+            var lastRx = TrafficStats.getUidRxBytes(uid)
+            var lastTx = TrafficStats.getUidTxBytes(uid)
+            var lastT = SystemClock.elapsedRealtime()
+            while (isActive) {
+                delay(2000)
+                val nowRx = TrafficStats.getUidRxBytes(uid)
+                val nowTx = TrafficStats.getUidTxBytes(uid)
+                val nowT = SystemClock.elapsedRealtime()
+                val dt = (nowT - lastT) / 1000.0
+                if (dt > 0 && lastRx >= 0 && nowRx >= lastRx && nowTx >= lastTx) {
+                    _speed.value =
+                        ((nowRx - lastRx) / dt).toLong() to ((nowTx - lastTx) / dt).toLong()
+                }
+                lastRx = nowRx
+                lastTx = nowTx
+                lastT = nowT
+            }
+        }
+    }
+
+    private fun stopSpeedMonitor() {
+        speedJob?.cancel()
+        speedJob = null
+        _speed.value = null
+    }
+
     // ============ connect ============
 
     /** Permission + disclosure ke baad selected server par connect. */
@@ -351,7 +455,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         startConnect(server)
     }
 
-    private fun startConnect(server: VpnServer) {
+    private fun startConnect(server: VpnServer, isAutoRetry: Boolean = false) {
+        if (!isAutoRetry) autoRetried = false
+        lastConnectServer = server
         connector.clearDeadServers()
         // Selected server pehle (user ki choice), phir TCP-443 wale (firewall-friendly),
         // phir baqi. Pehle se dead/blocked (reachability == false) bahar.

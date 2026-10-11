@@ -99,6 +99,12 @@ class MainActivity : ComponentActivity() {
                 onScanQrClick = ::handleQrScanClick
             )
         }
+
+        // Quick Settings tile se aaye to foran connect flow shuru.
+        if (intent.getBooleanExtra(RaftarTileService.EXTRA_AUTO_CONNECT, false)) {
+            intent.removeExtra(RaftarTileService.EXTRA_AUTO_CONNECT)
+            window.decorView.post { handleConnectClick() }
+        }
     }
 
     /** VpnService.prepare() null = permission pehle se granted, warna system dialog. */

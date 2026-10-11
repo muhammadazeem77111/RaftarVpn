@@ -16,6 +16,10 @@ android {
         // CI me har build ka versionCode unique hona chahiye, warna Android purani APK rakhta hai.
         versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 1
         versionName = "1.0"
+        // APK size optimize: sirf phone wale ABIs (x86 emulator ABIs nikal do).
+        ndk {
+            abiFilters += listOf("arm64-v8a", "armeabi-v7a")
+        }
     }
 
     signingConfigs {
