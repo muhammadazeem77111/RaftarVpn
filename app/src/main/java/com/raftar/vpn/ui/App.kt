@@ -36,6 +36,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -64,6 +65,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -455,7 +457,7 @@ private fun PowerButton(
                     .clip(CircleShape)
                     .background(
                         Brush.radialGradient(
-                            listOf(Color(0xFFB9F5EA), Color.Transparent)
+                            listOf(Color(0x3300BFA5), Color.Transparent)
                         )
                     )
             )
@@ -475,7 +477,12 @@ private fun PowerButton(
                         strokeWidth = 5.dp
                     )
                 } else {
-                    Text("⏻", fontSize = 56.sp, color = Color.White)
+                    Icon(
+                        painter = painterResource(id = R.drawable.ic_power),
+                        contentDescription = null,
+                        tint = Color.White,
+                        modifier = Modifier.size(56.dp)
+                    )
                 }
             }
         }
@@ -488,7 +495,7 @@ private fun PowerButton(
         Text(
             hint,
             style = MaterialTheme.typography.bodySmall,
-            color = Color(0xFF4A6076),
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 6.dp)
         )
@@ -522,7 +529,7 @@ private fun StatusCard(
     }
     Card(
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 6.dp)
     ) {
@@ -538,7 +545,7 @@ private fun StatusCard(
             Spacer(Modifier.height(4.dp))
             Text(
                 "🕐 ${formatElapsed(elapsedSec)}",
-                color = Color(0xFF4A6076),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 style = MaterialTheme.typography.bodyMedium
             )
             if (gaming && connected) {
@@ -546,7 +553,7 @@ private fun StatusCard(
                 Text(
                     "${tr("gamingMode")} • ${tr("gamingPing")}: ${gamePing?.let { "$it ms" } ?: "…"}",
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFF009688)
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
         }
@@ -581,7 +588,7 @@ private fun SignalBars(pingMs: Int, modifier: Modifier = Modifier) {
                     .width(4.dp)
                     .height((7 + i * 5).dp)
                     .background(
-                        if (i < filled) Color(0xFF00C853) else Color(0xFFD7E3E0),
+                        if (i < filled) Color(0xFF00C853) else MaterialTheme.colorScheme.outline,
                         RoundedCornerShape(2.dp)
                     )
             )
@@ -600,7 +607,7 @@ private fun AutoFastestCard(
         onClick = onClick,
         enabled = !findingBest && enabled,
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         border = BorderStroke(1.5.dp, Color(0xFF00BFA5)),
         modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 6.dp)
@@ -624,18 +631,18 @@ private fun AutoFastestCard(
                     tr("autoFastest"),
                     fontWeight = FontWeight.Bold,
                     fontSize = 17.sp,
-                    color = Color(0xFF009688)
+                    color = MaterialTheme.colorScheme.primary
                 )
                 Text(
                     tr("quickConnect"),
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFF4A6076)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             if (findingBest) {
                 CircularProgressIndicator(Modifier.size(24.dp), strokeWidth = 2.5.dp)
             } else {
-                Text("⌄", fontSize = 22.sp, color = Color(0xFF4A6076))
+                Text("⌄", fontSize = 22.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }
@@ -700,7 +707,7 @@ private fun CountryCard(
     val bestPing = group.servers.minOfOrNull { it.pingMs } ?: 0
     Card(
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 5.dp)
     ) {
@@ -719,7 +726,7 @@ private fun CountryCard(
                 Text(
                     "${group.servers.size} ${tr("serversLabel")}",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFF4A6076)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             SignalBars(bestPing)
@@ -727,7 +734,7 @@ private fun CountryCard(
             Text(
                 text = if (isFavorite) "★" else "☆",
                 fontSize = 24.sp,
-                color = if (isFavorite) Color(0xFFFFB300) else Color(0xFFB0BEC5),
+                color = if (isFavorite) Color(0xFFFFB300) else MaterialTheme.colorScheme.outline,
                 modifier = Modifier.clickable(
                     indication = null,
                     interactionSource = remember { MutableInteractionSource() },
@@ -779,7 +786,7 @@ private fun ServerRow(
     }
     Card(
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
         border = if (isConnected) BorderStroke(1.5.dp, Color(0xFF00C853)) else null,
         modifier = Modifier
@@ -805,7 +812,7 @@ private fun ServerRow(
                 Text(
                     "${server.ip} • ${server.pingMs} ms • ${formatSpeed(server.speedBps)} • ${tr("sharedIp")}",
                     style = MaterialTheme.typography.bodySmall,
-                    color = Color(0xFF4A6076)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             SignalBars(server.pingMs)

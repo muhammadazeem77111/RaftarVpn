@@ -353,8 +353,12 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     private fun startConnect(server: VpnServer) {
         connector.clearDeadServers()
-        // Selected/best server pehle, baqi rank-order me failover candidates.
-        val ordered = listOf(server) + _ranked.value.filter { it.id != server.id }
+        // Selected server pehle (user ki choice), phir TCP-443 wale (firewall-friendly),
+        // phir baqi. Pehle se dead/blocked (reachability == false) bahar.
+        val reach = _reachability.value
+        val rest = _ranked.value.filter { it.id != server.id && reach[it.id] != false }
+        val (tcp443, others) = rest.partition { api.isTcp443(it) }
+        val ordered = listOf(server) + tcp443 + others
         connector.connect(ordered, api::decodeConfig)
     }
 

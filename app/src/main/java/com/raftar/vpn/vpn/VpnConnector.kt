@@ -22,7 +22,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
+import java.net.InetSocketAddress
+import java.net.Socket
 
 /**
  * tim06 OpenVPN engine ka wrapper.
@@ -73,7 +76,8 @@ class VpnConnector(private val appContext: Context) {
 
     /**
      * [servers] rank-ordered honi chahiye; pehla server user ka selected/best hota hai.
-     * Har server par 20s timeout; fail hone par aglay server par auto-failover (max 5 attempts),
+     * Har server se pehle tez TCP pre-check (2.5s) — dead server foran skip, engine ke
+     * 20s wait se bachat. Fail hone par aglay server par auto-failover (max 8 attempts),
      * attempts ke darmiyan ~1.5s ka waqfa.
      */
     fun connect(servers: List<VpnServer>, getConfig: (VpnServer) -> String?) {
@@ -81,7 +85,7 @@ class VpnConnector(private val appContext: Context) {
         userStopped = false
         _state.value = VpnState.Connecting
         connectJob = scope.launch {
-            val candidates = servers.filter { it.id !in deadServers }.take(5)
+            val candidates = servers.filter { it.id !in deadServers }.take(8)
             if (candidates.isEmpty()) {
                 _state.value = VpnState.Failed(Strings.t("noServersAvail"))
                 return@launch
@@ -138,6 +142,9 @@ class VpnConnector(private val appContext: Context) {
         val sanitized = sanitizeOvpnConfig(rawConfig)
         val ep = parseRemoteEndpoint(sanitized)
         if (ep.host.isBlank()) return false
+        // Tez pre-check: TCP server zinda hai? Dead par engine ke 20s zaya nahi karte.
+        // (UDP ka pre-check mumkin nahi — woh seedha engine try karega.)
+        if (ep.proto == "tcp" && !tcpPreCheck(ep.host, ep.port)) return false
 
         val cfg = OpenVPNConfig(
             name = server.hostName,
@@ -195,6 +202,20 @@ class VpnConnector(private val appContext: Context) {
             ConnectionState.IDLE -> Unit
         }
     }
+
+    /**
+     * Engine start karne se pehle tez TCP check (2.5s timeout).
+     * Dead/band server foran bahar — 20s ka engine wait zaya nahi hota.
+     */
+    private suspend fun tcpPreCheck(host: String, port: Int): Boolean =
+        withContext(Dispatchers.IO) {
+            try {
+                Socket().use { it.connect(InetSocketAddress(host, port), 2500) }
+                true
+            } catch (_: Exception) {
+                false
+            }
+        }
 
     private fun teardownAttempt() {
         try {

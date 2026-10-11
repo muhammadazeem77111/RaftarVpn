@@ -1,31 +1,31 @@
 package com.raftar.vpn.ui
 
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 /**
- * Raftar VPN premium light theme — saaf suthra, teal accents.
+ * Raftar VPN premium DARK theme — deep navy + glowing teal (app icon jaisa).
  */
-private val RaftarColors = lightColorScheme(
+private val RaftarColors = darkColorScheme(
     primary = Color(0xFF00BFA5),
-    onPrimary = Color.White,
-    primaryContainer = Color(0xFFCFF7F0),
-    onPrimaryContainer = Color(0xFF062A5E),
-    secondary = Color(0xFF0D47A1),
-    onSecondary = Color.White,
-    secondaryContainer = Color(0xFFDCE9FB),
-    onSecondaryContainer = Color(0xFF062A5E),
-    background = Color(0xFFF1F8F6),
-    onBackground = Color(0xFF10233B),
-    surface = Color.White,
-    onSurface = Color(0xFF10233B),
-    surfaceVariant = Color(0xFFE4EFEc),
-    onSurfaceVariant = Color(0xFF4A6076),
-    error = Color(0xFFD32F2F),
-    onError = Color.White,
-    outline = Color(0xFFC4D6D2)
+    onPrimary = Color(0xFF052E28),
+    primaryContainer = Color(0xFF0E3B34),
+    onPrimaryContainer = Color(0xFFB9F5EA),
+    secondary = Color(0xFF4FC3F7),
+    onSecondary = Color(0xFF062A3A),
+    secondaryContainer = Color(0xFF14324A),
+    onSecondaryContainer = Color(0xFFC9E6F7),
+    background = Color(0xFF0A1A2E),
+    onBackground = Color(0xFFEAF2F8),
+    surface = Color(0xFF10263F),
+    onSurface = Color(0xFFEAF2F8),
+    surfaceVariant = Color(0xFF1A3350),
+    onSurfaceVariant = Color(0xFF93A9BE),
+    error = Color(0xFFFF6B6B),
+    onError = Color(0xFF3A0A0A),
+    outline = Color(0xFF2A4560)
 )
 
 @Composable

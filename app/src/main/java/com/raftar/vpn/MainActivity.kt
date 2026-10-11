@@ -71,6 +71,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Dark theme: status bar bhi navy (screenshot wali lavender patti khatam).
+        window.statusBarColor = 0xFF0A1A2E.toInt()
+
         // Android 13+: VPN foreground-service notification ke liye runtime permission.
         if (Build.VERSION.SDK_INT >= 33 &&
             ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) !=
