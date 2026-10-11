@@ -123,8 +123,9 @@ fun App(
     val speed by viewModel.speed.collectAsState()
     val countryFilter by viewModel.countryFilter.collectAsState()
     val snackbar = remember { SnackbarHostState() }
+    var showL2tp by remember { mutableStateOf(false) }
 
-    // L2TP guide dialog (ranked/showL2tp declare hone ke baad).
+    // L2TP guide dialog (showL2tp oopar declare hai).
     if (showL2tp) {
         AlertDialog(
             onDismissRequest = { showL2tp = false },
@@ -164,7 +165,6 @@ fun App(
     var tab by remember { mutableIntStateOf(0) }
     var reportTarget by remember { mutableStateOf<VpnServer?>(null) }
     var showMenu by remember { mutableStateOf(false) }
-    var showL2tp by remember { mutableStateOf(false) }
 
     // Connection timer (00:00:00).
     val connectedAt by viewModel.connectedAt.collectAsState()
