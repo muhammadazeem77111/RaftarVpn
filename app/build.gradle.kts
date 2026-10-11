@@ -25,11 +25,30 @@ android {
             keyAlias = System.getenv("KEY_ALIAS")
             keyPassword = System.getenv("KEY_PASSWORD")
         }
+        // Har CI build me SAME test signature — warna har dafa nayi key = uninstall
+        // lazmi = VPN Allow dobara. Keystore repo me base64 hai (ci-debug.keystore.b64).
+        // SIRF test builds ke liye; Play Store release ke liye alag secret key hogi.
+        val testKeyB64 = rootProject.file("ci-debug.keystore.b64")
+            .takeIf { it.exists() }?.readText()?.trim().orEmpty()
+        if (testKeyB64.isNotEmpty()) {
+            val ksFile = File(layout.buildDirectory.get().asFile, "raftar-test.keystore")
+            if (!ksFile.exists()) {
+                ksFile.parentFile.mkdirs()
+                ksFile.writeBytes(java.util.Base64.getDecoder().decode(testKeyB64))
+            }
+            create("ciTest") {
+                storeFile = ksFile
+                storePassword = "RaftarTest2026!"
+                keyAlias = "raftardebug"
+                keyPassword = "RaftarTest2026!"
+            }
+        }
     }
 
     buildTypes {
         debug {
-            // default
+            // Consistent test signature (ciTest) taake update install ho, uninstall na ho.
+            signingConfig = signingConfigs.findByName("ciTest") ?: signingConfigs.getByName("debug")
         }
         release {
             // v1: R8/minify OFF taake native lib (libovpn3.so) ke sath koi issue na ho.
