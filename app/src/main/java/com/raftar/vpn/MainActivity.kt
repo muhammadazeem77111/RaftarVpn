@@ -89,6 +89,9 @@ class MainActivity : ComponentActivity() {
                 onGamingClick = {
                     withVpnPermission { viewModel.requestConnect { viewModel.startGamingMode() } }
                 },
+                onServerClick = { server ->
+                    withVpnPermission { viewModel.requestConnect { viewModel.connectTo(server) } }
+                },
                 onPrivateConnect = { ps: PrivateServer ->
                     withVpnPermission { viewModel.requestConnect { viewModel.connectPrivate(ps) } }
                 },

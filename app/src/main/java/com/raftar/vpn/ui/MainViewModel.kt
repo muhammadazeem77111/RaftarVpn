@@ -97,9 +97,10 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
 
     val vpnState: StateFlow<VpnConnector.VpnState> = connector.state
 
+    /** Konsa server try ho raha hai (connect ke waqt progress dikhane ke liye). */
+    val attemptInfo: StateFlow<String?> = connector.attemptInfo
+
     init {
-        Strings.current =
-            if (settings.getString("lang", "ur") == "en") Strings.Lang.EN else Strings.Lang.UR
         refresh(auto = true)
         // Gaming ping monitor lifecycle: connect par start, disconnect par stop.
         viewModelScope.launch {
@@ -116,14 +117,6 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 }
             }
         }
-    }
-
-    // ============ language ============
-
-    fun toggleLang() {
-        val next = if (Strings.current == Strings.Lang.UR) Strings.Lang.EN else Strings.Lang.UR
-        Strings.current = next
-        settings.edit().putString("lang", if (next == Strings.Lang.EN) "en" else "ur").apply()
     }
 
     // ============ disclosure ============
@@ -335,6 +328,12 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             _notice.value = Strings.t("noticeNeedList")
             return
         }
+        _selected.value = server
+        startConnect(server)
+    }
+
+    /** Country list me kisi server par tap → select + foran connect. */
+    fun connectTo(server: VpnServer) {
         _selected.value = server
         startConnect(server)
     }

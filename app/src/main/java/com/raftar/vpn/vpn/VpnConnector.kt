@@ -51,6 +51,10 @@ class VpnConnector(private val appContext: Context) {
     private val _state = MutableStateFlow<VpnState>(VpnState.Idle)
     val state: StateFlow<VpnState> = _state.asStateFlow()
 
+    /** UI ke liye: is waqt konsa server try ho raha hai ("Trying X (2/5)…"), null = koi attempt nahi. */
+    private val _attemptInfo = MutableStateFlow<String?>(null)
+    val attemptInfo: StateFlow<String?> = _attemptInfo.asStateFlow()
+
     private var connection: VpnServiceConnection? = null
     private var connectJob: Job? = null
     private var attemptSignal: CompletableDeferred<Boolean>? = null
@@ -79,6 +83,8 @@ class VpnConnector(private val appContext: Context) {
             }
             for ((index, server) in candidates.withIndex()) {
                 if (userStopped) return@launch
+                _attemptInfo.value =
+                    Strings.t("attempting").format(server.hostName, index + 1, candidates.size)
                 val raw = getConfig(server)
                 if (raw.isNullOrBlank()) {
                     deadServers.add(server.id)
@@ -88,6 +94,7 @@ class VpnConnector(private val appContext: Context) {
                 deadServers.add(server.id)
                 if (index < candidates.lastIndex && !userStopped) delay(1500)
             }
+            _attemptInfo.value = null
             if (!userStopped) {
                 _state.value = VpnState.Failed(Strings.t("failoverFailed"))
             }
@@ -159,6 +166,7 @@ class VpnConnector(private val appContext: Context) {
             ConnectionState.CONNECTED -> {
                 if (userStopped) return
                 val s = activeServer ?: return
+                _attemptInfo.value = null
                 _state.value = VpnState.Connected(s)
                 attemptSignal?.complete(true)
             }
@@ -205,6 +213,7 @@ class VpnConnector(private val appContext: Context) {
         connectJob = null
         teardownAttempt()
         activeServer = null
+        _attemptInfo.value = null
         if (!silent) _state.value = VpnState.Disconnected
     }
 }
