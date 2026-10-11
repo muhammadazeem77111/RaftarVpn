@@ -33,25 +33,24 @@ Daemon will be stopped at the end of the build
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
 > Task :app:javaPreCompileDebug
-> Task :app:processDebugManifestForPackage
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
-> Task :app:compressDebugAssets
 > Task :app:desugarDebugFileDependencies
+> Task :app:compressDebugAssets
+> Task :app:processDebugManifestForPackage
 > Task :app:processDebugResources
 > Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugStartupProfile
 
-> Task :app:compileDebugKotlin
+> Task :app:compileDebugKotlin FAILED
 e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/ui/App.kt:104:9 Unresolved reference: showL2tp
 e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/ui/App.kt:106:34 Unresolved reference: showL2tp
 e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/ui/App.kt:111:35 Unresolved reference: ranked
 e: file:///home/runner/work/RaftarVpn/RaftarVpn/app/src/main/java/com/raftar/vpn/ui/App.kt:124:40 Unresolved reference: showL2tp
 
 > Task :app:mergeExtDexDebug
-> Task :app:compileDebugKotlin FAILED
 
 FAILURE: Build failed with an exception.
 
@@ -66,6 +65,6 @@ Execution failed for task ':app:compileDebugKotlin'.
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 1m 45s
+BUILD FAILED in 1m 46s
 24 actionable tasks: 24 executed
 ```
