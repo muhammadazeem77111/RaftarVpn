@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+import java.util.Base64
+
 android {
     namespace = "com.raftar.vpn"
     compileSdk = 34
@@ -34,7 +36,7 @@ android {
             val ksFile = File(layout.buildDirectory.get().asFile, "raftar-test.keystore")
             if (!ksFile.exists()) {
                 ksFile.parentFile.mkdirs()
-                ksFile.writeBytes(java.util.Base64.getDecoder().decode(testKeyB64))
+                ksFile.writeBytes(Base64.getDecoder().decode(testKeyB64))
             }
             create("ciTest") {
                 storeFile = ksFile
